@@ -1,0 +1,1121 @@
+site_id,region,sub_region,city,lat,lng,priority,demographic,grid_type,fiber_pop,ssrf,batch
+53721,North,N3,Abbottabad,34.178302,73.223853,New Construction,Suburban,Good Grid,0,,Batch-1
+53730,North,N1,Islamabad,33.644844,73.174059,New Construction,Suburban,Good Grid,0,,Batch-1
+53123,North,N3,Abbottabad,34.197178,73.257023,Sharing,Suburban,Good Grid,0,Yes,Batch-1
+53160,North,N3,Abbottabad,34.171139,73.238352,Sharing,Suburban,Good Grid,0,,Batch-1
+53693,North,N2,Pabbi,34.022184,71.731483,New Construction,Rural,Prime,0,,Batch-1
+53748,North,N2,Peshawar,33.987707,71.626718,New Construction,Suburban,Bad Grid,0,,Batch-1
+52638,North,N1,Islamabad_Rural,33.65598,73.266732,Sharing,Urban,0,0,,Batch-1
+53713,North,N1,Rawalpindi,33.624922,73.046004,New Construction,Urban,Good Grid,0,,Batch-1
+51148,North,N3,Abbottabad,34.1897,73.2502,Sharing,Suburban,Good Grid,0,Yes,Batch-1
+51239,North,N3,Abbottabad,34.155092,73.219561,New Construction,Suburban,Good Grid,0,,Batch-1
+52385,North,N3,Abbottabad,34.142111,73.226115,New Construction,Suburban,Good Grid,0,,Batch-1
+53670,North,N3,Haripur_Rural,33.843,72.8984,New Construction,Rural,Good Grid,0,,Batch-1
+53387,North,N3,Haripur_Rural,33.835732,72.932525,New Construction,Rural,Good Grid,0,,Batch-1
+53278,North,N1,Hasan Abdal_Rural,33.738125,72.717104,New Construction,Suburban,Good Grid,0,,Batch-1
+53289,North,N1,Hasan Abdal_Rural,33.736062,72.687058,New Construction,Suburban,Good Grid,0,,Batch-1
+53155,North,N1,Islamabad,33.641254,73.029656,New Construction,Urban,Good Grid,0,,Batch-1
+53669,North,N1,Islamabad,33.684145,72.930123,New Construction,Urban,Good Grid,0,,Batch-1
+53224,North,N1,Islamabad,33.7424,73.1176,New Construction,Suburban,Bad Grid,0,,Batch-1
+52605,North,N1,Islamabad,33.73698,73.110876,New Construction,Suburban,Bad Grid,0,,Batch-1
+53291,North,N1,Islamabad_Rural,33.648202,73.286335,New Construction,Urban,0,0,,Batch-1
+52604,North,N1,Islamabad_Rural,33.684014,73.215005,New Construction,Suburban,Good Grid,0,,Batch-1
+51555,North,N3,Mansehra,34.328053,73.195804,New Construction,Suburban,Good Grid,0,,Batch-1
+52979,North,N3,Mansehra,34.31935,73.187471,New Construction,Suburban,Good Grid,0,,Batch-1
+53405,North,N2,Pabbi_Rural,34.047443,71.740827,New Construction,Rural,Prime,0,,Batch-1
+53768,North,N1,Islamabad_Rural,33.689317,73.211732,New Construction,Suburban,Good Grid,0,,Batch-1
+53772,North,N1,Rawalpindi,33.639121,73.168527,New Construction,Suburban,Good Grid,0,,Batch-1
+50712,North,N2,Peshawar,33.991596,71.438483,New Construction,Urban,Good Grid,0,,Batch-1
+51187,North,N2,Peshawar,34.0107,71.55344,Sharing,Urban,Good Grid,0,,Batch-1
+52295,North,N2,Peshawar,34.017,71.5527,Sharing,Urban,Good Grid,0,,Batch-1
+52479,North,N2,Peshawar,33.99529,71.44401,New Construction,Urban,Good Grid,0,,Batch-1
+51126,North,N2,Peshawar,34.000702,71.538106,Sharing,Urban,Good Grid,0,,Batch-1
+50747,North,N2,Peshawar,34.006162,71.537134,New Construction,Urban,Good Grid,0,,Batch-1
+52412,North,N1,Pindigheb,33.239433,72.271515,New Construction,Rural,Poor Grid,0,,Batch-1
+53285,North,N1,Pindigheb,33.248396,72.265054,New Construction,Rural,Poor Grid,0,,Batch-1
+53751,North,N1,Rawalpindi,33.59413,73.09225,New Construction,Urban,Bad Grid,FTTS ,,Batch-1
+53149,North,N1,Rawalpindi_Rural,33.530357,72.968573,New Construction,Suburban,Good Grid,0,,Batch-1
+53166,North,N3,Swat,35.208913,72.544099,New Construction,Rural,Good Grid,0,,Batch-1
+53781,North,N1,Attock_Rural,33.808664,72.350402,New Construction,Suburban,Good Grid,0,Yes,Batch-1
+52255,North,N1,Taxila_Rural,33.80568,72.759948,New Construction,Urban,Good Grid,0,,Batch-1
+51227,North,N1,Wah+Texila,33.75504,72.754122,New Construction,Suburban,Good Grid,0,,Batch-1
+53683,North,N1,Taxila,33.771617,72.714615,Sharing,Suburban,Prime,0,,Batch-1
+51292,North,N1,Wah+Texila,33.763817,72.762012,New Construction,Suburban,Good Grid,0,,Batch-1
+51293,North,N1,Wah+Texila,33.779259,72.722673,New Construction,Suburban,Prime,0,,Batch-1
+51984,North,N1,Wah+Texila,33.769409,72.738732,Sharing,Suburban,Good Grid,0,,Batch-1
+52246,North,N1,Wah+Texila,33.75552,72.745935,Sharing,Suburban,Good Grid,0,,Batch-1
+52248,North,N1,Wah+Texila,33.771042,72.748325,Sharing,Suburban,Prime,0,,Batch-1
+52250,North,N1,Wah+Texila,33.774577,72.75974,New Construction,Suburban,Prime,0,,Batch-1
+53200,North,N1,Wah+Texila,33.8004,72.7502,Sharing,Urban,Good Grid,0,,Batch-1
+53282,North,N1,Wah+Texila,33.752284,72.735755,New Construction,Suburban,Good Grid,0,,Batch-1
+52654,North,N1,Wah+Texila,33.733933,72.829116,Sharing,Suburban,Good Grid,0,,Batch-1
+53284,North,N1,Wah+Texila,33.739757,72.829141,New Construction,Suburban,Good Grid,0,,Batch-1
+50745,North,N1,Wah+Texila,33.75838,72.77339,Sharing,Suburban,Prime,0,,Batch-1
+51295,North,N1,Wah+Texila,33.753876,72.775415,Sharing,Suburban,Prime,0,,Batch-1
+43666,Central,C1,Raiwind_Rural,31.322932,74.245486,New Construction,Rural,Poor Grid,0,Yes,Batch-1
+43698,Central,C1,Raiwind_Rural,31.31479,74.22703,Sharing,Rural,Poor Grid,0,Yes,Batch-1
+43540,Central,C1,Lahore,31.40462,74.21249,New Construction,Rural,Good Grid,0,,Batch-1
+43776,Central,C1,Lahore,31.402311,74.18327,New Construction,Urban,Good Grid,0,,Batch-1
+43535,Central,C1,Lahore,31.406319,74.289506,New Construction,Urban,0,0,,Batch-1
+43460,Central,C4,Bahawalnagar,29.9892,73.2268,Sharing,Suburban,Good Grid,0,Yes,Batch-1
+43509,Central,C4,Bahawalnagar,29.981954,73.253648,New Construction,Suburban,Good Grid,0,,Batch-1
+43521,Central,C4,Mian Channu,30.4563,72.356,Sharing,Urban,Good Grid,0,,Batch-1
+43633,Central,C4,Okara,30.815198,73.436695,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+43697,Central,C1,Lahore,31.395147,74.209424,New Construction,Rural,Good Grid,0,,Batch-1
+43851,Central,C4,Bahawalnagar,29.97636,73.25995,New Construction,Suburban,Good Grid,0,,Batch-1
+43833,Central,C5,Sialkot_Rural,32.47518,74.4513,New Construction,Suburban,Good Grid,Fiber POP,,Batch-1
+61947,South,S3,Hub,25.0547,66.884,Sharing,Urban,Poor Grid,0,,Batch-2
+62065,South,S1,Hub_Rural,25.0792,66.9392,New Construction,Urban,Poor Grid,0,,Batch-2
+43880,Central,C4,Fort Abbas,29.1866,72.8535,Sharing,Suburban,Good Grid,0,,Batch-2
+43882,Central,C1,Lahore,31.406142,74.302117,New Construction,Urban,0,0,,Batch-2
+43884,Central,C1,Lahore,31.39161,74.21254,New Construction,Rural,Good Grid,0,,Batch-2
+43898,Central,C2,Toba Tek Singh_Rural,30.9694,72.4109,Sharing,Rural,Good Grid,0,,Batch-2
+43899,Central,C2,Toba Tek Singh,30.9656,72.4452,Sharing,Rural,Good Grid,0,,Batch-2
+43904,Central,C3,Kot Addu_Rural,30.5519,71.23,Sharing,Suburban,Good Grid,Fiber POP,,Batch-2
+43908,Central,C3,Alipur_Rural,29.3696,70.7517,Sharing,Rural,Good Grid,0,,Batch-2
+43914,Central,C3,Kot Addu_Rural,30.57654,71.03126,New Construction,Rural,Good Grid,0,,Batch-2
+43921,Central,C3,Kot Chhutta_Rural,29.983388,70.679297,New Construction,Rural,Poor Grid,0,,Batch-2
+43923,Central,C3,Kot Chhutta_Rural,29.9603,70.6976,Sharing,Rural,Poor Grid,0,,Batch-2
+43924,Central,C3,Kot Chhutta_Rural,29.871744,70.612965,New Construction,Suburban,Good Grid,0,,Batch-2
+43925,Central,C3,Kot Chhutta_Rural,29.84932,70.66284,Sharing,Suburban,Good Grid,0,,Batch-2
+43940,Central,C3,Kot Chhutta_Rural,29.953276,70.655409,New Construction,Rural,Poor Grid,0,,Batch-2
+43948,Central,C4,-,30.4441,72.3576,Sharing,Urban,Good Grid,0,,Batch-2
+43949,Central,C4,-,29.6069,73.1434,New Construction,Suburban,Good Grid,0,,Batch-2
+43953,Central,C4,-,30.4548,72.3583,Sharing,Urban,Good Grid,0,,Batch-2
+43954,Central,C4,-,30.8232,73.4313,New Construction,Urban,Good Grid,FTTS ,,Batch-2
+43955,Central,C4,-,29.60242,73.162748,New Construction,Suburban,Good Grid,0,,Batch-2
+43959,Central,C5,Sialkot_Rural,32.463551,74.471407,New Construction,Suburban,Good Grid,Fiber POP,,Batch-2
+43974,Central,C5,Zafarwal_Rural,32.359812,74.944421,New Construction,Suburban,Good Grid,0,Yes,Batch-2
+43976,Central,C5,Zafarwal,32.3401,74.912,Sharing,Suburban,Good Grid,0,Yes,Batch-2
+43985,Central,C4,Haroonabad_Rural,29.328773,72.966038,New Construction,Suburban,Good Grid,0,,Batch-2
+53810,North,N1,Rawalpindi,33.566339,72.946122,New Construction,Suburban,Good Grid,0,,Batch-2
+44001,Central,C4,-,29.99312,73.24394,Sharing,Suburban,Good Grid,0,Yes,Batch-2
+53812,North,N1,Rawalpindi,33.63012,73.046177,New Construction,Urban,Good Grid,0,,Batch-2
+53814,North,N1,Rawalpindi,33.635274,73.030916,New Construction,Urban,Good Grid,0,,Batch-2
+62498,South,S4,Khairpur,27.113678,68.606697,New Construction,Rural,Poor Grid,0,,Batch-2
+51008,North,N1,Rawalpindi,33.60562,73.09259,New Construction,Urban,Bad Grid,FTTS ,,Batch-2
+52676,North,N3,Kabal,34.82703,72.34735,New Construction,Rural,Good Grid,0,,Batch-2
+53013,North,N3,Fatehpur Thakiala_Rural,33.4895,74.1019,Sharing,Rural,Good Grid,0,Yes,Batch-2
+62395,South,S4,Larkana,27.550547,68.223302,New Construction,Urban,Bad Grid,0,,Batch-2
+62406,South,S3,Karezat_Rural,30.4934,67.1264,Sharing,Suburban,Bad Grid,0,,Batch-2
+62412,South,S3,Quetta,30.17678,67.02409,New Construction,Urban,Good Grid,0,,Batch-2
+62422,South,S3,Quetta,30.168037,67.0243,New Construction,Urban,Good Grid,0,,Batch-2
+53791,North,N1,Hasan Abdal_Rural,33.774323,72.695027,New Construction,Suburban,Prime,0,,Batch-2
+53792,North,N1,Attock_Rural,33.816362,72.360022,Sharing,Suburban,Good Grid,0,Yes,Batch-2
+53794,North,N3,Haripur_Rural,33.827565,72.904057,New Construction,Rural,Good Grid,0,,Batch-2
+62434,South,S1,Karachi,24.823067,67.182975,New Construction,Suburban,Prime,0,,Batch-2
+62445,South,S1,Karachi,25.03617,67.090033,New Construction,Urban,Good Grid,0,,Batch-2
+62446,South,S1,Karachi,25.038225,67.099943,New Construction,Urban,Good Grid,0,,Batch-2
+62450,South,S1,Karachi,24.81721,67.192734,New Construction,Suburban,Prime,0,,Batch-2
+62452,South,S3,Quetta,30.17419,66.95797,Sharing,Suburban,Poor Grid,0,,Batch-2
+53806,North,N1,-,33.714598,72.926759,New Construction,Urban,Good Grid,0,,Batch-2
+53808,North,N2,-,34.13164,71.600141,New Construction,Rural,Bad Grid,Fiber POP,,Batch-2
+62462,South,S2,Shahpur Chakar,26.170626,68.619028,New Construction,Rural,Poor Grid,0,,Batch-2
+62464,South,S2,Nawabshah,26.275017,68.154123,Sharing,Rural,Bad Grid,0,Yes,Batch-2
+62467,South,S3,Quetta,30.168558,66.962555,New Construction,Suburban,Poor Grid,0,,Batch-2
+62471,South,S4,Larkana,27.5425,68.2613,Sharing,Urban,Bad Grid,0,,Batch-2
+53785,North,N2,Peshawar,33.980038,71.638411,Sharing,Suburban,Bad Grid,0,,Batch-2
+53538,North,N2,Peshawar_Rural,34.123578,71.632524,Sharing,Rural,Bad Grid,Fiber POP,,Batch-2
+62391,South,S1,Karachi,25.022207,67.094168,Sharing,Urban,Good Grid,0,,Batch-2
+61810,South,S3,Karezat_Rural,30.5721,67.1088,Sharing,Suburban,Bad Grid,0,,Batch-2
+61994,South,S3,Karezat_Rural,30.5731,67.1346,Sharing,Suburban,Bad Grid,0,,Batch-2
+43798,Central,C3,Kot Addu,30.574694,70.935889,,Rural,Good Grid,0,,Batch-3
+53819,North,N2,Bara,33.9138,71.4128,,Rural,Bad Grid,0,,Batch-3
+53822,North,N2,Peshawar,33.8544,71.45847,,Rural,Bad Grid,0,,Batch-3
+53823,North,N2,Peshawar,33.888,71.4369,,Rural,Bad Grid,0,,Batch-3
+53824,North,N3,Kalam,35.463791,72.587475,,Rural,Prime,0,,Batch-3
+53526,North,N3,Haveli_Rural,33.880756,74.057787,,Rural,Good Grid,0,,Batch-3
+53527,North,N3,Haveli_Rural,33.875535,74.080198,,Rural,Good Grid,0,,Batch-3
+53530,North,N3,Haveli_Rural,33.907271,74.125852,,Rural,Good Grid,0,,Batch-3
+53013,North,N3,Fatehpur Thakiala_Rural,33.4895,74.1019,,Rural,Good Grid,0,Yes,Batch-3
+44023,Central,C2,JHANG,31.055477,72.061344,,Rural,Good Grid,0,,Batch-4
+44024,Central,C2,JHANG,31.128686,72.089997,,Rural,Good Grid,0,,Batch-4
+44029,Central,C2,JHANG,30.76376,71.79984,,Rural,Poor Grid,Fiber POP,Yes,Batch-4
+44031,Central,C2,JHANG,30.681554,71.768879,,Rural,Good Grid,0,,Batch-4
+44036,Central,C2,JHANG,31.620054,72.20406,,Rural,Good Grid,0,,Batch-4
+44043,Central,C2,JHANG,31.579996,72.172141,,Suburban,Good Grid,Fiber POP,,Batch-4
+44048,Central,C2,JHANG,31.3817,72.5212,,Rural,Good Grid,0,,Batch-4
+44049,Central,C2,JHANG,31.3201,72.4977,,Rural,Good Grid,0,,Batch-4
+44051,Central,C2,JHANG,31.3025,72.5359,,Rural,Good Grid,0,,Batch-4
+44060,Central,C2,JHANG,30.818862,72.151297,,Rural,Good Grid,0,,Batch-4
+44067,Central,C2,JHANG,31.307716,72.608978,,Rural,Good Grid,0,,Batch-4
+44070,Central,C2,JHANG,30.96938,72.330158,,Rural,Good Grid,0,,Batch-4
+44072,Central,C2,JHANG,31.578923,72.417025,,Rural,Good Grid,0,,Batch-4
+44074,Central,C1,LAHORE,31.406736,74.1739,,Urban,Good Grid,0,,Batch-4
+44151,Central,C5,MANDI BAHAUDDIN,32.683476,73.555915,,Rural,Good Grid,0,,Batch-4
+44152,Central,C5,MANDI BAHAUDDIN,32.65525,73.623807,,Rural,Good Grid,0,,Batch-4
+44158,Central,C5,MANDI BAHAUDDIN,32.649431,73.556997,,Rural,Good Grid,0,,Batch-4
+44163,Central,C5,MANDI BAHAUDDIN,32.436958,73.570881,,Rural,Poor Grid,Fiber POP,,Batch-4
+44166,Central,C5,MANDI BAHAUDDIN,32.574426,73.61129,,Rural,Good Grid,0,,Batch-4
+44167,Central,C5,MANDI BAHAUDDIN,32.507064,73.57184,,Rural,Good Grid,0,,Batch-4
+44170,Central,C5,MANDI BAHAUDDIN,32.431942,73.363045,,Rural,Good Grid,0,,Batch-4
+44181,Central,C5,MANDI BAHAUDDIN,32.3335,73.2614,,Rural,Good Grid,0,,Batch-4
+44222,Central,C3,MUZAFFARGARH,30.581913,71.199502,,Suburban,Good Grid,Fiber POP,,Batch-4
+44226,Central,C3,MUZAFFARGARH,30.304691,71.058344,,Rural,Good Grid,0,,Batch-4
+44230,Central,C3,MUZAFFARGARH,30.316555,71.015428,,Rural,Good Grid,0,,Batch-4
+44231,Central,C3,MUZAFFARGARH,30.398557,70.861271,,Rural,Good Grid,0,,Batch-4
+44232,Central,C3,MUZAFFARGARH,30.577538,71.056439,,Rural,Good Grid,0,,Batch-4
+44233,Central,C3,MUZAFFARGARH,30.451656,70.894392,,Suburban,Good Grid,0,,Batch-4
+44237,Central,C3,MUZAFFARGARH,29.550989,70.944713,,Rural,Good Grid,0,,Batch-4
+44239,Central,C3,MUZAFFARGARH,29.349388,70.85185,,Rural,Good Grid,Fiber POP,Yes,Batch-4
+44251,Central,C3,MUZAFFARGARH,29.872552,70.978861,,Rural,Good Grid,0,,Batch-4
+44253,Central,C3,MUZAFFARGARH,29.282404,70.893028,,Rural,Good Grid,0,,Batch-4
+62591,South,S2,SHAHEED BENAZIRABAD,26.342858,68.166456,,Rural,Bad Grid,Fiber POP,,Batch-4
+53847,North,N3,SWAT,34.911599,72.55344,,Rural,Good Grid,0,Yes,Batch-4
+53849,North,N3,SWAT,34.78838,72.347226,,Suburban,Good Grid,0,,Batch-4
+53853,North,N3,SWAT,34.7881,72.2814,,Rural,Good Grid,0,,Batch-4
+53854,North,N3,SWAT,34.785833,72.229773,,Rural,Good Grid,0,,Batch-4
+53855,North,N3,SWAT,34.6638,72.3418,,Rural,Good Grid,0,,Batch-4
+53860,North,N3,SWAT,34.947523,72.527338,,Rural,Good Grid,0,Yes,Batch-4
+53861,North,N3,SWAT,34.979168,72.546977,,Rural,Good Grid,0,Yes,Batch-4
+53862,North,N3,SWAT,35.137551,72.54486,,Rural,Good Grid,0,,Batch-4
+53864,North,N3,SWAT,35.123066,72.586805,,Rural,Good Grid,0,,Batch-4
+53866,North,N3,SWAT,35.232228,72.568172,,Rural,Good Grid,0,,Batch-4
+53870,North,N3,SWAT,34.814591,72.36646,,Rural,Good Grid,0,,Batch-4
+53873,North,N3,SWAT,34.912768,72.409733,,Rural,Good Grid,0,,Batch-4
+53875,North,N3,SWAT,34.934869,72.404113,,Rural,Good Grid,0,,Batch-4
+53877,North,N3,SWAT,35.0714,72.474,,Rural,Good Grid,0,,Batch-4
+53878,North,N3,SWAT,35.123043,72.388183,,Rural,Good Grid,0,,Batch-4
+53879,North,N3,SWAT,34.979604,72.321624,,Rural,Good Grid,0,,Batch-4
+53883,North,N3,SWAT,35.1125,72.3265,,Rural,Good Grid,0,,Batch-4
+53832,North,N2,Kohat-Hangu,33.52268,71.07342,,Rural,Bad Grid,Fiber POP,,Batch-4
+53833,North,N2,Kohat-Hangu,33.5313,71.08528,,Rural,Bad Grid,Fiber POP,,Batch-4
+53836,North,N2,Kohat-Hangu,33.51709,71.05316,,Rural,Bad Grid,Fiber POP,,Batch-4
+53838,North,N2,Kohat-Hangu,33.52399,71.03995,,Rural,Bad Grid,Fiber POP,,Batch-4
+53844,North,N2,Kohat-Hangu,33.43111,71.36823,,Rural,Good Grid,0,,Batch-4
+53845,North,N2,Kohat-Hangu,33.45392,71.28841,,Rural,Good Grid,0,,Batch-4
+53848,North,N3,Swat,34.76283,72.34999,,Suburban,Good Grid,Planned Fiber POP,,Batch-4
+53849,North,N3,Swat,34.788972,72.347375,,Suburban,Good Grid,0,,Batch-4
+53850,North,N3,Swat,34.79967,72.313616,,Rural,Good Grid,0,,Batch-4
+53852,North,N3,Swat,34.767129,72.335359,,Suburban,Good Grid,0,,Batch-4
+53853,North,N3,Swat,34.80964,72.28051,,Rural,Good Grid,0,,Batch-4
+53854,North,N3,Swat,34.787558,72.235174,,Rural,Good Grid,0,,Batch-4
+53855,North,N3,Swat,34.669331,72.343314,,Rural,Good Grid,0,,Batch-4
+53857,North,N3,Swat,34.8065,72.5691,,Suburban,0,0,,Batch-4
+53858,North,N3,Swat,34.94143,72.47777,,Rural,Good Grid,Fiber POP,,Batch-4
+53859,North,N3,Swat,34.94125,72.47021,,Rural,Good Grid,Fiber POP,,Batch-4
+53861,North,N3,Swat,34.966684,72.557912,,Rural,Good Grid,0,Yes,Batch-4
+53862,North,N3,Swat,35.13811,72.54564,,Rural,Good Grid,0,,Batch-4
+53863,North,N3,Swat,35.129649,72.510762,,Rural,Good Grid,0,,Batch-4
+53864,North,N3,Swat,35.12306,72.5862,,Rural,Good Grid,0,,Batch-4
+53865,North,N3,Swat,35.21206,72.5468,,Rural,Good Grid,0,,Batch-4
+53866,North,N3,Swat,35.231385,72.568555,,Rural,Good Grid,0,,Batch-4
+53867,North,N3,Swat,35.5425,72.6609,,Rural,Prime,0,,Batch-4
+53868,North,N3,Swat,35.52515,72.40897,,Rural,Prime,0,,Batch-4
+53870,North,N3,Swat,34.83752,72.34837,,Rural,Good Grid,0,,Batch-4
+53872,North,N3,Swat,34.87236,72.41159,,Rural,Good Grid,0,,Batch-4
+53873,North,N3,Swat,34.91413,72.41124,,Rural,Good Grid,0,,Batch-4
+53874,North,N3,Swat,34.916176,72.394699,,Rural,Good Grid,0,,Batch-4
+53875,North,N3,Swat,34.93338,72.405276,,Rural,Good Grid,0,,Batch-4
+53876,North,N3,Swat,34.9518,72.436,,Rural,Good Grid,0,,Batch-4
+53877,North,N3,Swat,35.07043,72.4688,,Rural,Good Grid,0,,Batch-4
+53878,North,N3,Swat,35.1364,72.39378,,Rural,Good Grid,0,,Batch-4
+53879,North,N3,Swat,34.980536,72.326633,,Rural,Good Grid,0,,Batch-4
+53880,North,N3,Swat,34.9993,72.3659,,Rural,Good Grid,0,,Batch-4
+53882,North,N3,Swat,35.07155,72.32199,,Rural,Good Grid,0,,Batch-4
+53883,North,N3,Swat,35.11368,72.32642,,Rural,Good Grid,0,,Batch-4
+53884,North,N3,Swat,35.06247,72.25298,,Rural,Prime,0,,Batch-4
+53885,North,N3,Swat,34.6807,72.12238,,Rural,Good Grid,0,,Batch-4
+53887,North,N3,Swat,34.65061,72.15107,,Rural,Poor Grid,0,,Batch-4
+Temp-2,North,North-3,Lower Dir,34.8102,72.0913,Sharing,Rural,Prime,0,,Batch-Special
+Temp-3,North,North-3,Lower Dir,34.725885,72.092549,Sharing,Rural,Prime,0,,Batch-Special
+Temp-4,North,North-3,Lower Dir,34.77874,72.12719,Sharing,Rural,Prime,0,,Batch-Special
+Temp-5,North,North-3,Lower Dir,34.8143,72.1798,Sharing,Rural,Dark site,0,,Batch-Special
+Temp-7,North,North-3,Lower Dir,34.8642,71.7264,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-8,North,North-3,Lower Dir,34.8355,71.6944,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-9,North,North-3,Lower Dir,34.8198,71.6896,New Construction,Rural,Poor Grid,0,,Batch-Special
+Temp-10,North,North-3,Lower Dir,34.8213,71.675,Sharing,Rural,Poor Grid,0,,Batch-Special
+Temp-11,North,North-3,Lower Dir,34.9154,71.7437,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-13,North,North-3,Lower Dir,34.829203,71.702815,New Construction,Rural,Bad Grid,0,,Batch-Special
+Temp-14,North,North-3,Lower Dir,34.717842,72.003209,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-15,North,North-3,Lower Dir,34.7888,71.9942,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-16,North,North-3,Lower Dir,34.763279,72.032388,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-17,North,North-3,Lower Dir,34.9796,71.638,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-19,North,North-3,Lower Dir,34.93785,71.66674,Sharing,Rural,Prime,0,,Batch-Special
+Temp-20,North,North-3,Lower Dir,34.92883,71.716883,New Construction,Rural,Bad Grid,0,,Batch-Special
+Temp-21,North,North-3,Lower Dir,35.01829,71.60712,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-25,North,North-3,Lower Dir,34.9445,71.6488,New Construction,Rural,Prime,0,,Batch-Special
+Temp-31,North,North-3,Lower Dir,35.018,71.8029,New Construction,Rural,Prime,0,,Batch-Special
+Temp-32,North,North-3,Lower Dir,34.992,71.8031,New Construction,Rural,Prime,0,,Batch-Special
+Temp-33,North,North-3,Lower Dir,34.9715,71.8127,New Construction,Rural,Prime,0,,Batch-Special
+Temp-34,North,North-3,Lower Dir,34.9695,71.7864,New Construction,Rural,Prime,0,,Batch-Special
+Temp-35,North,North-3,Lower Dir,34.95195,71.72882,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-38,North,North-3,Lower Dir,35.0109,71.7832,New Construction,Rural,Prime,0,,Batch-Special
+Temp-39,North,North-3,Lower Dir,35.0042,71.8119,Sharing,Rural,Prime,0,,Batch-Special
+Temp-40,North,North-3,Lower Dir,34.83066,71.96809,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-42,North,North-3,Lower Dir,34.8226,71.9925,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-44,North,North-3,Lower Dir,34.7656,71.8962,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-45,North,North-3,Lower Dir,34.7263,71.8015,New Construction,Rural,Prime,0,,Batch-Special
+Temp-46,North,North-3,Lower Dir,34.7434,71.8595,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-47,North,North-3,Lower Dir,34.7547,71.8482,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-48,North,North-3,Lower Dir,34.6605,71.7897,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-49,North,North-3,Lower Dir,34.76683,71.7957,Sharing,Rural,Prime,0,,Batch-Special
+Temp-50,North,North-3,Lower Dir,34.6987,71.8086,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-51,North,North-3,Lower Dir,34.731603,71.891538,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-52,North,North-3,Lower Dir,34.75191,71.93613,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-53,North,North-3,Lower Dir,34.71621,71.96918,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-58,North,North-3,Lower Dir,35.05538,71.77988,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-60,North,North-3,Swat,34.894867,72.528011,New Construction,Rural,Good Grid,0,Yes,Batch-Special
+Temp-61,North,North-3,Swat,34.76283,72.34999,Sharing,Suburban,Good Grid,Planned Fiber POP,,Batch-Special
+Temp-62,North,North-3,Swat,34.788972,72.347375,Sharing,Suburban,Good Grid,0,,Batch-Special
+Temp-63,North,North-3,Swat,34.79967,72.313616,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-64,North,North-3,Swat,34.778039,72.323276,New Construction,Suburban,Good Grid,0,,Batch-Special
+Temp-65,North,North-3,Swat,34.767129,72.335359,New Construction,Suburban,Good Grid,0,,Batch-Special
+Temp-66,North,North-3,Swat,34.80964,72.28051,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-67,North,North-3,Swat,34.787558,72.235174,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-68,North,North-3,Swat,34.669331,72.343314,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-71,North,North-3,Swat,34.8065,72.5691,Sharing,Suburban,0,0,,Batch-Special
+Temp-72,North,North-3,Swat,34.94143,72.47777,New Construction,Rural,Good Grid,Fiber POP,,Batch-Special
+Temp-73,North,North-3,Swat,34.94125,72.47021,Sharing,Rural,Good Grid,Fiber POP,,Batch-Special
+Temp-74,North,North-3,Swat,34.94843,72.527976,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-75,North,North-3,Swat,34.966684,72.557912,New Construction,Rural,Good Grid,0,Yes,Batch-Special
+Temp-76,North,North-3,Swat,35.13811,72.54564,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-77,North,North-3,Swat,35.129649,72.510762,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-78,North,North-3,Swat,35.12306,72.5862,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-79,North,North-3,Swat,35.21206,72.5468,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-80,North,North-3,Swat,35.231385,72.568555,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-81,North,North-3,Swat,35.5425,72.6609,Sharing,Rural,Prime,0,,Batch-Special
+Temp-82,North,North-3,Swat,35.52515,72.40897,Sharing,Rural,Prime,0,,Batch-Special
+Temp-83,North,North-3,Swat,34.80742,72.33721,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-84,North,North-3,Swat,34.83752,72.34837,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-85,North,North-3,Swat,34.824038,72.370985,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-86,North,North-3,Swat,34.87236,72.41159,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-87,North,North-3,Swat,34.91413,72.41124,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-88,North,North-3,Swat,34.916176,72.394699,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-89,North,North-3,Swat,34.93338,72.405276,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-90,North,North-3,Swat,34.9518,72.436,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-91,North,North-3,Swat,35.07043,72.4688,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-92,North,North-3,Swat,35.1364,72.39378,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-93,North,North-3,Swat,34.980536,72.326633,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-94,North,North-3,Swat,34.9993,72.3659,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-95,North,North-3,Swat,35.0202,72.3311,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-96,North,North-3,Swat,35.07155,72.32199,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-97,North,North-3,Swat,35.11368,72.32642,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-98,North,North-3,Swat,35.06247,72.25298,Sharing,Rural,Prime,0,,Batch-Special
+Temp-99,North,North-3,Swat,34.6807,72.12238,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-100,North,North-3,Swat,34.74184,72.1752,New Construction,Rural,Dark site,0,,Batch-Special
+Temp-101,North,North-3,Swat,34.65061,72.15107,New Construction,Rural,Poor Grid,0,,Batch-Special
+Temp-102,North,North-3,Upper Dir,35.0748,72.163,Sharing,Rural,Prime,0,,Batch-Special
+Temp-104,North,North-3,Upper Dir,34.918009,72.08544,New Construction,Rural,Bad Grid,0,,Batch-Special
+Temp-105,North,North-3,Upper Dir,35.0761,72.116,Sharing,Rural,Prime,0,,Batch-Special
+Temp-107,North,North-3,Upper Dir,34.9395,72.1361,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-108,North,North-3,Upper Dir,35.146,71.7207,New Construction,Rural,Poor Grid,0,,Batch-Special
+Temp-109,North,North-3,Upper Dir,35.0592,71.704,New Construction,Rural,Poor Grid,0,,Batch-Special
+Temp-110,North,North-3,Upper Dir,35.0692,71.6694,New Construction,Rural,Poor Grid,0,,Batch-Special
+Temp-113,North,North-3,Upper Dir,35.0681,71.7775,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-114,North,North-3,Upper Dir,35.0743,71.7355,New Construction,Rural,Poor Grid,0,,Batch-Special
+Temp-116,North,North-3,Upper Dir,35.0824,72.0177,New Construction,Rural,Poor Grid,0,,Batch-Special
+Temp-117,North,North-3,Upper Dir,35.33231,72.06471,Sharing,Rural,Prime,0,,Batch-Special
+Temp-118,North,North-3,Upper Dir,35.3303,72.0928,Sharing,Rural,Prime,0,,Batch-Special
+Temp-121,North,North-3,Upper Dir,35.4262,72.2309,Sharing,Rural,Prime,0,,Batch-Special
+Temp-122,North,North-3,Upper Dir,35.4428,72.2853,Sharing,Rural,Prime,0,,Batch-Special
+Temp-123,North,North-3,Upper Dir,35.4683,72.2479,Sharing,Rural,Prime,0,,Batch-Special
+Temp-124,North,North-3,Upper Dir,35.04321,71.9672,Sharing,Rural,Poor Grid,0,,Batch-Special
+Temp-126,North,North-3,Upper Dir,35.0281,71.9325,Sharing,Rural,Poor Grid,0,,Batch-Special
+Temp-130,North,North-3,Upper Dir,35.2297,71.9992,Sharing,Rural,Prime,0,,Batch-Special
+Temp-132,North,North-3,Upper Dir,35.2923,71.8564,Sharing,Rural,Prime,0,,Batch-Special
+Temp-133,North,North-3,Upper Dir,35.3083,71.8482,New Construction,Rural,Prime,0,,Batch-Special
+Temp-135,North,North-3,Upper Dir,35.1614,72.0855,New Construction,Rural,Bad Grid,0,,Batch-Special
+Temp-136,North,North-3,Upper Dir,35.1953,72.1081,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-141,North,North-3,Upper Dir,35.2595,71.9494,Sharing,Rural,Prime,0,,Batch-Special
+Temp-142,South,South-4,Khairpur,27.3746,68.4231,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-146,South,South-4,Khairpur,27.1313,68.5336,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-147,South,South-4,Khairpur,27.1467,68.5644,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-148,South,South-4,Khairpur,27.1882,68.5544,Sharing,Rural,Bad Grid,Planned Fiber POP,,Batch-Special
+Temp-157,South,South-4,Khairpur,27.2232,68.5655,Sharing,Rural,Bad Grid,Planned Fiber POP,,Batch-Special
+Temp-162,South,South-4,Khairpur,27.1093,68.6296,Sharing,Rural,Poor Grid,0,,Batch-Special
+Temp-163,South,South-4,Khairpur,27.419,68.4348,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-169,South,South-4,Khairpur,27.02545,68.58521,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-171,South,South-4,Khairpur,27.0514,68.5933,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-181,South,South-4,Khairpur,27.26786,68.44376,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-184,South,South-4,Khairpur,27.3019,68.4167,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-186,South,South-2,Shaheed Benazirabad,26.1005,68.1512,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-189,South,South-2,Shaheed Benazirabad,26.34822,68.27768,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-190,South,South-2,Shaheed Benazirabad,26.3467,68.41493,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-193,South,South-2,Shaheed Benazirabad,26.2979,68.4319,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-194,South,South-2,Shaheed Benazirabad,26.245,68.2677,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-196,South,South-2,Shaheed Benazirabad,26.20412,68.24624,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-197,South,South-2,Shaheed Benazirabad,26.245325,68.220848,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-202,South,South-2,Shaheed Benazirabad,26.17516,68.28946,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-203,South,South-2,Shaheed Benazirabad,26.31129,67.96387,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-204,South,South-2,Shaheed Benazirabad,26.22224,68.07351,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-205,South,South-2,Shaheed Benazirabad,26.4285,68.1399,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-206,South,South-2,Shaheed Benazirabad,26.4048,68.2349,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-211,South,South-2,Shaheed Benazirabad,26.18611,68.20846,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-213,South,South-2,Shaheed Benazirabad,26.2526,68.1489,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-215,South,South-2,Shaheed Benazirabad,26.1981,68.3073,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-216,South,South-2,Shaheed Benazirabad,26.2697,68.5271,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-223,South,South-2,Shaheed Benazirabad,26.14698,68.13645,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-224,South,South-2,Shaheed Benazirabad,26.08381,68.265925,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-228,South,South-2,Shaheed Benazirabad,26.37147,68.1279,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-229,South,South-2,Shaheed Benazirabad,26.34018,68.16201,Sharing,Rural,Bad Grid,Fiber POP,,Batch-Special
+Temp-230,South,South-2,Shaheed Benazirabad,26.3471,68.0706,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-231,South,South-2,Shaheed Benazirabad,26.12235,68.280192,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-233,South,South-2,Shaheed Benazirabad,26.22327,68.61726,Sharing,Rural,Poor Grid,0,,Batch-Special
+Temp-234,South,South-2,Shaheed Benazirabad,26.18729,68.58377,Sharing,Rural,Bad Grid,Fiber POP,,Batch-Special
+Temp-235,South,South-2,Shaheed Benazirabad,26.2002,68.5542,Sharing,Rural,Bad Grid,Fiber POP,,Batch-Special
+Temp-236,South,South-2,Shaheed Benazirabad,26.212,68.5182,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-238,Central,Central-5,Mandi Bahauddin,32.5828,73.4693,Sharing,Suburban,Good Grid,0,,Batch-Special
+Temp-239,Central,Central-5,Mandi Bahauddin,32.5838,73.49416,New Construction,Urban,Good Grid,0,,Batch-Special
+Temp-240,Central,Central-5,Mandi Bahauddin,32.57618,73.47133,New Construction,Suburban,Good Grid,0,,Batch-Special
+Temp-241,Central,Central-5,Mandi Bahauddin,32.59724,73.49911,Sharing,Suburban,Good Grid,0,,Batch-Special
+Temp-242,Central,Central-5,Mandi Bahauddin,32.61001,73.50008,New Construction,Suburban,Good Grid,0,,Batch-Special
+Temp-243,Central,Central-5,Mandi Bahauddin,32.686,73.5522,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-244,Central,Central-5,Mandi Bahauddin,32.65462,73.622758,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-246,Central,Central-5,Mandi Bahauddin,32.589229,73.491903,New Construction,Urban,Good Grid,0,,Batch-Special
+Temp-247,Central,Central-5,Mandi Bahauddin,32.551361,73.4886,New Construction,Rural,Good Grid,0,Yes,Batch-Special
+Temp-250,Central,Central-5,Mandi Bahauddin,32.648213,73.560442,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-253,Central,Central-5,Mandi Bahauddin,32.5429,73.4779,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-254,Central,Central-5,Mandi Bahauddin,32.4245,73.5903,New Construction,Rural,Poor Grid,Fiber POP,,Batch-Special
+Temp-255,Central,Central-5,Mandi Bahauddin,32.4359,73.5867,Sharing,Rural,Poor Grid,Fiber POP,,Batch-Special
+Temp-256,Central,Central-5,Mandi Bahauddin,32.42576,73.57606,Sharing,Rural,Poor Grid,Fiber POP,,Batch-Special
+Temp-257,Central,Central-5,Mandi Bahauddin,32.560931,73.590938,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-258,Central,Central-5,Mandi Bahauddin,32.5719,73.6119,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-259,Central,Central-5,Mandi Bahauddin,32.50597,73.57325,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-260,Central,Central-5,Mandi Bahauddin,32.531799,73.414737,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-261,Central,Central-5,Mandi Bahauddin,32.477248,73.37768,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-262,Central,Central-5,Mandi Bahauddin,32.4374,73.3624,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-265,Central,Central-5,Mandi Bahauddin,32.44601,73.32725,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-267,Central,Central-5,Mandi Bahauddin,32.50777,73.23117,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-268,Central,Central-5,Mandi Bahauddin,32.4926,73.2383,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-269,Central,Central-5,Mandi Bahauddin,32.55917,73.404414,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-271,Central,Central-5,Mandi Bahauddin,32.475795,73.27737,New Construction,Rural,Good Grid,0,Yes,Batch-Special
+Temp-273,Central,Central-5,Mandi Bahauddin,32.3355,73.2614,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-274,Central,Central-5,Mandi Bahauddin,32.36353,73.25263,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-277,Central,Central-5,Mandi Bahauddin,32.33638,73.20322,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-278,Central,Central-5,Mandi Bahauddin,32.39647,73.24614,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-279,Central,Central-5,Mandi Bahauddin,32.443,73.231,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-280,Central,Central-5,Mandi Bahauddin,32.4226,73.3366,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-282,Central,Central-2,Jhang,31.0547,72.0714,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-283,Central,Central-2,Jhang,31.12061,72.09077,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-288,Central,Central-2,Jhang,30.75721,71.79452,Sharing,Rural,Poor Grid,Fiber POP,Yes,Batch-Special
+Temp-290,Central,Central-2,Jhang,30.68328,71.76879,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-291,Central,Central-2,Jhang,31.11322,72.35442,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-293,Central,Central-2,Jhang,31.3091,72.18819,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-294,Central,Central-2,Jhang,31.272194,72.159639,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-295,Central,Central-2,Jhang,31.611944,72.207083,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-296,Central,Central-2,Jhang,31.551028,72.23225,Sharing,Suburban,Good Grid,Fiber POP,,Batch-Special
+Temp-298,Central,Central-2,Jhang,31.34863,72.13962,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-299,Central,Central-2,Jhang,31.390139,72.137694,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-301,Central,Central-2,Jhang,31.486981,72.200325,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-302,Central,Central-2,Jhang,31.581507,72.167527,New Construction,Suburban,Good Grid,Fiber POP,,Batch-Special
+Temp-303,Central,Central-2,Jhang,31.5211,72.261,Sharing,Suburban,Good Grid,Fiber POP,,Batch-Special
+Temp-306,Central,Central-2,Jhang,31.4601,72.2588,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-307,Central,Central-2,Jhang,31.39175,72.51789,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-308,Central,Central-2,Jhang,31.328892,72.474894,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-310,Central,Central-2,Jhang,31.297694,72.532306,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-311,Central,Central-2,Jhang,31.254037,72.485936,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-312,Central,Central-2,Jhang,31.25436,72.425187,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-313,Central,Central-2,Jhang,31.204283,72.407371,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-316,Central,Central-2,Jhang,31.39512,72.63203,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-317,Central,Central-2,Jhang,31.36639,72.68991,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-318,Central,Central-2,Jhang,31.369788,72.638885,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-319,Central,Central-2,Jhang,30.820304,72.141793,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-322,Central,Central-2,Jhang,31.066319,72.318661,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-324,Central,Central-2,Jhang,31.04592,72.37798,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-325,Central,Central-2,Jhang,31.35395,72.54285,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-326,Central,Central-2,Jhang,31.3094,72.6171,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-327,Central,Central-2,Jhang,31.39279,72.57708,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-328,Central,Central-2,Jhang,31.013583,72.307389,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-329,Central,Central-2,Jhang,30.964739,72.317222,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-331,Central,Central-2,Jhang,31.581139,72.425472,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-334,Central,Central-3,Muzaffargarh,30.44801,71.10661,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-335,Central,Central-3,Muzaffargarh,30.5801,71.1585,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-336,Central,Central-3,Muzaffargarh,30.580694,71.185,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-337,Central,Central-3,Muzaffargarh,30.32808,70.84651,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-338,Central,Central-3,Muzaffargarh,30.4712,70.931,Sharing,Suburban,Good Grid,0,,Batch-Special
+Temp-339,Central,Central-3,Muzaffargarh,30.25361,70.99488,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-341,Central,Central-3,Muzaffargarh,30.41046,71.09072,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-342,Central,Central-3,Muzaffargarh,30.62627,70.91578,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-344,Central,Central-3,Muzaffargarh,30.31729,71.01835,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-345,Central,Central-3,Muzaffargarh,30.38972,70.86134,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-346,Central,Central-3,Muzaffargarh,30.5899,71.0062,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-347,Central,Central-3,Muzaffargarh,30.44383,70.88929,Sharing,Suburban,Good Grid,0,,Batch-Special
+Temp-348,Central,Central-3,Muzaffargarh,30.3352,70.8971,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-351,Central,Central-3,Muzaffargarh,29.5461,70.9336,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-353,Central,Central-3,Muzaffargarh,29.3445,70.852,Sharing,Rural,Good Grid,Fiber POP,Yes,Batch-Special
+Temp-354,Central,Central-3,Muzaffargarh,29.8684,70.938,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-355,Central,Central-3,Muzaffargarh,29.86,71.0205,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-356,Central,Central-3,Muzaffargarh,29.8167,70.9724,Sharing,Rural,Poor Grid,0,Yes,Batch-Special
+Temp-357,Central,Central-3,Muzaffargarh,29.7263,70.8079,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-359,Central,Central-3,Muzaffargarh,29.85018,70.89211,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-360,Central,Central-3,Muzaffargarh,29.7024,71.1779,Sharing,Suburban,Poor Grid,0,,Batch-Special
+Temp-362,Central,Central-3,Muzaffargarh,29.7335,71.1374,Sharing,Suburban,Poor Grid,0,,Batch-Special
+Temp-363,Central,Central-3,Muzaffargarh,29.7505,70.8202,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-364,Central,Central-3,Muzaffargarh,29.8768,71.0446,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-365,Central,Central-3,Muzaffargarh,29.8819,70.9809,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-367,Central,Central-3,Muzaffargarh,29.27568,70.88561,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-368,Central,Central-3,Muzaffargarh,29.8034,70.8473,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-369,Central,Central-3,Muzaffargarh,29.7909,70.9956,Sharing,Rural,Poor Grid,0,Yes,Batch-Special
+Temp-370,Central,Central-3,Muzaffargarh,29.86746,70.87484,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-372,Central,Central-3,Muzaffargarh,30.2539,71.0572,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-374,Central,Central-3,Muzaffargarh,29.3483,70.7814,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-376,Central,Central-4,Fort Abbas,29.295278,73.01569,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-377,Central,Central-4,Fort Abbas,29.300899,73.06493,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-378,Central,Central-4,Fort Abbas,29.33109,72.99695,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-379,Central,Central-4,Fort Abbas,29.31647,72.95813,New Construction,Suburban,Good Grid,0,,Batch-Special
+Temp-380,Central,Central-4,Fort Abbas,29.30343,73.0866,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-381,Central,Central-4,Fort Abbas,29.32211,72.93791,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-382,Central,Central-4,Fort Abbas,29.32348,72.89724,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-383,Central,Central-4,Fort Abbas,29.32997,73.06184,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-384,Central,Central-4,Fort Abbas,29.35188,73.0689,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-385,Central,Central-4,Fort Abbas,29.391963,72.9824,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-386,Central,Central-4,Fort Abbas,29.39966,73.038619,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-388,Central,Central-4,Fort Abbas,29.38023,73.02149,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-389,Central,Central-4,Fort Abbas,29.191225,72.843036,New Construction,Suburban,Good Grid,0,,Batch-Special
+Temp-390,Central,Central-4,Fort Abbas,29.19669,72.85118,New Construction,Suburban,Good Grid,0,,Batch-Special
+Temp-393,Central,Central-4,Fort Abbas,29.211191,72.84252,New Construction,Suburban,Good Grid,0,,Batch-Special
+53653,North,N2,Peshawar,34.0315,71.5879,New Construction,Dense Urban,Bad Grid,0,,Batch-1
+53722,North,N3,Abbottabad,34.203987,73.243249,New Construction,Suburban,Good Grid,0,,Batch-1
+53701,North,N3,Abbottabad,34.162933,73.24979,New Construction,Suburban,Good Grid,0,,Batch-1
+53702,North,N3,Abbottabad,34.155275,73.239475,New Construction,Suburban,Good Grid,0,,Batch-1
+53734,North,N1,Attock,33.767138,72.358345,New Construction,Suburban,Good Grid,0,,Batch-1
+51800,North,N2,Peshawar,34.00983,71.53777,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+53708,North,N3,Haripur,33.932461,72.852597,New Construction,Rural,Good Grid,0,,Batch-1
+53728,North,N1,Islamabad,33.665459,73.081624,New Construction,Urban,Good Grid,Fiber POP,,Batch-1
+53720,North,N2,Nowshehra,33.972644,72.181762,New Construction,Rural,Good Grid,0,,Batch-1
+53707,North,N3,Mardan,34.211847,72.029644,New Construction,Suburban,Bad Grid,0,,Batch-1
+53724,North,N3,Mardan,34.142443,72.089187,New Construction,Rural,Good Grid,0,,Batch-1
+53698,North,N2,Peshawar,34.052398,71.517645,New Construction,Suburban,Bad Grid,0,,Batch-1
+53695,North,N2,Peshawar,34.01812,71.685402,New Construction,Suburban,Bad Grid,0,,Batch-1
+53709,North,N1,Jhika Gali,33.9148,73.421,New Construction,Suburban,Good Grid,0,,Batch-1
+53738,North,N2,Nowshera,33.997131,71.982914,New Construction,Suburban,Bad Grid,0,,Batch-1
+52778,North,N1,Islamabad,33.682507,72.960335,Sharing,Urban,Good Grid,0,,Batch-1
+53691,North,N1,Rawalpindi,33.6024,73.051,Sharing,Urban,Good Grid,FTTS ,,Batch-1
+53679,North,N1,Rawalpindi,33.657377,73.07954,New Construction,Urban,Good Grid,Fiber POP,,Batch-1
+53664,North,N1,Rawalpindi,33.654,73.0925,Sharing,Urban,Good Grid,FTTS ,,Batch-1
+53712,North,N1,Rawalpindi,33.6392,73.0846,New Construction,Dense Urban,Good Grid,0,,Batch-1
+53684,North,N1,Rawalpindi,33.594709,73.104818,New Construction,Urban,Good Grid,0,,Batch-1
+50777,North,N3,Abbottabad,34.210255,73.244672,New Construction,Suburban,Good Grid,0,,Batch-1
+50965,North,N3,Abbottabad,34.17273,73.200332,New Construction,Suburban,Good Grid,Planned Fiber POP,,Batch-1
+51146,North,N3,Abbottabad,34.164006,73.22379,New Construction,Suburban,Good Grid,0,,Batch-1
+50695,North,N2,Peshawar,33.997493,71.483639,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+51551,North,N3,Abbottabad,34.17073,73.2286,New Construction,Suburban,Good Grid,Fiber POP,,Batch-1
+52041,North,N3,Abbottabad,34.196238,73.239758,New Construction,Suburban,Good Grid,Fiber POP,,Batch-1
+53277,North,N1,Attock,33.792321,72.35583,New Construction,Suburban,Good Grid,0,,Batch-1
+53581,North,N2,Charsadda,34.151006,71.731618,Sharing,Rural,Poor Grid,0,Yes,Batch-1
+52690,North,N1,Fateh Jang_Rural,33.55834,72.83812,New Construction,Urban,0,0,,Batch-1
+52691,North,N1,Fateh Jang_Rural,33.55901,72.8244,New Construction,Rural,Bad Grid,0,,Batch-1
+52583,North,N3,Haripur_Rural,33.994265,72.865317,New Construction,Rural,Bad Grid,0,,Batch-1
+53384,North,N3,Haripur_Rural,33.967804,72.891393,New Construction,Rural,Poor Grid,Fiber POP,,Batch-1
+53237,North,N3,Havelian,34.034827,73.116337,New Construction,Rural,Good Grid,Fiber POP,,Batch-1
+53376,North,N3,Havelian,34.063054,73.162761,New Construction,Rural,Good Grid,0,,Batch-1
+52012,North,N1,Islamabad,33.701083,72.974984,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+53156,North,N1,Islamabad,33.62393,72.966013,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+53192,North,N1,Islamabad,33.6382,73.0175,Sharing,Urban,Good Grid,0,,Batch-1
+53584,North,N2,Pabbi,34.0087,71.8048,New Construction,Rural,Good Grid,0,,Batch-1
+52024,North,N1,Islamabad,33.659451,72.994485,Sharing,Urban,Good Grid,FTTS ,,Batch-1
+53219,North,N1,Islamabad,33.712627,73.080853,New Construction,Urban,Good Grid,Fiber POP,,Batch-1
+52135,North,N1,Islamabad_Rural,33.651629,73.241184,New Construction,Suburban,Good Grid,0,,Batch-1
+53322,North,N1,Islamabad_Rural,33.722887,72.99445,New Construction,Urban,Good Grid,FTTS,,Batch-1
+53294,North,N1,Kamra,33.85396,72.406378,New Construction,Suburban,Good Grid,0,,Batch-1
+53412,North,N2,Kohat_Rural,33.599625,71.308556,New Construction,Rural,Good Grid,0,,Batch-1
+53763,North,N1,Rawalpindi,33.59122,73.00919,Sharing,Urban,Good Grid,FTTS,,Batch-1
+53689,North,N1,Rawalpindi,33.64,73.05,Sharing,Urban,Good Grid,0,,Batch-1
+53391,North,N3,Mansehra,34.32727,73.21025,New Construction,Suburban,Good Grid,Fiber POP,,Batch-1
+51940,North,N3,Mansehra,34.325741,73.187397,New Construction,Suburban,Good Grid,Fiber POP,,Batch-1
+53140,North,N3,Mansehra,34.312609,73.200383,New Construction,Rural,Good Grid,0,,Batch-1
+52616,North,N3,Mansehra_Rural,34.453576,73.253272,New Construction,Rural,Good Grid,0,,Batch-1
+51068,North,N3,mardan,34.202879,72.052733,New Construction,Suburban,Good Grid,0,,Batch-1
+52742,North,N3,mardan,34.143552,72.039045,New Construction,Rural,Good Grid,0,,Batch-1
+53752,North,N3,Mardan,34.194613,72.061705,New Construction,Suburban,Poor Grid,0,,Batch-1
+53453,North,N3,Mardan_Rural,34.202055,72.165201,New Construction,Rural,Good Grid,0,,Batch-1
+52178,North,N1,Murree,33.913775,73.403804,New Construction,Suburban,Good Grid,0,,Batch-1
+52923,North,N1,Murree,33.900059,73.404961,Sharing,Rural,Good Grid,0,Yes,Batch-1
+53143,North,N1,Murree,33.89798,73.385864,New Construction,Suburban,Good Grid,Fiber POP,,Batch-1
+51550,North,N3,Abbottabad,34.19,73.23,Sharing,Suburban,Good Grid,0,,Batch-1
+53448,North,N2,Pabbi_Rural,33.8231,71.8886,Sharing,Rural,Good Grid,0,,Batch-1
+52726,North,N2,Peshawar,34.000026,71.57591,New Construction,Dense Urban,Good Grid,FTTS ,,Batch-1
+53177,North,N2,Peshawar,33.997631,71.569182,New Construction,Dense Urban,Good Grid,FTTS ,,Batch-1
+53783,North,N2,Peshawar,33.9541,71.4403,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+53764,North,N1,Rawalpindi,33.58605,73.11166,Sharing,Urban,Good Grid,0,,Batch-1
+53765,North,N1,Rawalpindi,33.549731,73.083244,New Construction,Urban,Good Grid,0,,Batch-1
+53766,North,N1,Rawalpindi,33.5676,73.102,Sharing,Urban,Good Grid,FTTS ,,Batch-1
+53767,North,N1,Rawalpindi,33.565275,73.006437,New Construction,Suburban,Good Grid,0,,Batch-1
+51560,North,N2,Nowshera,34.0051,71.9906,Sharing,Suburban,Good Grid,0,,Batch-1
+53769,North,N1,Islamabad,33.665755,73.160871,New Construction,Suburban,Good Grid,0,,Batch-1
+53375,North,N3,Haripur,34.0092,72.9359,Sharing,Suburban,Poor Grid,0,,Batch-1
+53770,North,N1,Bhara Kahu,33.7376,73.1923,Sharing,Suburban,Good Grid,FTTS ,,Batch-1
+53771,North,N1,Rawalpindi,33.64445,73.191177,New Construction,Suburban,Good Grid,0,,Batch-1
+53736,North,N2,Peshawar,34.058171,71.576773,Sharing,Dense Urban,Bad Grid,0,,Batch-1
+53773,North,N1,Taxila_Rural,33.796695,72.821958,New Construction,Rural,Bad Grid,Fiber POP,,Batch-1
+52737,North,N2,Peshawar,34.043739,71.577276,New Construction,Suburban,Good Grid,0,,Batch-1
+51179,North,N2,Peshawar,33.985494,71.437936,New Construction,Urban,Good Grid,FTTS,,Batch-1
+51232,North,N2,Peshawar,33.989542,71.457642,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+51794,North,N2,Peshawar,34.006345,71.483806,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+53173,North,N2,Peshawar,33.9515,71.4324,Sharing,Suburban,Good Grid,0,,Batch-1
+53774,North,N1,Wah+Texila,33.724961,72.816769,New Construction,Suburban,Poor Grid,0,,Batch-1
+50749,North,N2,Peshawar,33.97293,71.44906,Sharing,Urban,Good Grid,Fiber POP,,Batch-1
+51769,North,N2,Peshawar,33.9876,71.533,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+53775,North,N1,Taxila_Rural,33.816891,72.788085,New Construction,Rural,Good Grid,0,,Batch-1
+53776,North,N1,Hassan Abdal,33.826849,72.680994,New Construction,Suburban,Good Grid,0,,Batch-1
+53777,North,N1,Hazro_Rural,33.947382,72.551752,Sharing,Rural,Poor Grid,0,,Batch-1
+53778,North,N1,Kamra,33.841562,72.411909,New Construction,Suburban,Good Grid,0,,Batch-1
+51741,North,N1,Rawalpindi,33.604774,73.081113,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+51742,North,N1,Rawalpindi,33.608862,73.001957,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+52189,North,N1,Rawalpindi,33.571363,73.023763,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+52194,North,N1,Rawalpindi,33.58389,73.041092,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+52985,North,N1,Rawalpindi,33.576499,73.035877,New Construction,Urban,Poor Grid,FTTS ,,Batch-1
+53275,North,N1,Rawalpindi,33.613262,73.070989,Sharing,Dense Urban,Good Grid,FTTS ,,Batch-1
+53309,North,N1,Rawalpindi,33.619452,73.081368,New Construction,Dense Urban,Good Grid,0,,Batch-1
+53675,North,N1,Rawalpindi,33.604755,72.985202,New Construction,Suburban,Good Grid,0,,Batch-1
+53668,North,N1,Rawalpindi,33.633849,73.080857,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+53217,North,N1,Rawalpindi,33.620166,73.14944,New Construction,Suburban,Good Grid,0,,Batch-1
+51886,North,N1,Rawalpindi,33.628261,73.084757,New Construction,Dense Urban,Good Grid,Fiber POP,,Batch-1
+52186,North,N1,Rawalpindi,33.559624,73.04746,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+53153,North,N1,Rawalpindi,33.633869,73.105545,New Construction,Urban,Good Grid,0,,Batch-1
+53293,North,N1,Rawalpindi,33.6207,73.06995,New Construction,Suburban,Good Grid,0,,Batch-1
+53577,North,N1,Rawalpindi,33.550615,73.052577,New Construction,Urban,Good Grid,0,,Batch-1
+52988,North,N1,Rawalpindi,33.551752,73.062556,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+52795,North,N1,Rawalpindi,33.63759,73.0384,New Construction,Urban,Good Grid,Fiber POP,,Batch-1
+53305,North,N1,Rawalpindi_Rural,33.317384,72.77793,New Construction,Rural,Good Grid,0,,Batch-1
+52803,North,N1,Rawat,33.492141,73.206534,Sharing,Rural,Good Grid,0,,Batch-1
+53229,North,N1,Rawat,33.494822,73.189913,New Construction,Urban,Good Grid,FTTS ,,Batch-1
+53239,North,N3,Razar_Rural,34.170957,72.276726,New Construction,Rural,Good Grid,0,,Batch-1
+52562,North,N2,Risalpur,34.067063,71.993417,New Construction,Rural,Good Grid,0,,Batch-1
+53248,North,N3,Swabi,34.126062,72.469383,New Construction,Suburban,Good Grid,0,,Batch-1
+52739,North,N3,Swabi_Rural,34.067999,72.443897,New Construction,Rural,Good Grid,0,,Batch-1
+53779,North,N1,fatehjang,33.567661,72.638322,New Construction,Rural,Good Grid,0,,Batch-1
+53780,North,N1,fatehjang,33.563734,72.620352,New Construction,Rural,Good Grid,0,,Batch-1
+53150,North,N3,Swabi_Rural,34.106907,72.475328,New Construction,Suburban,Good Grid,0,,Batch-1
+53459,North,N3,Swabi_Rural,34.163486,72.436256,New Construction,Rural,Good Grid,0,,Batch-1
+53474,North,N3,Takht Bhai_Rural,34.4138,71.9251,New Construction,Rural,Good Grid,0,,Batch-1
+51605,North,N1,Taxila_Rural,33.805244,72.707648,New Construction,Rural,Good Grid,0,,Batch-1
+53580,North,N1,Taxila_Rural,33.820328,72.737384,New Construction,Rural,Good Grid,0,,Batch-1
+52582,North,N1,Taxila_Rural,33.838101,72.729118,New Construction,Rural,Good Grid,0,,Batch-1
+53552,North,N1,Rawalpindi,33.5383,73.1215,Sharing,Urban,Good Grid,0,,Batch-1
+51224,North,N1,Wah+Texila,33.740431,72.795565,New Construction,Suburban,Good Grid,0,,Batch-1
+51228,North,N1,Wah+Texila,33.783045,72.714399,New Construction,Suburban,Good Grid,0,,Batch-1
+53782,North,N3,Mardan,34.224008,72.031863,New Construction,Suburban,Good Grid,0,,Batch-1
+51225,North,N1,Wah+Texila,33.743152,72.773949,Sharing,Suburban,Poor Grid,Fiber POP,,Batch-1
+51229,North,N1,Wah+Texila,33.78783,72.723086,Sharing,Suburban,Good Grid,0,,Batch-1
+51230,North,N1,Wah+Texila,33.79125,72.71597,New Construction,Suburban,Good Grid,0,,Batch-1
+51231,North,N1,Wah+Texila,33.79574,72.73963,New Construction,Urban,Prime,0,,Batch-1
+52635,North,N1,Wah+Texila,33.731,72.8113,Sharing,Suburban,Good Grid,0,Yes,Batch-1
+52240,North,N1,Wah+Texila,33.745008,72.765202,Sharing,Suburban,Good Grid,0,,Batch-1
+52253,North,N1,Wah+Texila,33.798011,72.724247,New Construction,Suburban,Good Grid,Fiber POP,,Batch-1
+52993,North,N1,Wah+Texila,33.737982,72.785879,New Construction,Suburban,Good Grid,0,,Batch-1
+53180,North,N1,Wah+Texila,33.7473,72.777,Sharing,Suburban,Good Grid,0,Yes,Batch-1
+53663,North,N1,Wah+Texila,33.74879,72.78945,Sharing,Suburban,Good Grid,0,Yes,Batch-1
+61278,South,S1,Karachi,24.87903,67.0878,Sharing,Urban,Good Grid,FTTS ,,Batch-1
+61435,South,S1,Karachi,24.8183,66.976,New Construction,Urban,Bad Grid,Fiber POP,,Batch-1
+61765,South,S1,Karachi,24.916,67.0178,New Construction,Dense Urban,Good Grid,0,,Batch-1
+62074,South,S3,Quetta,30.1875,67.0207,New Construction,Urban,Good Grid,0,,Batch-1
+62386,South,S1,Karachi,24.834175,67.151723,New Construction,Urban,Poor Grid,FTTS ,,Batch-1
+62387,South,S1,Karachi,24.904362,67.224511,New Construction,Urban,Poor Grid,0,,Batch-1
+62388,South,S1,Karachi,24.860961,67.202359,New Construction,Urban,Bad Grid,0,,Batch-1
+62037,South,S2,Hyderabad,25.3633,68.3514,New Construction,Dense Urban,Good Grid,0,,Batch-1
+62110,South,S3,Quetta,30.149517,67.026999,New Construction,Urban,Good Grid,0,,Batch-1
+62389,South,S1,Karachi,24.926208,67.174385,New Construction,Urban,Bad Grid,0,,Batch-1
+61219,South,S1,Karachi,24.81237,67.06823,New Construction,Urban,Good Grid,0,,Batch-1
+61538,South,S2,Jamshoro,25.41317,68.28124,Sharing,Suburban,Bad Grid,Fiber POP,,Batch-1
+61320,South,S4,Pano Aqil,27.796394,69.127478,Sharing,Suburban,Good Grid,0,,Batch-1
+62318,South,S3,Quetta,30.250706,67.003963,New Construction,Suburban,Good Grid,0,,Batch-1
+62390,South,S3,Quetta,30.2137,67.024,Sharing,Dense Urban,Good Grid,0,,Batch-1
+62337,South,S1,Karachi,25.02706,67.0619,New Construction,Urban,Prime,0,,Batch-1
+62317,South,S3,Quetta,30.2251,66.96953,New Construction,Suburban,Good Grid,0,,Batch-1
+62305,South,S1,Karachi,24.98422,67.09792,New Construction,Urban,Prime,Planned Fiber POP,,Batch-1
+43532,Central,C1,Raiwind_Rural,31.33715,74.23151,New Construction,Rural,Bad Grid,Fiber POP,,Batch-1
+42441,Central,C1,Lahore,31.4899,74.4102,Sharing,Urban,Good Grid,0,,Batch-1
+43527,Central,C1,Shadara,31.6081,74.2674,Sharing,Urban,Poor Grid,FTTS in progress,,Batch-1
+43696,Central,C1,Lahore,31.414389,74.220331,Sharing,Rural,Good Grid,0,,Batch-1
+43650,Central,C5,Gujrat,32.562115,74.061099,New Construction,Urban,Good Grid,0,,Batch-1
+43699,Central,C5,Daska_Rural,32.412734,74.477604,New Construction,Rural,Good Grid,0,,Batch-1
+43782,Central,C1,Lahore,31.40662,74.16343,New Construction,Urban,Good Grid,0,,Batch-1
+43778,Central,C1,Lahore,31.3742,74.1884,New Construction,Suburban,Good Grid,0,,Batch-1
+43754,Central,C3,Layyah_Rural,30.77529,71.09925,Sharing,Rural,Good Grid,0,,Batch-1
+43780,Central,C3,Multan,30.162277,71.448623,New Construction,Suburban,Good Grid,FTTS ,,Batch-1
+43536,Central,C1,Sheikhupura_Rural,31.7395,74.0055,Sharing,Rural,Bad Grid,Fiber POP,,Batch-1
+43543,Central,C1,Lahore,31.365114,74.267719,Sharing,Urban,Good Grid,0,,Batch-1
+43712,Central,C1,Lahore,31.499076,74.36716,New Construction,Urban,Good Grid,0,,Batch-1
+43065,Central,C3,Multan,30.1843,71.4907,Sharing,Urban,Good Grid,FTTS ,,Batch-1
+43797,Central,C3,Kot Addu_Rural,30.586311,71.231853,New Construction,Suburban,Good Grid,0,,Batch-1
+42866,Central,C4,Chichawatni,30.530059,72.687511,New Construction,Suburban,Good Grid,0,,Batch-1
+43620,Central,C4,Okara,30.804416,73.452434,New Construction,Urban,Good Grid,0,,Batch-1
+43679,Central,C4,Mian Channu_Rural,30.4414,72.3124,Sharing,Rural,Good Grid,0,,Batch-1
+43076,Central,C5,Sialkot,32.4761,74.5561,Sharing,Urban,Good Grid,0,,Batch-1
+43081,Central,C5,Gujrat,32.55159,74.07198,Sharing,Urban,Good Grid,0,,Batch-1
+43661,Central,C5,Gujranwala,32.165561,74.236307,New Construction,Urban,Good Grid,0,,Batch-1
+43786,Central,C5,Kharian_Rural,32.62487,73.80383,Sharing,Rural,Good Grid,0,Yes,Batch-1
+43813,Central,C1,Shadara,31.61694,74.26528,New Construction,Urban,Poor Grid,Fiber POP,,Batch-1
+43814,Central,C1,Shadara,31.639167,74.272778,New Construction,Urban,Poor Grid,FTTS in progress,,Batch-1
+43774,Central,C1,Lahore,31.39323,74.28652,New Construction,Suburban,Good Grid,0,,Batch-1
+43821,Central,C2,Faisalabad,31.491932,73.056304,New Construction,Suburban,Poor Grid,FTTS ,Yes,Batch-1
+43453,Central,C2,Shorkot Cant.,30.787559,72.247847,New Construction,Suburban,Good Grid,0,,Batch-1
+42935,Central,C5,Zafarwal,32.347623,74.903617,New Construction,Suburban,Poor Grid,Fiber POP,,Batch-1
+43655,Central,C5,Gujrat,32.5531,74.0937,Sharing,Urban,Good Grid,0,,Batch-1
+42758,Central,C2,Sargodha,32.08667,72.67109,Sharing,Urban,Good Grid,0,,Batch-1
+42980,Central,C1,Lahore,31.601884,74.480799,New Construction,Suburban,Good Grid,FTTS in progress,,Batch-1
+43519,Central,C4,Bahawalnagar,29.9945,73.2595,Sharing,Suburban,Good Grid,0,,Batch-1
+43769,Central,C1,Raiwind_Rural,31.321293,74.219648,New Construction,Urban,0,0,,Batch-1
+43809,Central,C5,Kharian_Rural,32.821766,74.120384,New Construction,Rural,Good Grid,0,,Batch-1
+43618,Central,C4,Okara,30.80227,73.4417,Sharing,Urban,Bad Grid,Fiber POP,,Batch-1
+62479,South,S1,Karachi,24.80985,67.174911,New Construction,Urban,Poor Grid,0,,Batch-2
+43537,Central,C1,Ferozewala_Rural,31.72739,74.26696,Sharing,Rural,Poor Grid,Fiber POP,,Batch-2
+43546,Central,C1,Sharaqpur,31.45836,74.098756,New Construction,Suburban,Good Grid,0,,Batch-2
+43561,Central,C1,Narang,31.9054,74.5175,New Construction,Suburban,Poor Grid,0,,Batch-2
+43665,Central,C1,Shadara,31.634847,74.211578,New Construction,Suburban,Good Grid,0,,Batch-2
+61486,South,S1,Karachi,24.974219,67.030164,New Construction,Urban,Bad Grid,0,,Batch-2
+61885,South,S1,Karachi,24.8767,67.1009,New Construction,Urban,Good Grid,0,,Batch-2
+62160,South,S3,Dera Bugti_Rural,29.0352,69.1596,New Construction,Rural,Bad Grid,0,,Batch-2
+62480,South,S1,Hub,25.046398,66.871253,New Construction,Urban,Bad Grid,Fiber POP,,Batch-2
+43870,Central,C3,Multan,30.06444,71.49422,Sharing,Rural,Bad Grid,0,Yes,Batch-2
+43871,Central,C3,Layyah,30.9103,70.9971,Sharing,Rural,Good Grid,0,,Batch-2
+43872,Central,C3,Layyah,30.939571,71.045891,New Construction,Rural,Good Grid,0,,Batch-2
+43873,Central,C3,Kot Addu,30.382033,70.936668,New Construction,Rural,Good Grid,0,,Batch-2
+43874,Central,C3,Mailsi,29.888577,72.033942,Sharing,Rural,Good Grid,0,,Batch-2
+43875,Central,C3,Jahania,30.052796,71.84136,Sharing,Rural,Good Grid,0,Yes,Batch-2
+43876,Central,C3,Multan,30.169872,71.440396,New Construction,Urban,Good Grid,FTTS ,,Batch-2
+43877,Central,C3,Alipur,29.34503,70.908958,New Construction,Rural,Bad Grid,0,,Batch-2
+43878,Central,C3,Bahawalpur,29.328458,71.567612,Sharing,Rural,Good Grid,0,Yes,Batch-2
+43879,Central,C4,Basirpur,30.5826,73.8335,Sharing,Rural,Good Grid,Fiber POP,,Batch-2
+43759,Central,C1,Lahore,31.351714,74.200866,New Construction,Rural,Good Grid,0,,Batch-2
+43881,Central,C4,Mian Channu_Rural,30.494644,72.430636,New Construction,Rural,Poor Grid,Fiber POP,,Batch-2
+43883,Central,C1,Shalimar_Rural,31.630356,74.444615,Sharing,Rural,Good Grid,0,,Batch-2
+43885,Central,C1,Raiwand,31.25408,74.217725,New Construction,Suburban,Poor Grid,0,,Batch-2
+43886,Central,C1,Raiwand,31.253419,74.209421,New Construction,Suburban,Poor Grid,0,,Batch-2
+43887,Central,C1,Raiwand,31.2482,74.2154,Sharing,Suburban,Good Grid,0,,Batch-2
+43888,Central,C1,Lahore,31.448732,74.208061,New Construction,Urban,Good Grid,0,,Batch-2
+43889,Central,C1,-,31.689508,74.033122,Sharing,Rural,Poor Grid,0,,Batch-2
+43890,Central,C1,-,31.669047,74.288681,New Construction,Urban,Good Grid,FTTS in progress,,Batch-2
+43891,Central,C1,-,31.551247,74.262779,New Construction,Urban,Good Grid,FTTS ,,Batch-2
+43892,Central,C1,-,31.446776,74.230104,New Construction,Urban,Good Grid,0,,Batch-2
+43893,Central,C1,-,31.606582,74.352479,New Construction,Urban,Good Grid,FTTS ,,Batch-2
+43803,Central,C2,Toba Tek Singh,30.9697,72.47451,Sharing,Suburban,Good Grid,0,,Batch-2
+43894,Central,C2,Mianwali_Rural,32.8214,71.8782,New Construction,Rural,Good Grid,0,,Batch-2
+43895,Central,C2,Kundian,32.479268,71.484364,New Construction,Rural,Good Grid,0,,Batch-2
+43896,Central,C2,Khushab_Rural,32.52235,72.422989,New Construction,Rural,Good Grid,0,,Batch-2
+43897,Central,C2,Khushab_Rural,32.24821,72.319195,New Construction,Suburban,Good Grid,0,,Batch-2
+43779,Central,C2,Khushab_Rural,32.63081,72.45948,New Construction,Rural,Good Grid,0,,Batch-2
+43900,Central,C2,Toba tek singh Rural,30.87901,72.55667,New Construction,Rural,Good Grid,0,,Batch-2
+43901,Central,C2,Sukheke,31.866132,73.501347,Sharing,Suburban,Poor Grid,Fiber POP,,Batch-2
+43902,Central,C3,Multan Saddar_Rural,30.222599,71.622598,New Construction,Rural,Good Grid,0,,Batch-2
+43903,Central,C3,Multan City_Rural,30.132022,71.522875,New Construction,Rural,Good Grid,0,,Batch-2
+43905,Central,C3,Lodhran,29.511784,71.636499,New Construction,Suburban,Good Grid,0,,Batch-2
+43906,Central,C3,Bahawalpur,29.363693,71.64234,New Construction,Rural,Good Grid,0,,Batch-2
+43907,Central,C3,Liaquatpur_Rural,28.82522,70.76556,New Construction,Rural,Good Grid,0,,Batch-2
+43823,Central,C3,Khanewal,30.282874,71.907411,New Construction,Rural,Good Grid,0,,Batch-2
+43909,Central,C3,Kabirwala,30.410124,71.852683,New Construction,Suburban,Good Grid,0,,Batch-2
+43910,Central,C3,Liaquatpur_Rural,29.01083,70.73136,Sharing,Rural,Good Grid,0,Yes,Batch-2
+43911,Central,C3,Liaquatpur_Rural,29.042513,70.898384,New Construction,Suburban,Good Grid,0,,Batch-2
+43912,Central,C3,Liaquatpur_Rural,28.984722,70.858056,New Construction,Rural,Good Grid,0,,Batch-2
+43755,Central,C3,Karor Lal Esan_Rural,31.18595,71.209685,New Construction,Rural,Good Grid,0,,Batch-2
+43913,Central,C3,Bahawalpur City_Rural,29.372644,71.594433,New Construction,Rural,Good Grid,0,,Batch-2
+43915,Central,C3,Multan,30.1826,71.4052,Sharing,Suburban,Good Grid,0,,Batch-2
+43916,Central,C3,Muzaffargarh,30.065813,71.199512,New Construction,Suburban,Good Grid,0,,Batch-2
+43917,Central,C3,Mailsi_Rural,29.713388,72.1366,New Construction,Suburban,Good Grid,0,,Batch-2
+43918,Central,C3,Mailsi_Rural,30.053149,72.054288,New Construction,Rural,Good Grid,Fiber POP,,Batch-2
+43919,Central,C3,Multan,30.198913,71.541716,New Construction,Suburban,Good Grid,FTTS ,,Batch-2
+43920,Central,C3,Alipur_Rural,29.27978,70.78158,Sharing,Rural,Good Grid,0,,Batch-2
+43922,Central,C3,Dera Ghazi Khan_Rural,30.077902,70.682888,New Construction,Rural,Bad Grid,Fiber POP,,Batch-2
+43926,Central,C3,Rohelanwali,29.7592,71.0654,Sharing,Suburban,Bad Grid,0,,Batch-2
+43927,Central,C3,Multan,30.172836,71.53142,Sharing,Suburban,Poor Grid,Fiber POP,,Batch-2
+43928,Central,C3,Multan,30.202702,71.523688,New Construction,Urban,Good Grid,FTTS ,,Batch-2
+43929,Central,C3,Khanewal Rural,30.346595,72.070939,New Construction,Rural,Good Grid,0,,Batch-2
+43930,Central,C3,Kot Subzal,28.212607,69.894109,New Construction,Rural,Poor Grid,0,,Batch-2
+43931,Central,C3,Dera Ghazi Khan,30.098636,70.648523,New Construction,Suburban,Good Grid,0,,Batch-2
+43932,Central,C3,Sanawan,30.3208,70.9641,Sharing,Suburban,Good Grid,0,,Batch-2
+43933,Central,C3,Uch Sharif,29.226884,71.049014,Sharing,Suburban,Poor Grid,0,,Batch-2
+43934,Central,C3,Uch Sharif,29.2446,71.0659,Sharing,Suburban,Bad Grid,Fiber POP,,Batch-2
+43935,Central,C3,Zahir Pir,28.821058,70.525542,New Construction,Suburban,Poor Grid,0,,Batch-2
+43936,Central,C3,Zahir Pir Rural,28.751543,70.558867,New Construction,Rural,Good Grid,0,,Batch-2
+43937,Central,C3,Layyah Rural,30.84542,70.943719,New Construction,Rural,Good Grid,0,,Batch-2
+43938,Central,C3,Multan,30.148722,71.499554,New Construction,Suburban,Good Grid,FTTS ,,Batch-2
+43939,Central,C3,Bahawalpur City_Rural,29.45975,71.6383,Sharing,Suburban,Good Grid,0,,Batch-2
+43941,Central,C3,Kot Chhutta_Rural,29.9215,70.6045,New Construction,Suburban,Good Grid,Fiber POP,,Batch-2
+43942,Central,C3,Kot Chhutta_Rural,29.86813,70.56979,Sharing,Suburban,Good Grid,0,,Batch-2
+43943,Central,C3,Kot Chhutta_Rural,30.003221,70.632764,New Construction,Suburban,Poor Grid,0,,Batch-2
+43944,Central,C4,Kamalia,30.7352,72.6477,New Construction,Suburban,Good Grid,0,,Batch-2
+43945,Central,C4,-,30.1622,73.7388,New Construction,Suburban,Good Grid,0,,Batch-2
+43946,Central,C4,-,30.662548,73.65678,Sharing,Suburban,Poor Grid,0,,Batch-2
+43947,Central,C4,-,30.79358,73.419479,New Construction,Urban,Poor Grid,FTTS ,,Batch-2
+43950,Central,C4,Kamalia,30.7272,72.6495,New Construction,Suburban,Good Grid,0,,Batch-2
+43951,Central,C4,-,30.4345,72.3398,Sharing,Urban,Good Grid,0,,Batch-2
+43952,Central,C4,-,30.7261,72.6361,Sharing,Suburban,Good Grid,0,,Batch-2
+43956,Central,C5,Kamoke_Rural,31.9025,74.2271,Sharing,Suburban,Poor Grid,0,Yes,Batch-2
+43957,Central,C5,Kamoki,31.969463,74.23202,New Construction,Urban,Good Grid,0,,Batch-2
+43958,Central,C5,Sialkot,32.484226,74.545396,Sharing,Urban,Good Grid,0,,Batch-2
+43960,Central,C5,Sambrial_Rural,32.49211,74.297293,New Construction,Suburban,Good Grid,0,,Batch-2
+43961,Central,C5,Sialkot,32.47439,74.50378,Sharing,Urban,Good Grid,0,Yes,Batch-2
+43962,Central,C5,Sialkot_Rural,32.614011,74.542821,Sharing,Rural,Good Grid,0,,Batch-2
+43963,Central,C5,-,32.3738,74.6127,Sharing,Rural,Good Grid,0,,Batch-2
+43964,Central,C5,Gujrat_Rural,32.4501,73.9311,Sharing,Rural,Good Grid,0,Yes,Batch-2
+43965,Central,C5,Gujrat_Rural,32.554564,74.01324,New Construction,Urban,Good Grid,0,,Batch-2
+43966,Central,C5,Gujrat,32.5682,74.0661,Sharing,Urban,Good Grid,0,,Batch-2
+43967,Central,C5,Gujranwala Saddar_Rural,32.1555,74.001056,New Construction,Suburban,Good Grid,0,,Batch-2
+43968,Central,C5,Pasrur_Rural,32.179121,74.555725,New Construction,Suburban,Good Grid,0,,Batch-2
+43969,Central,C5,Narowal_Rural,32.228626,74.751697,Sharing,Rural,Good Grid,0,,Batch-2
+43970,Central,C5,Zafarwal_Rural,32.278148,74.891359,Sharing,Rural,Good Grid,0,,Batch-2
+43971,Central,C5,-,32.79482,73.83768,New Construction,Rural,Good Grid,0,,Batch-2
+43972,Central,C5,-,32.72634,74.07407,New Construction,Rural,Good Grid,0,,Batch-2
+43973,Central,C5,-,32.72835,74.03616,New Construction,Rural,Good Grid,0,,Batch-2
+43975,Central,C5,Sialkot,32.522716,74.515119,New Construction,Urban,Good Grid,0,,Batch-2
+43977,Central,C1,-,31.345075,74.379681,Sharing,Suburban,Good Grid,0,,Batch-2
+43978,Central,C1,-,31.409226,74.2788,New Construction,Urban,Good Grid,Planned Fiber POP,,Batch-2
+43979,Central,C1,Ferozewala,31.682367,74.265519,New Construction,Rural,Bad Grid,0,,Batch-2
+43980,Central,C1,-,31.4642,74.2028,New Construction,Urban,Good Grid,0,,Batch-2
+43981,Central,C1,-,31.639889,74.280002,New Construction,Urban,Good Grid,FTTS in progress,,Batch-2
+43982,Central,C1,-,31.444515,74.365649,New Construction,Urban,Good Grid,0,,Batch-2
+43983,Central,C4,Depalpur_Rural,30.63181,73.7288,Sharing,Suburban,Good Grid,0,,Batch-2
+43984,Central,C3,Shujaabad,29.8765,71.3109,Sharing,Rural,Bad Grid,0,,Batch-2
+43986,Central,C5,Nowshera Virkan_Rural,32.0791,73.8708,Sharing,Rural,Good Grid,0,,Batch-2
+43987,Central,C4,Kamalia,30.728113,72.662189,New Construction,Suburban,Good Grid,0,,Batch-2
+43988,Central,C5,Zafarwal_Rural,32.38234,74.95912,Sharing,Rural,Good Grid,0,,Batch-2
+43854,Central,C4,Renala Khurd_Rural,30.88065,73.59522,New Construction,Suburban,Poor Grid,0,,Batch-2
+43989,Central,C4,Sahiwal_Rural,30.618389,73.094646,New Construction,Urban,Good Grid,0,,Batch-2
+43990,Central,C5,Shakargarh,32.2663,75.1431,Sharing,Urban,Good Grid,0,,Batch-2
+62481,South,S3,Loralai,30.365931,68.590193,New Construction,Rural,Bad Grid,0,,Batch-2
+62482,South,S3,Bela_Rural,26.22878,66.30849,New Construction,Suburban,Poor Grid,0,,Batch-2
+62483,South,S1,Karachi,24.82722,67.0475,New Construction,Urban,Good Grid,0,,Batch-2
+62484,South,S1,Karachi,24.82667,67.224586,New Construction,Urban,Bad Grid,0,,Batch-2
+62485,South,S1,Hub,25.035392,66.864778,New Construction,Urban,Poor Grid,0,,Batch-2
+62486,South,S1,Hub,25.021704,66.878447,New Construction,Suburban,Poor Grid,0,,Batch-2
+62487,South,S3,Dera Murad Jamali,28.532774,68.217344,New Construction,Suburban,Bad Grid,0,,Batch-2
+62488,South,S3,Dera Murad Jamali,28.53944,68.227718,New Construction,Suburban,Bad Grid,0,,Batch-2
+62489,South,S3,Dera Murad Jamali,28.548024,68.205842,New Construction,Suburban,Bad Grid,Fiber POP,,Batch-2
+43991,Central,C1,Raiwind,31.400505,74.22631,New Construction,Rural,Good Grid,0,,Batch-2
+43992,Central,C1,Model Town,31.435158,74.374489,New Construction,Rural,Good Grid,0,,Batch-2
+43993,Central,C1,-,31.41837,74.28339,New Construction,Urban,Good Grid,0,,Batch-2
+43994,Central,C1,Kot Radha Kishan,31.2885,74.1857,Sharing,Suburban,Poor Grid,0,Yes,Batch-2
+43995,Central,C2,Jhang,31.30752,72.3233,New Construction,Urban,Good Grid,0,,Batch-2
+43996,Central,C2,Chiniot,31.70658,72.97103,Sharing,Suburban,Good Grid,0,Yes,Batch-2
+43997,Central,C3,Multan,30.20223,71.49209,New Construction,Urban,Good Grid,0,,Batch-2
+43998,Central,C3,Multan,30.16344,71.4694,New Construction,Suburban,Good Grid,FTTS ,,Batch-2
+43999,Central,C3,Dera Ghazi Khan,30.06738,70.6557,Sharing,Suburban,Good Grid,0,,Batch-2
+44000,Central,C3,Khanpur,28.6356,70.6479,Sharing,Suburban,Good Grid,0,,Batch-2
+44002,Central,C5,-,32.56453,74.05342,New Construction,Urban,Good Grid,0,,Batch-2
+44003,Central,C5,Shakargarh,32.264505,75.168781,New Construction,Suburban,Good Grid,0,,Batch-2
+44004,Central,C5,-,32.246272,74.163194,New Construction,Urban,Good Grid,0,,Batch-2
+44005,Central,C5,-,32.15284,74.11197,Sharing,Suburban,Good Grid,0,,Batch-2
+44006,Central,C5,Gujranwala Saddar,32.098672,74.205465,New Construction,Urban,Good Grid,FTTS ,,Batch-2
+53811,North,N1,Islamabad,33.569117,73.194188,New Construction,Suburban,Good Grid,0,,Batch-2
+53813,North,N1,Rawalpindi,33.620283,72.988672,New Construction,Urban,Good Grid,0,,Batch-2
+62490,South,S1,Karachi,24.825911,67.000379,New Construction,Urban,Good Grid,0,,Batch-2
+62491,South,S1,Karachi,24.821896,67.011107,New Construction,Urban,Good Grid,0,,Batch-2
+62492,South,S1,Karachi,24.865927,67.039526,New Construction,Urban,Good Grid,0,,Batch-2
+62493,South,S1,Karachi,24.949088,67.136528,New Construction,Urban,Poor Grid,0,,Batch-2
+62494,South,S1,Karachi,24.994217,67.131861,New Construction,Urban,Bad Grid,0,,Batch-2
+62495,South,S1,Karachi,24.995233,67.035672,New Construction,Urban,Poor Grid,0,,Batch-2
+62496,South,S1,Karachi,24.95674,67.039028,New Construction,Dense Urban,Good Grid,0,,Batch-2
+62497,South,S3,Dera murad jamali_Rural,28.453222,68.037128,Sharing,Rural,Bad Grid,0,Yes,Batch-2
+62394,South,S4,Ghotki,28.006792,69.325796,New Construction,Urban,Good Grid,0,,Batch-2
+50755,North,N1,Rawalpindi,33.614254,73.025054,New Construction,Urban,Good Grid,FTTS ,,Batch-2
+50807,North,N1,Rawalpindi,33.56166,73.13443,Sharing,Suburban,Good Grid,FTTS ,,Batch-2
+50810,North,N1,Rawalpindi,33.54896,73.122836,New Construction,Suburban,Good Grid,0,,Batch-2
+50815,North,N1,Islamabad,33.735155,73.07767,New Construction,Rural,Good Grid,0,,Batch-2
+51360,North,N1,Islamabad,33.677378,72.991277,New Construction,Urban,Good Grid,FTTS ,,Batch-2
+52025,North,N1,Islamabad,33.710999,73.089765,New Construction,Urban,Good Grid,0,,Batch-2
+52191,North,N1,Rawalpindi,33.579361,73.048826,Sharing,Urban,Good Grid,FTTS,,Batch-2
+52517,North,N1,Gujar Khan_Rural,33.2432,73.32,Sharing,Urban,Bad Grid,Fiber POP,,Batch-2
+52572,North,N1,Rawalpindi,33.48822,73.07436,Sharing,Urban,Good Grid,0,,Batch-2
+52652,North,N1,Rawalpindi,33.527687,73.066318,New Construction,Urban,Good Grid,0,,Batch-2
+52763,North,N3,Swat Rani Zai_Rural,34.610932,71.971414,New Construction,Rural,Good Grid,0,,Batch-2
+52799,North,N1,Rawalpindi,33.52148,73.1588,New Construction,Suburban,Good Grid,FTTS ,,Batch-2
+53196,North,N1,Taxila_Rural,33.678971,72.825253,New Construction,Suburban,Good Grid,0,,Batch-2
+53320,North,N1,Rawalpindi,33.489165,73.094638,New Construction,Urban,Good Grid,0,,Batch-2
+53324,North,N1,Hazro_Rural,33.924881,72.42566,New Construction,Rural,Good Grid,0,,Batch-2
+53353,North,N1,Rawalpindi,33.526738,73.092091,New Construction,Urban,Good Grid,0,,Batch-2
+53578,North,N1,Rawalpindi,33.497116,73.108421,New Construction,Urban,Good Grid,0,,Batch-2
+53579,North,N1,Islamabad,33.641355,73.039252,Sharing,Urban,Good Grid,0,,Batch-2
+53619,North,N1,Kahuta,33.592818,73.391837,Sharing,Urban,Good Grid,0,,Batch-2
+62025,South,S1,Karachi,25.00611,67.12438,Sharing,Suburban,Bad Grid,0,,Batch-2
+62396,South,S1,Karachi,24.962489,66.950655,New Construction,Urban,Good Grid,0,,Batch-2
+62397,South,S3,Quetta,30.154411,66.985161,New Construction,Suburban,Good Grid,Planned Fiber POP,,Batch-2
+62398,South,S3,Quetta,30.211811,66.992317,New Construction,Urban,Good Grid,0,,Batch-2
+62399,South,S3,Quetta,30.210812,66.970286,New Construction,Suburban,Poor Grid,0,,Batch-2
+62400,South,S2,Hyderabad,25.34135,68.359693,New Construction,Urban,Poor Grid,0,,Batch-2
+62401,South,S4,Qambar,27.592969,68.001905,New Construction,Suburban,Poor Grid,0,,Batch-2
+62402,South,S2,Umerkot,25.360986,69.732718,New Construction,Rural,Good Grid,0,,Batch-2
+62403,South,S4,Kandhkot,28.24513,69.17641,Sharing,Urban,Bad Grid,0,,Batch-2
+53787,North,N2,-,33.94782,72.07091,Sharing,Rural,Bad Grid,0,,Batch-2
+62404,South,S4,Shadadpur,25.913632,68.613573,New Construction,Suburban,Bad Grid,0,,Batch-2
+62405,South,S3,Chaman_Rural,30.9086,66.51,New Construction,Urban,Bad Grid,0,,Batch-2
+62407,South,S3,Quetta Saddar_Rural,30.365159,66.959181,New Construction,Urban,Bad Grid,0,,Batch-2
+62408,South,S3,Quetta,30.2526,66.9507,Sharing,Suburban,Good Grid,Fiber POP,,Batch-2
+62409,South,S3,Quetta City_Rural,30.243,66.9281,Sharing,Suburban,Good Grid,0,,Batch-2
+62410,South,S3,Quetta,30.23232,66.957014,New Construction,Suburban,Good Grid,0,,Batch-2
+62411,South,S3,Quetta,30.221479,67.038205,New Construction,Suburban,Good Grid,0,,Batch-2
+62413,South,S1,Karachi,25.092162,67.013228,Sharing,Rural,Prime,0,,Batch-2
+62414,South,S1,Karachi,24.910673,67.054457,New Construction,Urban,Poor Grid,Fiber POP,,Batch-2
+62415,South,S1,Karachi,24.85191,67.084496,New Construction,Dense Urban,Good Grid,0,,Batch-2
+62416,South,S1,Karachi,24.939154,66.971229,New Construction,Urban,Bad Grid,0,,Batch-2
+62345,South,S1,Karachi,24.9348,67.0162,Sharing,Dense Urban,Bad Grid,0,,Batch-2
+62417,South,S1,Karachi,24.944725,67.101078,New Construction,Urban,Good Grid,0,,Batch-2
+62418,South,S1,Karachi,24.916,67.0729,Sharing,Urban,Good Grid,0,,Batch-2
+62419,South,S4,Mehar_Rural,27.087566,67.925528,Sharing,Rural,Bad Grid,0,,Batch-2
+62420,South,S4,Nawabshah,26.2445,68.4436,Sharing,Rural,Good Grid,0,,Batch-2
+62421,South,S4,Tando Adam,25.75611,68.66691,Sharing,Suburban,Good Grid,0,Yes,Batch-2
+62423,South,S3,Quetta,30.161821,67.015761,New Construction,Urban,Good Grid,0,,Batch-2
+62424,South,S3,Pishin_Rural,30.5361,66.9022,Sharing,Rural,Bad Grid,Fiber POP,,Batch-2
+53788,North,N1,Rawalpindi,33.514685,73.104724,Sharing,Urban,Good Grid,0,,Batch-2
+53789,North,N1,Rawalpindi,33.584516,73.059094,New Construction,Urban,Good Grid,0,,Batch-2
+53790,North,N1,Rawalpindi,33.539643,73.022374,New Construction,Suburban,Good Grid,0,,Batch-2
+53793,North,N2,Peshawar,34.038828,71.606032,New Construction,Urban,Good Grid,0,,Batch-2
+53795,North,N3,Haripur_Rural,33.770655,72.858466,New Construction,Rural,Good Grid,0,,Batch-2
+53796,North,N1,Rawalpindi,33.5936,73.0273,Sharing,Urban,Good Grid,0,,Batch-2
+53797,North,N2,Nowshera_Rural,34.029754,71.984267,New Construction,Suburban,Good Grid,0,,Batch-2
+53798,North,N2,Peshawar,34.00195,71.609264,New Construction,Suburban,Good Grid,FTTS ,,Batch-2
+53799,North,N2,Charsadda_Rural,34.180605,71.804795,New Construction,Rural,Bad Grid,0,,Batch-2
+53800,North,N2,Jehangira_Rural,33.980415,72.173392,New Construction,Rural,Good Grid,0,,Batch-2
+62425,South,S2,Tando Muhammad Khan,25.130526,68.542633,New Construction,Suburban,Good Grid,0,,Batch-2
+62426,South,S2,Sehwan,26.427417,67.858143,New Construction,Rural,Bad Grid,0,,Batch-2
+62427,South,S3,Killa Saifullah_Rural,30.702934,68.356398,New Construction,Rural,Bad Grid,0,,Batch-2
+62428,South,S4,Jacobabad,28.271361,68.452754,New Construction,Urban,Prime,Fiber POP,,Batch-2
+53801,North,N2,Peshawar,34.011629,71.51116,New Construction,Urban,Poor Grid,FTTS ,,Batch-2
+53802,North,N2,Peshawar,34.008277,71.499697,Sharing,Urban,Good Grid,FTTS ,,Batch-2
+53803,North,N2,Peshawar,34.00403,71.596351,New Construction,Dense Urban,Good Grid,Fiber POP,,Batch-2
+62429,South,S1,Karachi,24.899998,67.063155,New Construction,Dense Urban,Good Grid,0,,Batch-2
+62430,South,S2,Nawabshah,26.238253,68.419681,New Construction,Suburban,Bad Grid,0,,Batch-2
+62431,South,S3,Quetta,30.186184,66.95711,New Construction,Suburban,Good Grid,0,,Batch-2
+62432,South,S4,Warah_Rural,27.499948,67.906376,New Construction,Rural,Bad Grid,0,,Batch-2
+62433,South,S1,Karachi,24.849926,67.336932,New Construction,Rural,Bad Grid,0,,Batch-2
+62435,South,S1,Karachi,24.854386,67.11137,New Construction,Urban,Bad Grid,0,,Batch-2
+62436,South,S1,Karachi,24.85875,67.24674,Sharing,Urban,Good Grid,0,,Batch-2
+62437,South,S1,Karachi,24.88044,66.98545,Sharing,Urban,Good Grid,0,,Batch-2
+62438,South,S1,Karachi,24.959836,67.143785,New Construction,Urban,Good Grid,0,,Batch-2
+62439,South,S1,Karachi,24.980954,67.108531,New Construction,Urban,Poor Grid,0,,Batch-2
+62440,South,S1,Karachi,24.853031,67.282048,New Construction,Suburban,Bad Grid,0,,Batch-2
+62441,South,S1,Karachi,24.99485,67.190731,New Construction,Rural,Prime,0,,Batch-2
+62442,South,S1,Karachi,25.016572,67.157409,New Construction,Suburban,Prime,0,,Batch-2
+62443,South,S1,Karachi,25.003778,67.155266,New Construction,Suburban,Bad Grid,0,,Batch-2
+62444,South,S1,Karachi,25.026589,67.081985,New Construction,Urban,Good Grid,0,,Batch-2
+62447,South,S1,Karachi,24.950707,66.953748,New Construction,Urban,Bad Grid,0,,Batch-2
+62448,South,S1,Karachi,24.959053,66.930457,New Construction,Suburban,Bad Grid,Planned Fiber POP,,Batch-2
+62449,South,S1,Karachi,24.936226,66.953208,New Construction,Urban,Bad Grid,0,,Batch-2
+62451,South,S3,Quetta City_Rural,30.257188,66.898129,New Construction,Suburban,Bad Grid,0,,Batch-2
+62453,South,S3,Quetta,30.18188,66.969286,New Construction,Suburban,Good Grid,0,,Batch-2
+62454,South,S3,Quetta,30.156433,67.011446,New Construction,Urban,Poor Grid,0,,Batch-2
+62455,South,S3,Quetta,30.158213,66.997693,New Construction,Suburban,Good Grid,0,,Batch-2
+62456,South,S3,Quetta,30.146298,67.017697,New Construction,Urban,Good Grid,0,,Batch-2
+53804,North,N1,-,33.64659,73.056429,New Construction,Urban,Good Grid,FTTS ,,Batch-2
+53805,North,N1,-,33.23254,72.914182,New Construction,Rural,Good Grid,0,,Batch-2
+53807,North,N2,-,33.9846,71.485,Sharing,Suburban,Good Grid,FTTS ,,Batch-2
+53809,North,N3,-,34.266125,72.148862,New Construction,Rural,Bad Grid,0,,Batch-2
+62457,South,S1,Karachi,24.96893,67.063443,New Construction,Urban,Good Grid,FTTS ,,Batch-2
+62458,South,S1,Karachi,24.881725,66.994544,New Construction,Dense Urban,Poor Grid,0,,Batch-2
+62459,South,S1,Karachi,24.862353,67.048073,New Construction,Urban,Good Grid,0,,Batch-2
+62460,South,S1,Karachi,24.78859,67.13029,Sharing,Urban,Good Grid,0,,Batch-2
+62461,South,S2,Jati_Rural,24.351002,68.269995,New Construction,Rural,Bad Grid,0,,Batch-2
+62463,South,S2,Shahdadpur,25.933081,68.619914,New Construction,Suburban,Poor Grid,0,,Batch-2
+62465,South,S2,Matiari_Rural,25.7474,68.4499,Sharing,Rural,Poor Grid,0,,Batch-2
+62466,South,S2,Hyderabad,25.502658,68.466912,New Construction,Rural,Bad Grid,0,,Batch-2
+62468,South,S3,Quetta,30.0934,66.997039,New Construction,Suburban,Good Grid,0,,Batch-2
+62469,South,S3,Quetta,30.078261,66.938591,New Construction,Suburban,Good Grid,0,,Batch-2
+62470,South,S4,Larkana,27.534567,68.198697,New Construction,Urban,Bad Grid,0,,Batch-2
+62472,South,S4,Miro Khan_Rural,27.757241,68.09155,New Construction,Rural,Bad Grid,0,,Batch-2
+62473,South,S4,Garhi Yasin_Rural,27.75633,68.45384,Sharing,Suburban,Bad Grid,0,,Batch-2
+62474,South,S4,Dadu_Rural,26.651133,67.711594,New Construction,Rural,Bad Grid,0,,Batch-2
+62475,South,S4,Bhiria_Rural,26.861501,68.269009,New Construction,Rural,Bad Grid,0,,Batch-2
+62476,South,S4,Gambat,27.354301,68.506547,New Construction,Rural,Good Grid,0,,Batch-2
+62477,South,S4,Ranipur,27.30681,68.51308,Sharing,Rural,Bad Grid,0,,Batch-2
+62478,South,S4,Kot Diji_Rural,27.31967,68.64933,Sharing,Rural,Bad Grid,0,Yes,Batch-2
+53784,North,N2,Peshawar,34.083649,71.604352,Sharing,Suburban,Bad Grid,0,,Batch-2
+53786,North,N2,Peshawar_Rural,34.09568,71.50247,Sharing,Suburban,Good Grid,0,,Batch-2
+53407,North,N2,Charsadda_Rural,34.212165,71.753521,Sharing,Rural,Bad Grid,0,,Batch-2
+62011,South,S2,Hyderabad,25.37195,68.36725,New Construction,Dense Urban,Good Grid,0,,Batch-2
+62081,South,S3,Quetta,30.1828,67.0083,New Construction,Urban,Poor Grid,0,,Batch-2
+62087,South,S4,Rohri_Rural,27.5598,69.0502,New Construction,Rural,Bad Grid,0,,Batch-2
+62392,South,S3,Zhob,31.329916,69.449291,New Construction,Rural,Bad Grid,0,,Batch-2
+62393,South,S3,Zhob,31.344006,69.446498,New Construction,Rural,Dark Site,0,,Batch-2
+61480,South,S2,Matli_Rural,25.123065,68.88898,New Construction,Rural,Good Grid,0,,Batch-2
+53075,North,N2,Kurram Agency,33.5389,70.3456,,Rural,Bad Grid,Planned Fiber POP,,Batch-3
+52090,North,N1,Islamabad,33.661,73.0563,,Urban,Good Grid,FTTS ,,Batch-3
+53540,North,N2,Peshawar,33.904167,71.357661,,Rural,Prime,0,,Batch-3
+51851,North,N1,Rawalpindi,33.526846,73.155079,,Urban,Good Grid,0,,Batch-3
+53108,North,N2,F.R. Kohat,33.665224,71.53884,,Rural,Prime,0,Yes,Batch-3
+52590,North,N2,Peshawar,34.099917,71.441628,,Rural,Prime,0,,Batch-3
+52591,North,N2,Peshawar,34.033651,71.42299,,Urban,Prime,0,,Batch-3
+43758,Central,C1,Lahore,31.361974,74.221905,,Rural,Good Grid,0,,Batch-3
+50748,North,N2,Peshawar,34.01234,71.543574,,Urban,Good Grid,0,Yes,Batch-3
+53069,North,N2,Central Orakzai,33.74496,70.82738,,Rural,Prime,0,,Batch-3
+53818,North,N2,Peshawar,33.8042,71.5933,,Rural,Bad Grid,0,,Batch-3
+53820,North,N2,Bara,33.90228,71.38093,,Rural,Bad Grid,0,,Batch-3
+53821,North,N2,Yake Ghund,34.19997,71.41669,,Suburban,Solar,0,,Batch-3
+53825,North,N2,Peshawar,34.164101,71.420588,,Rural,Bad Grid,0,,Batch-3
+53826,North,N2,Peshawar,33.798001,71.560284,,Rural,Bad Grid,Fiber POP,Yes,Batch-3
+53827,North,N2,Peshawar,33.967859,71.490946,,Urban,Bad Grid,FTTS ,,Batch-3
+MUZ 1,North,N3,Muzaffarabad,34.3801,73.4646,,Suburban,Good Grid,0,,Batch-3
+53263,North,N3,Muzaffarabad,34.3707,73.46217,,Suburban,Good Grid,0,,Batch-3
+53754,North,N3,Haveli_Rural,33.98082,73.7651,,Rural,Good Grid,0,,Batch-3
+HJR_OB_2024_1,North,N3,Bagh,33.817575,73.971389,,Rural,Good Grid,0,,Batch-3
+KTL_OB_2024_1,North,N3,Kotli,33.5047,73.9918,,Rural,Good Grid,0,,Batch-3
+GBSKU 04,North,N3,Skardu,35.28932,75.66163,,Rural,Good Grid,0,,Batch-3
+GBSKU 03,North,N3,Skardu,35.30009,75.63059,,Rural,Good Grid,0,,Batch-3
+Hun_OB_01,North,N3,Gilgit,36.288149,74.60313,,Rural,Good Grid,0,,Batch-3
+GLT_OB_01,North,N3,Gilgit,35.886721,74.460049,,Rural,Good Grid,0,,Batch-3
+44028,Central,C2,JHANG,30.712107,71.703798,,Rural,Good Grid,0,,Batch-4
+44032,Central,C2,JHANG,30.730965,71.975263,,Rural,Good Grid,0,,Batch-4
+44042,Central,C2,JHANG,30.842891,71.825139,,Rural,Good Grid,0,,Batch-4
+44057,Central,C2,JHANG,31.404739,72.761435,,Rural,Good Grid,0,,Batch-4
+44061,Central,C2,JHANG,30.835996,72.077831,,Suburban,Good Grid,0,Yes,Batch-4
+44073,Central,C2,JHANG,31.380678,72.907844,,Rural,Good Grid,0,,Batch-4
+44085,Central,C1,LAHORE,31.372935,74.236177,,Suburban,Good Grid,0,,Batch-4
+44091,Central,C1,LAHORE,31.371725,74.205522,,Suburban,Good Grid,0,,Batch-4
+44093,Central,C1,LAHORE,31.30639,73.20527,,Rural,Good Grid,0,,Batch-4
+44094,Central,C1,LAHORE,31.41718,74.239989,,Urban,Good Grid,0,,Batch-4
+44098,Central,C1,LAHORE,31.356035,74.254432,,Rural,Good Grid,0,,Batch-4
+44100,Central,C1,LAHORE,31.36041,74.182691,,Suburban,Good Grid,0,,Batch-4
+44114,Central,C1,KASUR,31.3201,74.487,,Rural,Good Grid,0,Yes,Batch-4
+44116,Central,C1,LAHORE,31.3275,74.3774,,Suburban,Bad Grid,0,,Batch-4
+44138,Central,C1,LAHORE,31.467501,74.46532,,Urban,Good Grid,Planned Fiber POP,,Batch-4
+44228,Central,C3,MUZAFFARGARH,30.500438,70.955544,,Urban,Good Grid,0,,Batch-4
+44229,Central,C3,MUZAFFARGARH,30.266109,70.955513,,Rural,Bad Grid,Fiber POP,,Batch-4
+44244,Central,C3,MUZAFFARGARH,29.573358,71.010874,,Suburban,Poor Grid,0,,Batch-4
+44246,Central,C3,MUZAFFARGARH,29.70077,71.079135,,Suburban,Good Grid,0,,Batch-4
+44249,Central,C3,MUZAFFARGARH,29.92225,70.96046,,Suburban,Poor Grid,Planned Fiber POP,Yes,Batch-4
+44277,Central,C3,Layyah,30.950005,70.940948,,Suburban,Good Grid,0,,Batch-4
+44278,Central,C3,Layyah,30.978929,70.951609,,Suburban,Good Grid,0,,Batch-4
+53830,North,N2,Swat,33.5727,71.6494,,Rural,Good Grid,0,,Batch-4
+53834,North,N2,Kohat-Hangu,33.53422,71.062523,,Rural,Good Grid,0,,Batch-4
+53837,North,N2,Kohat-Hangu,33.5488,71.1051,,Rural,Prime,0,,Batch-4
+53839,North,N2,Kohat-Hangu,33.503533,70.915248,,Rural,Good Grid,0,,Batch-4
+53840,North,N2,Kohat-Hangu,33.5174,71.48436,,Rural,Good Grid,0,,Batch-4
+53841,North,N2,Kohat-Hangu,33.61481,71.45608,,Suburban,Poor Grid,0,,Batch-4
+53842,North,N2,Kohat-Hangu,33.592,71.4421,,Urban,Good Grid,0,,Batch-4
+53843,North,N2,Kohat-Hangu,33.54654,71.53439,,Rural,Good Grid,0,,Batch-4
+53846,North,N2,Kohat-Hangu,33.50839,71.46957,,Rural,Good Grid,0,,Batch-4
+Temp-1,North,North-3,Lower Dir,34.8466,71.6763,Sharing,Rural,Bad Grid,Fiber POP,,Batch-Special
+Temp-6,North,North-3,Lower Dir,34.687792,72.004169,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-12,North,North-3,Lower Dir,34.826208,71.745141,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-18,North,North-3,Lower Dir,34.94352,71.68456,Sharing,Rural,Prime,0,,Batch-Special
+Temp-22,North,North-3,Lower Dir,34.89349,71.69176,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-23,North,North-3,Lower Dir,34.96154,71.68689,Sharing,Rural,Prime,0,,Batch-Special
+Temp-24,North,North-3,Lower Dir,34.95091,71.69273,Sharing,Rural,Solar,0,,Batch-Special
+Temp-26,North,North-3,Lower Dir,34.891,71.64435,Sharing,Rural,Prime,0,,Batch-Special
+Temp-27,North,North-3,Lower Dir,34.9016,71.6562,New Construction,Rural,Prime,0,,Batch-Special
+Temp-28,North,North-3,Lower Dir,34.9414,71.5901,Sharing,Rural,Prime,0,,Batch-Special
+Temp-29,North,North-3,Lower Dir,34.8365,71.79039,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-30,North,North-3,Lower Dir,35.03724,71.82559,Sharing,Rural,Poor Grid,0,,Batch-Special
+Temp-36,North,North-3,Lower Dir,34.9468,71.8143,New Construction,Rural,Bad Grid,0,,Batch-Special
+Temp-37,North,North-3,Lower Dir,34.9489,71.8379,New Construction,Rural,Poor Grid,0,,Batch-Special
+Temp-41,North,North-3,Lower Dir,34.8422,71.9153,New Construction,Rural,Bad Grid,Fiber POP,,Batch-Special
+Temp-43,North,North-3,Lower Dir,34.8564,71.9499,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-54,North,North-3,Lower Dir,34.815457,71.848484,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-55,North,North-3,Lower Dir,34.9303,71.8024,Sharing,Rural,Prime,0,,Batch-Special
+Temp-56,North,North-3,Lower Dir,34.864294,72.057643,New Construction,Rural,Prime,0,,Batch-Special
+Temp-57,North,North-3,Lower Dir,34.9176,71.9243,New Construction,Rural,Bad Grid,0,,Batch-Special
+Temp-59,North,North-3,Swat,34.8897,72.5803,Sharing,Rural,Prime,Fiber POP,,Batch-Special
+Temp-69,North,North-3,Swat,34.8586,72.56266,New Construction,Rural,Bad Grid,0,,Batch-Special
+Temp-70,North,North-3,Swat,34.8165,72.5022,Sharing,Rural,Prime,0,,Batch-Special
+Temp-103,North,North-3,Upper Dir,34.97403,72.13554,Sharing,Rural,Prime,0,,Batch-Special
+Temp-106,North,North-3,Upper Dir,35.02025,72.08841,Sharing,Rural,Prime,0,,Batch-Special
+Temp-111,North,North-3,Upper Dir,35.1062,71.7882,Sharing,Rural,Poor Grid,0,,Batch-Special
+Temp-112,North,North-3,Upper Dir,35.089,71.7635,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-115,North,North-3,Upper Dir,35.1035,72.00695,New Construction,Rural,Prime,Fiber POP,,Batch-Special
+Temp-119,North,North-3,Upper Dir,35.3983,72.1541,Sharing,Rural,Prime,0,,Batch-Special
+Temp-120,North,North-3,Upper Dir,35.3555,72.1587,Sharing,Rural,Prime,0,,Batch-Special
+Temp-125,North,North-3,Upper Dir,35.054502,71.933759,New Construction,Rural,Prime,0,,Batch-Special
+Temp-127,North,North-3,Upper Dir,35.34583,71.96606,Sharing,Rural,Prime,0,,Batch-Special
+Temp-128,North,North-3,Upper Dir,35.2675,71.9892,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-129,North,North-3,Upper Dir,35.1882,72.0133,Sharing,Rural,Prime,0,,Batch-Special
+Temp-131,North,North-3,Upper Dir,35.3121,72.0158,Sharing,Rural,Prime,0,,Batch-Special
+Temp-134,North,North-3,Upper Dir,35.2393,71.8148,Sharing,Rural,Poor Grid,0,,Batch-Special
+Temp-137,North,North-3,Upper Dir,35.1388,72.0516,New Construction,Rural,Poor Grid,0,,Batch-Special
+Temp-138,North,North-3,Upper Dir,35.1989,72.1887,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-139,North,North-3,Upper Dir,35.0625,72.062,Sharing,Rural,Prime,0,,Batch-Special
+Temp-140,North,North-3,Upper Dir,35.1501,71.9386,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-143,South,South-4,Khairpur,26.9218,68.4298,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-144,South,South-4,Khairpur,27.5402,68.6471,Sharing,Rural,Prime,0,,Batch-Special
+Temp-145,South,South-4,Khairpur,27.207,68.665,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-149,South,South-4,Khairpur,27.1662,68.4034,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-150,South,South-4,Khairpur,27.4829,68.5791,Sharing,Rural,Prime,0,,Batch-Special
+Temp-151,South,South-4,Khairpur,27.414,68.5943,Sharing,Rural,Prime,0,,Batch-Special
+Temp-152,South,South-4,Khairpur,27.1985,69.0422,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-153,South,South-4,Khairpur,27.39844,68.73842,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-154,South,South-4,Khairpur,27.45634,68.3581,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-155,South,South-4,Khairpur,26.9845,68.9042,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-156,South,South-4,Khairpur,27.404,68.6722,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-158,South,South-4,Khairpur,27.2576,68.5893,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-159,South,South-4,Khairpur,27.36576,68.63541,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-160,South,South-4,Khairpur,27.28,68.6001,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-161,South,South-4,Khairpur,27.4305,68.772,Sharing,Rural,Poor Grid,0,,Batch-Special
+Temp-164,South,South-4,Khairpur,27.4626,68.4616,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-165,South,South-4,Khairpur,27.4987,68.4923,Sharing,Rural,Prime,Fiber POP,,Batch-Special
+Temp-166,South,South-4,Khairpur,27.6507,68.6767,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-167,South,South-4,Khairpur,27.5397,68.7502,Sharing,Rural,Bad Grid,Fiber POP,,Batch-Special
+Temp-168,South,South-4,Khairpur,27.1021,68.4504,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-170,South,South-4,Khairpur,27.0359,68.6189,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-172,South,South-4,Khairpur,27.42376,68.49596,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-173,South,South-4,Khairpur,27.422,68.5666,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-174,South,South-4,Khairpur,27.52093,68.54904,Sharing,Rural,Prime,0,,Batch-Special
+Temp-175,South,South-4,Khairpur,26.8946,68.3683,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-176,South,South-4,Khairpur,26.84,68.3782,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-177,South,South-4,Khairpur,26.7846,68.3378,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-178,South,South-4,Khairpur,27.63197,68.54724,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-179,South,South-4,Khairpur,27.62017,68.75115,Sharing,Rural,Poor Grid,0,,Batch-Special
+Temp-180,South,South-4,Khairpur,27.027553,68.522008,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-182,South,South-4,Khairpur,27.267,68.5205,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-183,South,South-4,Khairpur,27.15756,68.46312,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-185,South,South-4,Khairpur,27.1438,68.6466,Sharing,Rural,Poor Grid,0,,Batch-Special
+Temp-187,South,South-2,Shaheed Benazirabad,26.61874,68.341685,Sharing,Rural,Bad Grid,Fiber POP,,Batch-Special
+Temp-188,South,South-2,Shaheed Benazirabad,26.5719,68.2699,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-191,South,South-2,Shaheed Benazirabad,26.3336,68.3528,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-192,South,South-2,Shaheed Benazirabad,26.3067,68.37,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-195,South,South-2,Shaheed Benazirabad,26.2475,68.2972,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-198,South,South-2,Shaheed Benazirabad,26.46206,68.25165,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-199,South,South-2,Shaheed Benazirabad,26.5515,67.9881,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-200,South,South-2,Shaheed Benazirabad,26.4675,68.0636,Sharing,Rural,Solar,0,,Batch-Special
+Temp-201,South,South-2,Shaheed Benazirabad,26.4619,68.1622,Sharing,Rural,Poor Grid,0,Yes,Batch-Special
+Temp-207,South,South-2,Shaheed Benazirabad,26.4677,68.4911,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-208,South,South-2,Shaheed Benazirabad,26.488,68.3883,Sharing,Rural,Solar,0,Yes,Batch-Special
+Temp-209,South,South-2,Shaheed Benazirabad,26.4467,68.5656,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-210,South,South-2,Shaheed Benazirabad,26.13999,68.42705,Sharing,Rural,Prime,0,,Batch-Special
+Temp-212,South,South-2,Shaheed Benazirabad,26.4544,68.0006,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-214,South,South-2,Shaheed Benazirabad,26.404482,68.312818,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-217,South,South-2,Shaheed Benazirabad,26.515,68.1144,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-218,South,South-2,Shaheed Benazirabad,26.30956,68.66207,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-219,South,South-2,Shaheed Benazirabad,26.1785,68.3698,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-220,South,South-2,Shaheed Benazirabad,26.3302,68.5003,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-221,South,South-2,Shaheed Benazirabad,26.372,68.518,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-222,South,South-2,Shaheed Benazirabad,26.32547,68.57841,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-225,South,South-2,Shaheed Benazirabad,26.24013,68.38308,Sharing,Suburban,Bad Grid,0,,Batch-Special
+Temp-226,South,South-2,Shaheed Benazirabad,26.26071,68.38586,Sharing,Suburban,Bad Grid,0,,Batch-Special
+Temp-227,South,South-2,Shaheed Benazirabad,26.27846,68.03786,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-232,South,South-2,Shaheed Benazirabad,26.1362,68.2684,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-237,Central,Central-5,Mandi Bahauddin,32.53962,73.52578,New Construction,Rural,Poor Grid,0,,Batch-Special
+Temp-245,Central,Central-5,Mandi Bahauddin,32.566846,73.48295,New Construction,Urban,Poor Grid,0,,Batch-Special
+Temp-248,Central,Central-5,Mandi Bahauddin,32.56741,73.52625,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-249,Central,Central-5,Mandi Bahauddin,32.58701,73.51247,New Construction,Suburban,Good Grid,0,,Batch-Special
+Temp-251,Central,Central-5,Mandi Bahauddin,32.558324,73.45566,New Construction,Suburban,Good Grid,0,,Batch-Special
+Temp-252,Central,Central-5,Mandi Bahauddin,32.633,73.47155,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-263,Central,Central-5,Mandi Bahauddin,32.52793,73.242235,New Construction,Suburban,Good Grid,0,,Batch-Special
+Temp-264,Central,Central-5,Mandi Bahauddin,32.508831,73.201854,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-266,Central,Central-5,Mandi Bahauddin,32.56385,73.151947,New Construction,Suburban,Good Grid,0,,Batch-Special
+Temp-270,Central,Central-5,Mandi Bahauddin,32.5215,73.3234,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-272,Central,Central-5,Mandi Bahauddin,32.52615,73.27661,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-275,Central,Central-5,Mandi Bahauddin,32.324367,73.295848,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-276,Central,Central-5,Mandi Bahauddin,32.39074,73.19817,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-281,Central,Central-5,Mandi Bahauddin,32.34517,73.360141,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-284,Central,Central-2,Jhang,30.956536,72.003472,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-285,Central,Central-2,Jhang,31.0,72.0,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-286,Central,Central-2,Jhang,30.9794,71.9545,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-287,Central,Central-2,Jhang,30.7476,71.7258,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-289,Central,Central-2,Jhang,30.814806,71.867,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-292,Central,Central-2,Jhang,31.20312,72.03972,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-297,Central,Central-2,Jhang,31.38778,72.23465,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-300,Central,Central-2,Jhang,31.45944,72.15688,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-304,Central,Central-2,Jhang,31.55648,72.32529,Sharing,Suburban,Good Grid,0,,Batch-Special
+Temp-305,Central,Central-2,Jhang,31.48233,72.31216,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-309,Central,Central-2,Jhang,31.22656,72.48849,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-314,Central,Central-2,Jhang,31.243742,72.391853,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-315,Central,Central-2,Jhang,31.33407,72.76814,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-320,Central,Central-2,Jhang,30.831449,72.071815,New Construction,Suburban,Good Grid,0,,Batch-Special
+Temp-321,Central,Central-2,Jhang,30.823332,72.103819,New Construction,Suburban,Poor Grid,Fiber POP,,Batch-Special
+Temp-323,Central,Central-2,Jhang,31.0986,72.267,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-330,Central,Central-2,Jhang,31.688333,72.19375,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-332,Central,Central-2,Jhang,31.606139,72.33575,Sharing,Suburban,Good Grid,0,,Batch-Special
+Temp-333,Central,Central-3,Muzaffargarh,30.234,70.8871,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-340,Central,Central-3,Muzaffargarh,30.295339,71.099361,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-343,Central,Central-3,Muzaffargarh,30.21088,70.88814,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-349,Central,Central-3,Muzaffargarh,29.9189,70.9135,Sharing,Suburban,Good Grid,0,Yes,Batch-Special
+Temp-350,Central,Central-3,Muzaffargarh,29.5872,70.9522,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-352,Central,Central-3,Muzaffargarh,29.4224,70.7488,Sharing,Rural,Bad Grid,0,Yes,Batch-Special
+Temp-358,Central,Central-3,Muzaffargarh,29.5857,71.0001,Sharing,Rural,Bad Grid,0,,Batch-Special
+Temp-361,Central,Central-3,Muzaffargarh,29.6327,70.9254,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-366,Central,Central-3,Muzaffargarh,29.7238,70.9408,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-371,Central,Central-3,Muzaffargarh,29.7672,70.9078,Sharing,Rural,Bad Grid,Fiber POP,,Batch-Special
+Temp-373,Central,Central-3,Muzaffargarh,29.4849,70.9637,Sharing,Rural,Good Grid,0,Yes,Batch-Special
+Temp-375,Central,Central-4,Fort Abbas,29.37165,72.91126,Sharing,Rural,Good Grid,0,,Batch-Special
+Temp-387,Central,Central-4,Fort Abbas,29.407689,72.954,New Construction,Rural,Good Grid,0,,Batch-Special
+Temp-391,Central,Central-4,Fort Abbas,29.181378,72.861537,New Construction,Suburban,Good Grid,0,,Batch-Special
+Temp-392,Central,Central-4,Fort Abbas,29.202598,72.856913,New Construction,Rural,Poor Grid,Fiber POP,,Batch-Special
