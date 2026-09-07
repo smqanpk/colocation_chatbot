@@ -3,1248 +3,932 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Towerco Colocation Analyzer</title>
-
-<!-- Leaflet -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<!-- Leaflet MarkerCluster -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
-<!-- Chart.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<!-- Papa Parse (CSV upload) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-<!-- XLSX -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-
+<title>Colocation Analyzer</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <style>
-:root {
-  --navy: #1B2A4A;
-  --navy-dark: #121C33;
-  --teal: #2D6E7E;
-  --green: #1F9D6E;
-  --amber: #E8A33D;
-  --red: #D9534F;
-  --slate: #8A93A6;
-  --paper: #F4F6F9;
-  --white: #FFFFFF;
-  --muted: #5C6B85;
-  --border: #E2E8F0;
-  --sidebar-w: 320px;
-  --topbar-h: 58px;
-  --panel-h: 300px;
+:root{
+  --navy:#1B2A4A;--dark:#121C33;--teal:#2D6E7E;
+  --green:#1F9D6E;--amber:#E8A33D;--red:#D9534F;
+  --slate:#8A93A6;--paper:#F4F6F9;--white:#fff;
+  --muted:#5C6B85;--border:#E2E8F0;
+  --top:58px;--side:310px;--bot:260px;
 }
-*,*::before,*::after { box-sizing: border-box; margin:0; padding:0; }
-body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--paper); color: var(--navy); overflow: hidden; height: 100vh; display: flex; flex-direction: column; }
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',system-ui,sans-serif;color:var(--navy)}
 
-/* ── TOPBAR ── */
-.topbar {
-  height: var(--topbar-h); background: var(--navy-dark);
-  display: flex; align-items: center; padding: 0 20px; gap: 16px;
-  z-index: 1000; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,.4);
-}
-.logo { display: flex; align-items: center; gap: 10px; }
-.logo-icon { width:32px; height:32px; background:var(--amber); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; }
-.logo-text { color:var(--white); font-size:15px; font-weight:700; letter-spacing:-.3px; }
-.logo-sub { color: #9AAACB; font-size:11px; margin-top:1px; }
-.topbar-sep { width:1px; height:30px; background:#39496E; margin:0 4px; }
-.topbar-stat { text-align:center; }
-.topbar-stat .val { color:var(--white); font-size:18px; font-weight:700; line-height:1; }
-.topbar-stat .lbl { color:#9AAACB; font-size:10px; margin-top:2px; text-transform:uppercase; letter-spacing:.5px; }
-.topbar-right { margin-left:auto; display:flex; align-items:center; gap:10px; }
-.btn { padding:7px 14px; border-radius:6px; font-size:12px; font-weight:600; cursor:pointer; border:none; transition:opacity .15s; }
-.btn:hover { opacity:.85; }
-.btn-amber { background:var(--amber); color:var(--navy-dark); }
-.btn-outline { background:transparent; color:var(--white); border:1px solid #39496E; }
-.btn-outline:hover { background:#39496E; }
-.btn-green { background:var(--green); color:#fff; }
-.btn-red { background:var(--red); color:#fff; }
-.btn-teal { background:var(--teal); color:#fff; }
-.btn-sm { padding:5px 10px; font-size:11px; }
+/* TOPBAR */
+#topbar{position:fixed;top:0;left:0;right:0;height:var(--top);background:var(--dark);
+  display:flex;align-items:center;padding:0 16px;gap:12px;z-index:2000;
+  box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.logo{display:flex;align-items:center;gap:8px}
+.logo-icon{width:30px;height:30px;background:var(--amber);border-radius:7px;
+  display:flex;align-items:center;justify-content:center;font-size:15px}
+.logo-text{color:#fff;font-size:14px;font-weight:700}
+.logo-sub{color:#9AAACB;font-size:10px}
+.sep{width:1px;height:26px;background:#39496E;flex-shrink:0}
+.kpi{text-align:center;flex-shrink:0}
+.kpi-n{font-size:17px;font-weight:700;color:#fff;line-height:1}
+.kpi-l{font-size:9px;color:#9AAACB;text-transform:uppercase;letter-spacing:.4px;margin-top:1px}
+.topbar-r{margin-left:auto;display:flex;gap:8px}
+.btn{padding:6px 12px;border-radius:5px;font-size:11px;font-weight:600;cursor:pointer;border:none;transition:opacity .15s}
+.btn:hover{opacity:.82}
+.btn-amber{background:var(--amber);color:var(--dark)}
+.btn-outline{background:transparent;color:#fff;border:1px solid #39496E}
+.btn-outline:hover{background:#39496E}
+.btn-green{background:var(--green);color:#fff}
+.btn-full{width:100%;margin-bottom:6px}
 
-/* ── LAYOUT ── */
-.app-body { display:flex; flex:1; overflow:hidden; }
+/* SIDEBAR */
+#sidebar{position:fixed;top:var(--top);left:0;bottom:0;width:var(--side);
+  background:var(--white);border-right:1px solid var(--border);
+  display:flex;flex-direction:column;z-index:1000;overflow:hidden}
+.stabs{display:flex;border-bottom:1px solid var(--border)}
+.stab{flex:1;padding:9px 0;font-size:10px;font-weight:700;text-align:center;
+  cursor:pointer;color:var(--slate);border-bottom:2px solid transparent;
+  text-transform:uppercase;letter-spacing:.5px;transition:all .15s}
+.stab.on{color:var(--navy);border-bottom-color:var(--amber)}
+.sbody{flex:1;overflow-y:auto;padding:12px}
+.sbody::-webkit-scrollbar{width:3px}
+.sbody::-webkit-scrollbar-thumb{background:var(--border)}
+.fg{margin-bottom:12px}
+.fl{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;
+  letter-spacing:.4px;margin-bottom:5px}
+.chips{display:flex;flex-wrap:wrap;gap:4px}
+.chip{padding:3px 9px;border-radius:14px;font-size:10.5px;font-weight:600;cursor:pointer;
+  border:1.5px solid var(--border);color:var(--navy);background:var(--paper);transition:all .15s}
+.chip.on{color:#fff;border-color:transparent}
+.chip-e.on{background:var(--green)}.chip-d.on{background:var(--amber);color:#333}
+.chip-b.on{background:var(--red)}.chip-r.on{background:var(--navy)}.chip-m.on{background:var(--teal)}
+input[type=range]{width:100%;accent-color:var(--amber);margin:4px 0}
+.rrow{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--muted)}
+.cin{width:100%;padding:6px 9px;border:1.5px solid var(--border);border-radius:5px;font-size:11.5px;outline:none}
+.cin:focus{border-color:var(--amber)}
+/* Stats */
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px}
+.sc{background:var(--paper);border-radius:7px;padding:9px 11px;border-left:3px solid}
+.sc-g{border-color:var(--green)}.sc-a{border-color:var(--amber)}
+.sc-r{border-color:var(--red)}.sc-t{border-color:var(--teal)}.sc-n{border-color:var(--navy)}
+.sn{font-size:24px;font-weight:700;line-height:1}
+.sl{font-size:9.5px;font-weight:700;color:var(--muted);text-transform:uppercase;margin-top:2px}
+.ss{font-size:9px;color:var(--slate);margin-top:1px}
+.cw{background:var(--paper);border-radius:7px;padding:9px;margin-bottom:8px}
+.ct{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px}
+/* Upload */
+.dzone{border:2px dashed var(--border);border-radius:7px;padding:14px;text-align:center;
+  cursor:pointer;transition:all .15s;margin-bottom:7px}
+.dzone:hover,.dzone.over{border-color:var(--amber);background:#FFFBF2}
+.dzi{font-size:22px;margin-bottom:3px}
+.dzt{font-size:11px;color:var(--muted)}
+.dzt strong{color:var(--navy)}
+.step-box{background:var(--paper);border-radius:7px;padding:9px 11px;
+  margin-bottom:7px;border-left:3px solid var(--amber)}
+.step-n{font-size:9.5px;font-weight:700;color:var(--amber);text-transform:uppercase;margin-bottom:2px}
+.step-t{font-size:12px;font-weight:700;color:var(--navy)}
+.step-s{font-size:10px;color:var(--muted);margin-top:3px;line-height:1.4}
+.status{font-size:11px;padding:6px 8px;border-radius:5px;margin-bottom:6px;display:none;line-height:1.35}
+.st-ok{background:#E8F7F1;color:#1a7a55;display:block}
+.st-err{background:#FDECEA;color:#a33;display:block}
+.st-info{background:#EFF3FF;color:var(--teal);display:block}
+.prog{height:5px;border-radius:3px;background:var(--border);overflow:hidden;margin:4px 0;display:none}
+.prog.show{display:block}
+.prog-f{height:100%;background:var(--amber);border-radius:3px;transition:width .2s}
+.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px}
+.rgrid label,.erow label{font-size:10.5px;color:var(--navy)}
+.rgrid input,.erow input{width:100%;padding:4px 6px;border:1px solid var(--border);
+  border-radius:4px;font-size:12px;margin-top:2px;outline:none}
+.rgrid input:focus,.erow input:focus{border-color:var(--amber)}
+.erow{margin-bottom:8px}
+.hint{font-size:9.5px;color:var(--slate);line-height:1.4;margin-top:6px}
 
-/* ── SIDEBAR ── */
-.sidebar {
-  width: var(--sidebar-w); background:var(--white); flex-shrink:0;
-  display:flex; flex-direction:column; overflow:hidden;
-  border-right:1px solid var(--border); z-index:100;
-}
-.sidebar-tabs { display:flex; border-bottom:1px solid var(--border); }
-.s-tab { flex:1; padding:10px 0; font-size:11px; font-weight:600; text-align:center; cursor:pointer; color:var(--slate); border-bottom:2px solid transparent; transition:all .15s; text-transform:uppercase; letter-spacing:.5px; }
-.s-tab.active { color:var(--navy); border-bottom-color:var(--amber); }
-.sidebar-body { flex:1; overflow-y:auto; padding:14px; }
-.sidebar-body::-webkit-scrollbar { width:4px; }
-.sidebar-body::-webkit-scrollbar-thumb { background:var(--border); border-radius:2px; }
+/* MAP — fixed position between topbar and bottom panel */
+#map{position:fixed;top:var(--top);left:var(--side);right:0;bottom:var(--bot);z-index:1}
 
-/* Filter groups */
-.filter-group { margin-bottom:14px; }
-.filter-label { font-size:11px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.5px; margin-bottom:6px; }
-.filter-chips { display:flex; flex-wrap:wrap; gap:5px; }
-.chip { padding:4px 10px; border-radius:20px; font-size:11px; font-weight:600; cursor:pointer; border:1.5px solid var(--border); color:var(--navy); background:var(--paper); transition:all .15s; }
-.chip.active { color:#fff; border-color:transparent; }
-.chip-exact.active   { background:var(--green); }
-.chip-drift.active   { background:var(--amber); color:var(--navy); }
-.chip-build.active   { background:var(--red); }
-.chip-region.active  { background:var(--navy); }
-.chip-demo.active    { background:var(--teal); }
-.chip-ssrf.active    { background:var(--green); }
-.chip-priority.active{ background:var(--navy); }
+/* LEGEND */
+#legend{position:fixed;top:calc(var(--top) + 10px);right:10px;
+  background:rgba(255,255,255,.96);border-radius:8px;padding:9px 13px;
+  z-index:500;box-shadow:0 2px 8px rgba(0,0,0,.13);font-size:11px;pointer-events:none}
+.lr{display:flex;align-items:center;gap:6px;margin-bottom:4px}
+.lr:last-child{margin:0}
+.ld{width:11px;height:11px;border-radius:50%;flex-shrink:0}
+.ll{color:var(--navy);font-weight:500}
+.lc{color:var(--muted);margin-left:auto;padding-left:10px;font-weight:600;font-size:10.5px}
 
-.range-row { display:flex; align-items:center; gap:8px; font-size:12px; }
-.range-row input[type=range] { flex:1; accent-color:var(--amber); }
-.range-val { min-width:48px; text-align:right; font-size:11px; font-weight:600; color:var(--navy); }
-
-/* Stats panel */
-.stat-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:12px; }
-.stat-card { background:var(--paper); border-radius:8px; padding:10px 12px; border-left:3px solid transparent; }
-.stat-card.green  { border-color:var(--green); }
-.stat-card.amber  { border-color:var(--amber); }
-.stat-card.red    { border-color:var(--red); }
-.stat-card.teal   { border-color:var(--teal); }
-.stat-card.navy   { border-color:var(--navy); }
-.stat-n { font-size:26px; font-weight:700; line-height:1; }
-.stat-n.green { color:var(--green); }
-.stat-n.amber { color:var(--amber); }
-.stat-n.red   { color:var(--red); }
-.stat-n.teal  { color:var(--teal); }
-.stat-n.navy  { color:var(--navy); }
-.stat-lbl { font-size:10px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:.3px; margin-top:3px; }
-.stat-sub { font-size:10px; color:var(--slate); margin-top:2px; }
-
-.chart-wrap { background:var(--paper); border-radius:8px; padding:10px; margin-bottom:10px; }
-.chart-title { font-size:11px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.5px; margin-bottom:8px; }
-
-/* ── MAIN AREA ── */
-.main-area { flex:1; display:flex; flex-direction:column; overflow:hidden; position:relative; min-height:0; }
-
-/* Map — explicit height so Leaflet always gets a non-zero computed size */
-#map {
-  width: 100%;
-  height: calc(100vh - var(--topbar-h) - var(--panel-h) - 4px);
-  min-height: 200px;
-  flex-shrink: 0;
-  z-index: 1;
-}
-
-/* Bottom panel */
-.bottom-panel {
-  height: var(--panel-h); background:var(--white); border-top:1px solid var(--border);
-  display:flex; flex-direction:column; flex-shrink:0; overflow:hidden;
-}
-.panel-tabs { display:flex; border-bottom:1px solid var(--border); padding:0 16px; gap:2px; }
-.p-tab { padding:8px 16px; font-size:12px; font-weight:600; cursor:pointer; color:var(--slate); border-bottom:2px solid transparent; transition:all .15s; }
-.p-tab.active { color:var(--navy); border-bottom-color:var(--amber); }
-.panel-body { flex:1; overflow:hidden; display:flex; }
-
+/* BOTTOM PANEL */
+#bot{position:fixed;left:var(--side);right:0;bottom:0;height:var(--bot);
+  background:var(--white);border-top:1px solid var(--border);
+  display:flex;flex-direction:column;z-index:1000}
+#rh{height:4px;background:var(--border);cursor:row-resize;flex-shrink:0}
+#rh:hover{background:var(--amber)}
+.ptabs{display:flex;border-bottom:1px solid var(--border);padding:0 14px;flex-shrink:0}
+.ptab{padding:7px 14px;font-size:11.5px;font-weight:600;cursor:pointer;
+  color:var(--slate);border-bottom:2px solid transparent;transition:all .15s}
+.ptab.on{color:var(--navy);border-bottom-color:var(--amber)}
+.pbody{flex:1;overflow:hidden;display:flex;min-height:0}
 /* Table */
-.table-wrap { flex:1; overflow:auto; }
-.table-wrap::-webkit-scrollbar { height:4px; width:4px; }
-.table-wrap::-webkit-scrollbar-thumb { background:var(--border); }
-table { width:100%; border-collapse:collapse; font-size:11.5px; }
-th { position:sticky; top:0; background:var(--navy); color:#fff; padding:7px 10px; text-align:left; font-weight:600; white-space:nowrap; font-size:10.5px; letter-spacing:.3px; }
-th.sortable { cursor:pointer; user-select:none; }
-th.sortable:hover { background:var(--teal); }
-td { padding:6px 10px; border-bottom:1px solid var(--border); white-space:nowrap; }
-tr:hover td { background:#F8F9FC; }
-.badge { display:inline-block; padding:2px 7px; border-radius:10px; font-size:10px; font-weight:700; }
-.badge-exact { background:#E8F7F1; color:var(--green); }
-.badge-drift { background:#FDF5E6; color:#B5801F; }
-.badge-build { background:#FDECEA; color:var(--red); }
-.badge-ssrf  { background:#E8F7F1; color:var(--green); }
-
-/* AI Panel */
-.ai-panel { flex:1; display:flex; flex-direction:column; padding:12px 16px; gap:8px; }
-.ai-messages { flex:1; overflow-y:auto; display:flex; flex-direction:column; gap:8px; }
-.ai-messages::-webkit-scrollbar { width:3px; }
-.ai-msg { padding:8px 12px; border-radius:8px; font-size:12px; line-height:1.5; max-width:90%; }
-.ai-msg.user { background:var(--navy); color:#fff; align-self:flex-end; }
-.ai-msg.assistant { background:var(--paper); color:var(--navy); border:1px solid var(--border); align-self:flex-start; }
-.ai-msg.loading { color:var(--slate); }
-.ai-input-row { display:flex; gap:8px; }
-.ai-input { flex:1; padding:7px 12px; border:1.5px solid var(--border); border-radius:6px; font-size:12px; outline:none; }
-.ai-input:focus { border-color:var(--amber); }
-.ai-key-row { display:flex; gap:8px; align-items:center; font-size:11px; color:var(--muted); }
-.ai-key-row input { flex:1; padding:5px 8px; border:1px solid var(--border); border-radius:4px; font-size:11px; font-family:monospace; }
-
-/* Site detail popup */
-.detail-popup { position:absolute; top:70px; right:16px; width:300px; background:var(--white); border-radius:10px; box-shadow:0 8px 32px rgba(0,0,0,.18); z-index:500; overflow:hidden; }
-.detail-header { padding:12px 14px; display:flex; justify-content:space-between; align-items:flex-start; }
-.detail-header .close { cursor:pointer; color:var(--slate); font-size:16px; line-height:1; padding:2px; }
-.detail-header .close:hover { color:var(--navy); }
-.detail-id { font-size:13px; font-weight:700; color:var(--navy); }
-.detail-city { font-size:11px; color:var(--muted); margin-top:2px; }
-.detail-body { padding:0 14px 14px; }
-.detail-row { display:flex; justify-content:space-between; align-items:center; padding:5px 0; border-bottom:1px solid var(--border); font-size:11.5px; }
-.detail-row:last-child { border:none; }
-.detail-key { color:var(--muted); font-weight:500; }
-.detail-val { font-weight:600; color:var(--navy); text-align:right; max-width:60%; }
-.detail-action { margin-top:10px; padding:8px 10px; background:var(--paper); border-radius:6px; font-size:11px; color:var(--navy); line-height:1.4; }
-
-/* Map legend — floats over the map, anchored to top-left of .main-area */
-.map-legend {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background: rgba(255,255,255,.96);
-  border-radius: 8px;
-  padding: 10px 14px;
-  z-index: 500;
-  box-shadow: 0 2px 8px rgba(0,0,0,.15);
-  font-size: 11px;
-  pointer-events: none;
-}
-.legend-row { display:flex; align-items:center; gap:7px; margin-bottom:5px; }
-.legend-row:last-child { margin:0; }
-.legend-dot { width:12px; height:12px; border-radius:50%; flex-shrink:0; }
-.legend-label { color:var(--navy); font-weight:500; }
-.legend-count { color:var(--muted); margin-left:auto; padding-left:12px; font-weight:600; }
-
-/* Upload zone */
-.upload-zone { border:2px dashed var(--border); border-radius:8px; padding:20px; text-align:center; cursor:pointer; transition:all .15s; margin-bottom:12px; }
-.upload-zone:hover, .upload-zone.drag-over { border-color:var(--amber); background:#FFFBF2; }
-.upload-zone .icon { font-size:24px; margin-bottom:6px; }
-.upload-zone .text { font-size:12px; color:var(--muted); }
-.upload-zone .text strong { color:var(--navy); }
-.upload-zone input { display:none; }
-
-/* Tooltip on chart */
-.no-data { color:var(--slate); font-size:12px; text-align:center; padding:20px; }
-
-/* Resize handle */
-.resize-handle { height:4px; background:var(--border); cursor:row-resize; transition:background .15s; }
-.resize-handle:hover { background:var(--amber); }
-
-/* Loading overlay */
-.loading-overlay { position:fixed; inset:0; background:rgba(18,28,51,.85); z-index:9999; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; }
-.loading-spinner { width:44px; height:44px; border:4px solid #39496E; border-top-color:var(--amber); border-radius:50%; animation:spin .8s linear infinite; }
-@keyframes spin { to { transform:rotate(360deg); } }
-.loading-text { color:#C9D2E3; font-size:14px; }
-
-/* Responsive tweaks */
-@media(max-width:900px) { :root { --sidebar-w:260px; } }
-
-.tag { display:inline-block; padding:1px 6px; border-radius:4px; font-size:10px; font-weight:600; background:var(--paper); color:var(--muted); border:1px solid var(--border); }
-.progress-bar { height:6px; border-radius:3px; background:var(--border); overflow:hidden; margin-top:4px; }
-.progress-fill { height:100%; border-radius:3px; transition:width .3s; }
-
-/* Animations */
-@keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
-.fade-in { animation:fadeIn .2s ease; }
-
-/* Scrollbar for table */
-.table-wrap::-webkit-scrollbar { width:6px; height:6px; }
-.table-wrap::-webkit-scrollbar-track { background:var(--paper); }
-.table-wrap::-webkit-scrollbar-thumb { background:var(--border); border-radius:3px; }
-
-/* Quick prompts */
-.quick-prompts { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:8px; }
-.qp { padding:4px 9px; border-radius:12px; font-size:10.5px; cursor:pointer; background:var(--paper); border:1px solid var(--border); color:var(--navy); transition:all .15s; }
-.qp:hover { background:var(--navy); color:#fff; border-color:var(--navy); }
+.twrap{flex:1;overflow:auto}
+.twrap::-webkit-scrollbar{width:5px;height:5px}
+.twrap::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+table{width:100%;border-collapse:collapse;font-size:11px}
+th{position:sticky;top:0;background:var(--navy);color:#fff;padding:6px 9px;
+  text-align:left;font-weight:600;white-space:nowrap;font-size:10px;cursor:pointer;user-select:none}
+th:hover{background:var(--teal)}
+td{padding:5px 9px;border-bottom:1px solid var(--border);white-space:nowrap}
+tr:hover td{background:#F8F9FC}
+.bx{display:inline-block;padding:1px 6px;border-radius:9px;font-size:9.5px;font-weight:700}
+.bx-e{background:#E8F7F1;color:var(--green)}
+.bx-d{background:#FDF5E6;color:#B5801F}
+.bx-b{background:#FDECEA;color:var(--red)}
+.bx-y{background:#E8F7F1;color:var(--green)}
+.nodata{text-align:center;color:var(--slate);padding:20px;font-size:12px}
+/* AI */
+.aiwrap{flex:1;display:flex;flex-direction:column;padding:9px 13px;gap:6px;min-height:0}
+.aicfg{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.aicfg select,.aicfg input{padding:4px 7px;border:1px solid var(--border);
+  border-radius:4px;font-size:11px;color:var(--navy);background:#fff;outline:none}
+.aicfg select:focus,.aicfg input:focus{border-color:var(--amber)}
+.aicfg a{font-size:10px;color:var(--teal);text-decoration:none;font-weight:700;white-space:nowrap}
+.aimsgs{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:6px;min-height:0}
+.aimsgs::-webkit-scrollbar{width:3px}
+.aimsgs::-webkit-scrollbar-thumb{background:var(--border)}
+.aim{padding:7px 11px;border-radius:7px;font-size:11.5px;line-height:1.5;max-width:92%;white-space:pre-wrap}
+.aim.u{background:var(--navy);color:#fff;align-self:flex-end}
+.aim.a{background:var(--paper);color:var(--navy);border:1px solid var(--border);align-self:flex-start}
+.aim.ld{color:var(--slate)}
+.aiir{display:flex;gap:7px;flex-shrink:0}
+.aiin{flex:1;padding:6px 11px;border:1.5px solid var(--border);border-radius:5px;font-size:11.5px;outline:none}
+.aiin:focus{border-color:var(--amber)}
+.qps{display:flex;flex-wrap:wrap;gap:4px;flex-shrink:0}
+.qp{padding:3px 8px;border-radius:10px;font-size:10px;cursor:pointer;
+  background:var(--paper);border:1px solid var(--border);color:var(--navy);transition:all .15s}
+.qp:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+/* Detail */
+#detail{position:fixed;top:calc(var(--top)+10px);left:calc(var(--side)+10px);width:270px;
+  background:var(--white);border-radius:9px;
+  box-shadow:0 6px 24px rgba(0,0,0,.17);z-index:800;overflow:hidden;display:none}
+.dh{padding:10px 12px;display:flex;justify-content:space-between;align-items:flex-start}
+.di{font-size:12px;font-weight:700}.dc{font-size:10px;color:var(--muted);margin-top:1px}
+.dx{cursor:pointer;color:var(--slate);font-size:15px;line-height:1}
+.dx:hover{color:var(--navy)}
+.db{padding:0 12px 12px}
+.dr{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--border);font-size:10.5px}
+.dr:last-child{border:none}
+.dk{color:var(--muted)}.dv{font-weight:600;color:var(--navy);text-align:right;max-width:58%}
+.da{margin-top:7px;padding:7px 8px;background:var(--paper);border-radius:5px;font-size:10px;line-height:1.4}
+/* Loader */
+#loader{position:fixed;inset:0;background:rgba(18,28,51,.88);z-index:9999;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.spin{width:40px;height:40px;border:4px solid #39496E;border-top-color:var(--amber);
+  border-radius:50%;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.loadt{color:#C9D2E3;font-size:13px}
 </style>
 </head>
 <body>
 
-<!-- Loading overlay -->
-<div class="loading-overlay" id="loadingOverlay">
-  <div class="loading-spinner"></div>
-  <div class="loading-text">Loading site data…</div>
-</div>
+<div id="loader"><div class="spin"></div><div class="loadt" id="ltxt">Loading…</div></div>
 
-<!-- TOPBAR -->
-<div class="topbar">
+<div id="topbar">
   <div class="logo">
     <div class="logo-icon">📡</div>
-    <div>
-      <div class="logo-text">Colocation Analyzer</div>
-      <div class="logo-sub">Towerco × MNO Rollout Intelligence</div>
-    </div>
+    <div><div class="logo-text">Colocation Analyzer</div><div class="logo-sub">Towerco × MNO Rollout</div></div>
   </div>
-  <div class="topbar-sep"></div>
-  <div class="topbar-stat"><div class="val" id="st-total">—</div><div class="lbl">Total Sites</div></div>
-  <div class="topbar-sep"></div>
-  <div class="topbar-stat"><div class="val" style="color:var(--green)" id="st-exact">—</div><div class="lbl">Exact Match</div></div>
-  <div class="topbar-sep"></div>
-  <div class="topbar-stat"><div class="val" style="color:var(--amber)" id="st-drift">—</div><div class="lbl">Drift Match</div></div>
-  <div class="topbar-sep"></div>
-  <div class="topbar-stat"><div class="val" style="color:var(--red)" id="st-build">—</div><div class="lbl">New Build</div></div>
-  <div class="topbar-sep"></div>
-  <div class="topbar-stat"><div class="val" style="color:#C9D2E3" id="st-rate">—</div><div class="lbl">Coloc. Rate</div></div>
-  <div class="topbar-right">
-    <button class="btn btn-outline btn-sm" onclick="exportCSV()">⬇ Export CSV</button>
-    <button class="btn btn-amber btn-sm" onclick="resetFilters()">↺ Reset Filters</button>
+  <div class="sep"></div>
+  <div class="kpi"><div class="kpi-n" id="k-tot">—</div><div class="kpi-l">Sites</div></div>
+  <div class="sep"></div>
+  <div class="kpi"><div class="kpi-n" style="color:var(--green)" id="k-e">—</div><div class="kpi-l">Exact</div></div>
+  <div class="sep"></div>
+  <div class="kpi"><div class="kpi-n" style="color:var(--amber)" id="k-d">—</div><div class="kpi-l">Drift</div></div>
+  <div class="sep"></div>
+  <div class="kpi"><div class="kpi-n" style="color:var(--red)" id="k-b">—</div><div class="kpi-l">New Build</div></div>
+  <div class="sep"></div>
+  <div class="kpi"><div class="kpi-n" style="color:#C9D2E3" id="k-r">—</div><div class="kpi-l">Coloc. Rate</div></div>
+  <div class="topbar-r">
+    <button class="btn btn-outline" style="font-size:11px" onclick="exportCSV()">⬇ CSV</button>
+    <button class="btn btn-amber" style="font-size:11px" onclick="resetFilters()">↺ Reset</button>
   </div>
 </div>
 
-<!-- BODY -->
-<div class="app-body">
+<div id="sidebar">
+  <div class="stabs">
+    <div class="stab on" onclick="stab(0,this)">Filters</div>
+    <div class="stab" onclick="stab(1,this)">Stats</div>
+    <div class="stab" onclick="stab(2,this)">Analysis</div>
+  </div>
 
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <div class="sidebar-tabs">
-      <div class="s-tab active" onclick="switchSTab(0,this)" id="stab0">Filters</div>
-      <div class="s-tab" onclick="switchSTab(1,this)" id="stab1">Stats</div>
-      <div class="s-tab" onclick="switchSTab(2,this)" id="stab2">Upload</div>
-    </div>
-
-    <!-- Filters tab -->
-    <div class="sidebar-body" id="stab-body-0">
-      <div class="filter-group">
-        <div class="filter-label">Classification</div>
-        <div class="filter-chips">
-          <div class="chip chip-exact active" data-filter="class" data-val="Exact Match" onclick="toggleChip(this)">🟢 Exact Match</div>
-          <div class="chip chip-drift active" data-filter="class" data-val="Drift Match" onclick="toggleChip(this)">🟡 Drift Match</div>
-          <div class="chip chip-build active" data-filter="class" data-val="New Build" onclick="toggleChip(this)">🔴 New Build</div>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-label">Region</div>
-        <div class="filter-chips">
-          <div class="chip chip-region active" data-filter="region" data-val="North" onclick="toggleChip(this)">North</div>
-          <div class="chip chip-region active" data-filter="region" data-val="Central" onclick="toggleChip(this)">Central</div>
-          <div class="chip chip-region active" data-filter="region" data-val="South" onclick="toggleChip(this)">South</div>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-label">Demography</div>
-        <div class="filter-chips">
-          <div class="chip chip-demo active" data-filter="demo" data-val="Dense Urban" onclick="toggleChip(this)">Dense Urban</div>
-          <div class="chip chip-demo active" data-filter="demo" data-val="Urban" onclick="toggleChip(this)">Urban</div>
-          <div class="chip chip-demo active" data-filter="demo" data-val="Suburban" onclick="toggleChip(this)">Suburban</div>
-          <div class="chip chip-demo active" data-filter="demo" data-val="Rural" onclick="toggleChip(this)">Rural</div>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-label">Priority</div>
-        <div class="filter-chips">
-          <div class="chip chip-priority active" data-filter="priority" data-val="New Construction" onclick="toggleChip(this)">New Construction</div>
-          <div class="chip chip-priority active" data-filter="priority" data-val="Sharing" onclick="toggleChip(this)">Sharing</div>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-label">SSRF Submitted</div>
-        <div class="filter-chips">
-          <div class="chip chip-ssrf active" data-filter="ssrf" data-val="yes" onclick="toggleChip(this)">✅ Yes</div>
-          <div class="chip chip-ssrf active" data-filter="ssrf" data-val="no" onclick="toggleChip(this)">⬜ No</div>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-label">Max Distance: <span id="dist-label">all</span></div>
-        <div class="range-row">
-          <span style="font-size:10px;color:var(--muted)">0m</span>
-          <input type="range" id="dist-slider" min="0" max="72400" step="100" value="72400" oninput="onDistSlider(this)"/>
-          <span style="font-size:10px;color:var(--muted)">72km</span>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-label">Tower Height ≥ <span id="height-label">0m</span></div>
-        <div class="range-row">
-          <span style="font-size:10px;color:var(--muted)">0</span>
-          <input type="range" id="height-slider" min="0" max="90" step="5" value="0" oninput="onHeightSlider(this)"/>
-          <span style="font-size:10px;color:var(--muted)">90m</span>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-label">City Search</div>
-        <input type="text" id="city-search" placeholder="Type city name…" oninput="applyFilters()"
-          style="width:100%;padding:7px 10px;border:1.5px solid var(--border);border-radius:6px;font-size:12px;outline:none"/>
+  <!-- FILTERS TAB -->
+  <div class="sbody" id="sb0">
+    <div class="fg">
+      <div class="fl">Classification</div>
+      <div class="chips">
+        <div class="chip chip-e on" data-f="cls" data-v="Exact Match" onclick="fc(this)">🟢 Exact</div>
+        <div class="chip chip-d on" data-f="cls" data-v="Drift Match" onclick="fc(this)">🟡 Drift</div>
+        <div class="chip chip-b on" data-f="cls" data-v="New Build" onclick="fc(this)">🔴 New Build</div>
       </div>
     </div>
-
-    <!-- Stats tab -->
-    <div class="sidebar-body" id="stab-body-1" style="display:none">
-      <div class="stat-grid" id="stat-grid"></div>
-      <div class="chart-wrap">
-        <div class="chart-title">Classification Split</div>
-        <canvas id="donutChart" height="160"></canvas>
-      </div>
-      <div class="chart-wrap">
-        <div class="chart-title">By Region</div>
-        <canvas id="regionChart" height="140"></canvas>
-      </div>
-      <div class="chart-wrap">
-        <div class="chart-title">Distance Distribution (m)</div>
-        <canvas id="distChart" height="130"></canvas>
-      </div>
-      <div class="chart-wrap">
-        <div class="chart-title">By Demography</div>
-        <canvas id="demoChart" height="120"></canvas>
+    <div class="fg"><div class="fl">Region</div><div class="chips" id="f-reg"></div></div>
+    <div class="fg"><div class="fl">Demography</div><div class="chips" id="f-dem"></div></div>
+    <div class="fg"><div class="fl">Priority</div><div class="chips" id="f-pri"></div></div>
+    <div class="fg">
+      <div class="fl">SSRF Submitted</div>
+      <div class="chips">
+        <div class="chip chip-m on" data-f="ssrf" data-v="yes" onclick="fc(this)">✅ Yes</div>
+        <div class="chip chip-m on" data-f="ssrf" data-v="no" onclick="fc(this)">⬜ No</div>
       </div>
     </div>
-
-    <!-- Upload tab -->
-    <div class="sidebar-body" id="stab-body-2" style="display:none">
-      <div style="font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.5">
-        Upload your own <strong>MNO rollout plan</strong> (Excel or CSV) to run a fresh colocation analysis. The file must contain <code>Latitude</code>, <code>Longitude</code>, <code>City</code>, <code>Region</code>, and <code>Demographic Category</code> columns.
+    <div class="fg">
+      <div class="fl">Max distance: <span id="dl">all</span></div>
+      <div class="rrow">
+        <span>0</span>
+        <input type="range" id="sl-d" min="0" max="10000" step="50" value="10000" oninput="onDist(this)"/>
+        <span>10km</span>
       </div>
-      <div class="upload-zone" id="dropZone" onclick="document.getElementById('fileInput').click()" ondragover="onDragOver(event)" ondragleave="onDragLeave(event)" ondrop="onDrop(event)">
-        <input type="file" id="fileInput" accept=".xlsx,.xls,.csv" onchange="onFileSelect(event)"/>
-        <div class="icon">📂</div>
-        <div class="text"><strong>Click or drag & drop</strong><br>.xlsx, .xls, or .csv</div>
+    </div>
+    <div class="fg">
+      <div class="fl">Min tower height: <span id="hl">0m</span></div>
+      <div class="rrow">
+        <span>0</span>
+        <input type="range" id="sl-h" min="0" max="90" step="5" value="0" oninput="onH(this)"/>
+        <span>90m</span>
       </div>
-      <div id="uploadStatus" style="font-size:12px;color:var(--muted);margin-bottom:10px;"></div>
-
-      <div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">Drift Radii (metres)</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">
-        <label style="font-size:11px;color:var(--navy)">Dense Urban<br><input id="r-dense" type="number" value="100" style="width:100%;padding:4px 7px;border:1px solid var(--border);border-radius:4px;font-size:12px;margin-top:2px"/></label>
-        <label style="font-size:11px;color:var(--navy)">Urban<br><input id="r-urban" type="number" value="300" style="width:100%;padding:4px 7px;border:1px solid var(--border);border-radius:4px;font-size:12px;margin-top:2px"/></label>
-        <label style="font-size:11px;color:var(--navy)">Suburban<br><input id="r-suburban" type="number" value="700" style="width:100%;padding:4px 7px;border:1px solid var(--border);border-radius:4px;font-size:12px;margin-top:2px"/></label>
-        <label style="font-size:11px;color:var(--navy)">Rural<br><input id="r-rural" type="number" value="1500" style="width:100%;padding:4px 7px;border:1px solid var(--border);border-radius:4px;font-size:12px;margin-top:2px"/></label>
-      </div>
-      <div style="margin-bottom:10px">
-        <div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px">Exact Match Threshold</div>
-        <input id="r-exact" type="number" value="100" style="width:100%;padding:6px 8px;border:1px solid var(--border);border-radius:4px;font-size:12px"/> metres
-      </div>
-      <button class="btn btn-green" style="width:100%;margin-bottom:8px" onclick="rerunWithCustomRadii()">▶ Re-run Analysis</button>
-      <button class="btn btn-outline" style="width:100%;color:var(--navy);border-color:var(--border)" onclick="loadDefaultData()">↺ Reset to Default Data</button>
+    </div>
+    <div class="fg">
+      <div class="fl">City</div>
+      <input class="cin" id="city-in" placeholder="Search city…" oninput="applyFilters()"/>
     </div>
   </div>
 
-  <!-- MAIN AREA -->
-  <div class="main-area">
-    <!-- MAP — Leaflet manages position:relative internally -->
-    <div id="map"></div>
-
-    <!-- Legend floats over the map, anchored top-left of .main-area -->
-    <div class="map-legend">
-      <div style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:7px">Classification</div>
-      <div class="legend-row"><div class="legend-dot" style="background:var(--green)"></div><span class="legend-label">Exact Match (&lt;100m)</span><span class="legend-count" id="leg-exact">—</span></div>
-      <div class="legend-row"><div class="legend-dot" style="background:var(--amber)"></div><span class="legend-label">Drift Match</span><span class="legend-count" id="leg-drift">—</span></div>
-      <div class="legend-row"><div class="legend-dot" style="background:var(--red)"></div><span class="legend-label">New Build</span><span class="legend-count" id="leg-build">—</span></div>
-    </div>
-
-    <!-- Resize handle -->
-    <div class="resize-handle" id="resizeHandle"></div>
-
-    <!-- BOTTOM PANEL -->
-    <div class="bottom-panel" id="bottomPanel">
-      <div class="panel-tabs">
-        <div class="p-tab active" onclick="switchPTab(0,this)">📋 Site Table</div>
-        <div class="p-tab" onclick="switchPTab(1,this)">🤖 AI Assistant</div>
-      </div>
-      <div class="panel-body">
-
-        <!-- Table -->
-        <div class="table-wrap" id="ptab-0">
-          <table>
-            <thead>
-              <tr>
-                <th class="sortable" onclick="sortTable('id')">Site ID ↕</th>
-                <th class="sortable" onclick="sortTable('city')">City ↕</th>
-                <th class="sortable" onclick="sortTable('region')">Region ↕</th>
-                <th class="sortable" onclick="sortTable('demo')">Demography ↕</th>
-                <th class="sortable" onclick="sortTable('classification')">Classification ↕</th>
-                <th class="sortable" onclick="sortTable('distance')">Distance (m) ↕</th>
-                <th>Nearest Tower</th>
-                <th>Tower Type</th>
-                <th class="sortable" onclick="sortTable('towerHeight')">Height (m) ↕</th>
-                <th>SSRF</th>
-                <th>Priority</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody id="tableBody"></tbody>
-          </table>
-        </div>
-
-        <!-- AI Panel -->
-        <div id="ptab-1" style="display:none;flex:1">
-          <div class="ai-panel">
-            <!-- Provider + model row -->
-            <div class="ai-key-row" style="flex-wrap:wrap;gap:6px">
-              <select id="aiProvider" onchange="onProviderChange()"
-                style="padding:5px 8px;border:1px solid var(--border);border-radius:5px;font-size:11px;color:var(--navy);font-weight:600;background:#fff">
-                <option value="groq">🆓 Groq (Free)</option>
-                <option value="openrouter">🆓 OpenRouter (Free models)</option>
-                <option value="gemini">🆓 Google Gemini (Free)</option>
-                <option value="openai">💳 OpenAI</option>
-              </select>
-              <select id="aiModel"
-                style="padding:5px 8px;border:1px solid var(--border);border-radius:5px;font-size:11px;color:var(--navy);background:#fff;flex:1;min-width:0">
-                <option value="openai/gpt-oss-120b">openai/gpt-oss-120b</option>
-              </select>
-            </div>
-            <div class="ai-key-row" style="gap:6px">
-              <span style="white-space:nowrap">🔑 API Key:</span>
-              <input type="password" id="apiKey" placeholder="Get a free key →" style="flex:1;min-width:0"/>
-              <a id="keyLink" href="https://console.groq.com" target="_blank"
-                style="white-space:nowrap;font-size:10px;color:var(--teal);text-decoration:none;font-weight:600">Get free key ↗</a>
-            </div>
-            <div class="quick-prompts" id="quickPrompts">
-              <div class="qp" onclick="askAI(this.textContent)">Summarise current filter results</div>
-              <div class="qp" onclick="askAI(this.textContent)">Which cities should we prioritise?</div>
-              <div class="qp" onclick="askAI(this.textContent)">Estimate capex savings from colocations</div>
-              <div class="qp" onclick="askAI(this.textContent)">What are the top Drift Match opportunities?</div>
-              <div class="qp" onclick="askAI(this.textContent)">Compare North vs Central vs South</div>
-              <div class="qp" onclick="askAI(this.textContent)">Which sites have SSRF already submitted?</div>
-            </div>
-            <div class="ai-messages" id="aiMessages">
-              <div class="ai-msg assistant">👋 Hello! I'm your colocation analysis assistant. I can see all <span id="ai-site-count">—</span> sites currently loaded.<br><br>
-              <strong>To use for free:</strong> select <em>Groq</em> above, grab a free API key at <a href="https://console.groq.com" target="_blank" style="color:var(--teal)">console.groq.com</a> (no credit card), paste it in, and start asking questions.</div>
-            </div>
-            <div class="ai-input-row">
-              <input class="ai-input" id="aiInput" placeholder="Ask about the site data…" onkeydown="if(event.key==='Enter')sendAI()"/>
-              <button class="btn btn-amber btn-sm" onclick="sendAI()">Send</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
+  <!-- STATS TAB -->
+  <div class="sbody" id="sb1" style="display:none">
+    <div class="sg" id="sg"></div>
+    <div class="cw"><div class="ct">Classification Split</div><canvas id="ch-donut" height="155"></canvas></div>
+    <div class="cw"><div class="ct">By Region</div><canvas id="ch-reg" height="115"></canvas></div>
+    <div class="cw"><div class="ct">Distance Distribution</div><canvas id="ch-dist" height="105"></canvas></div>
+    <div class="cw"><div class="ct">By Demography</div><canvas id="ch-dem" height="105"></canvas></div>
   </div>
 
+  <!-- ANALYSIS TAB -->
+  <div class="sbody" id="sb2" style="display:none">
+    <div class="step-box">
+      <div class="step-n">Step 1</div>
+      <div class="step-t">Upload MNO Nominals</div>
+      <div class="step-s">Required columns: <code>lat</code> / <code>lng</code> (or Latitude/Longitude).<br>Optional: <code>site_id, city, region, demographic, priority, ssrf</code></div>
+    </div>
+    <div class="dzone" id="dz-n" onclick="document.getElementById('fi-n').click()"
+      ondragover="dov(event,'dz-n')" ondragleave="dol('dz-n')" ondrop="ddp(event,'n')">
+      <input type="file" id="fi-n" accept=".xlsx,.xls,.csv" style="display:none" onchange="onFi(event,'n')"/>
+      <div class="dzi">📋</div>
+      <div class="dzt"><strong id="nl">Click or drag MNO nominals</strong></div>
+    </div>
+    <div id="st-n" class="status"></div>
+
+    <div class="step-box">
+      <div class="step-n">Step 2</div>
+      <div class="step-t">Upload Towerco Inventory</div>
+      <div class="step-s">Required columns: <code>lat</code> / <code>lng</code>.<br>Optional: <code>tower_id, tower_type, height_m, tenants</code></div>
+    </div>
+    <div class="dzone" id="dz-t" onclick="document.getElementById('fi-t').click()"
+      ondragover="dov(event,'dz-t')" ondragleave="dol('dz-t')" ondrop="ddp(event,'t')">
+      <input type="file" id="fi-t" accept=".xlsx,.xls,.csv" style="display:none" onchange="onFi(event,'t')"/>
+      <div class="dzi">🗼</div>
+      <div class="dzt"><strong id="tl">Click or drag Towerco inventory</strong></div>
+    </div>
+    <div id="st-t" class="status"></div>
+
+    <div class="step-box">
+      <div class="step-n">Step 3</div>
+      <div class="step-t">Drift Radii (metres)</div>
+      <div class="step-s">Max distance a nominal can drift to reach a towerco tower</div>
+    </div>
+    <div class="rgrid">
+      <label>Dense Urban<input id="r-du" type="number" value="100"/></label>
+      <label>Urban<input id="r-u" type="number" value="300"/></label>
+      <label>Suburban<input id="r-s" type="number" value="700"/></label>
+      <label>Rural<input id="r-r" type="number" value="1500"/></label>
+    </div>
+    <div class="erow"><label>Exact Match threshold (m)<input id="r-e" type="number" value="100"/></label></div>
+
+    <div id="prog" class="prog"><div class="prog-f" id="pf" style="width:0%"></div></div>
+    <div id="st-run" class="status"></div>
+
+    <button class="btn btn-green btn-full" onclick="runAnalysis()">▶ Run Analysis</button>
+    <button class="btn btn-outline btn-full" style="color:var(--navy);border-color:var(--border)" onclick="loadDemo()">↺ Load Demo Data</button>
+    <div class="hint">Performs a haversine nearest-neighbour spatial join in the browser — equivalent to the QGIS Join Attributes by Nearest tool. No internet or QGIS required.</div>
+  </div>
 </div>
 
-<!-- Site Detail Popup (hidden by default) -->
-<div class="detail-popup fade-in" id="detailPopup" style="display:none">
-  <div class="detail-header">
-    <div>
-      <div class="detail-id" id="dp-id"></div>
-      <div class="detail-city" id="dp-city"></div>
+<!-- MAP -->
+<div id="map"></div>
+
+<!-- LEGEND -->
+<div id="legend">
+  <div style="font-size:9.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px">Classification</div>
+  <div class="lr"><div class="ld" style="background:var(--green)"></div><span class="ll">Exact Match</span><span class="lc" id="l-e">—</span></div>
+  <div class="lr"><div class="ld" style="background:var(--amber)"></div><span class="ll">Drift Match</span><span class="lc" id="l-d">—</span></div>
+  <div class="lr"><div class="ld" style="background:var(--red)"></div><span class="ll">New Build</span><span class="lc" id="l-b">—</span></div>
+</div>
+
+<!-- BOTTOM PANEL -->
+<div id="bot">
+  <div id="rh"></div>
+  <div class="ptabs">
+    <div class="ptab on" onclick="ptab(0,this)">📋 Results Table</div>
+    <div class="ptab" onclick="ptab(1,this)">🤖 AI Assistant</div>
+  </div>
+  <div class="pbody">
+    <div class="twrap" id="pt0">
+      <table>
+        <thead><tr>
+          <th onclick="srt('site_id')">Site ID ↕</th>
+          <th onclick="srt('city')">City ↕</th>
+          <th onclick="srt('region')">Region ↕</th>
+          <th onclick="srt('demographic')">Demography ↕</th>
+          <th onclick="srt('classification')">Classification ↕</th>
+          <th onclick="srt('distance')">Distance (m) ↕</th>
+          <th onclick="srt('tower_id')">Nearest Tower ↕</th>
+          <th onclick="srt('tower_type')">Type</th>
+          <th onclick="srt('tower_height')">Ht (m) ↕</th>
+          <th onclick="srt('tenants')">Tenants ↕</th>
+          <th>SSRF</th>
+          <th onclick="srt('priority')">Priority ↕</th>
+          <th>Action</th>
+        </tr></thead>
+        <tbody id="tb"></tbody>
+      </table>
     </div>
-    <div class="close" onclick="document.getElementById('detailPopup').style.display='none'">✕</div>
+    <div class="aiwrap" id="pt1" style="display:none">
+      <div class="aicfg">
+        <select id="ai-prov" onchange="provChange()">
+          <option value="groq">🆓 Groq</option>
+          <option value="openrouter">🆓 OpenRouter</option>
+          <option value="gemini">🆓 Gemini</option>
+          <option value="openai">💳 OpenAI</option>
+        </select>
+        <select id="ai-model" style="flex:1;min-width:80px"></select>
+        <input type="password" id="ai-key" style="flex:1;min-width:80px;font-family:monospace" placeholder="API key…"/>
+        <a id="ai-link" href="https://console.groq.com" target="_blank">Free key ↗</a>
+      </div>
+      <div class="qps">
+        <div class="qp" onclick="ask(this.textContent)">Summarise results</div>
+        <div class="qp" onclick="ask(this.textContent)">Cities to prioritise?</div>
+        <div class="qp" onclick="ask(this.textContent)">Capex savings estimate</div>
+        <div class="qp" onclick="ask(this.textContent)">Top Drift clusters</div>
+        <div class="qp" onclick="ask(this.textContent)">North vs Central vs South</div>
+        <div class="qp" onclick="ask(this.textContent)">SSRF sites summary</div>
+      </div>
+      <div class="aimsgs" id="ai-msgs">
+        <div class="aim a">👋 I can see <span id="ai-ct">—</span> sites. Ask me anything about the analysis.</div>
+      </div>
+      <div class="aiir">
+        <input class="aiin" id="ai-in" placeholder="Ask about the data…" onkeydown="if(event.key==='Enter')sendAI()"/>
+        <button class="btn btn-amber" style="font-size:11px;padding:5px 11px" onclick="sendAI()">Send</button>
+      </div>
+    </div>
   </div>
-  <div class="detail-body">
-    <div id="dp-rows"></div>
-    <div class="detail-action" id="dp-action"></div>
+</div>
+
+<!-- DETAIL POPUP -->
+<div id="detail">
+  <div class="dh">
+    <div><div class="di" id="d-id"></div><div class="dc" id="d-city"></div></div>
+    <div class="dx" onclick="document.getElementById('detail').style.display='none'">✕</div>
   </div>
+  <div class="db"><div id="d-rows"></div><div class="da" id="d-act"></div></div>
 </div>
 
 <script>
-// ═══════════════════════════════════════════════════════════
-// STATE
-// ═══════════════════════════════════════════════════════════
-let allSites = [];
-let filteredSites = [];
-let map, markerLayer;
-let donutChart, regionChart, distChart, demoChart;
-let sortCol = 'distance', sortAsc = true;
-let activeFilters = {
-  class: new Set(['Exact Match','Drift Match','New Build']),
-  region: new Set(['North','Central','South']),
-  demo: new Set(['Dense Urban','Urban','Suburban','Rural','Urban']),
-  priority: new Set(['New Construction','Sharing']),
-  ssrf: new Set(['yes','no']),
-  maxDist: 999999,
-  minHeight: 0,
-  city: ''
-};
+/* ─── STATE ─── */
+let ALL=[], FILT=[];
+let uploadedNom=null, uploadedTow=null;
+let map, cluster;
+let sortCol='distance', sortAsc=true;
+let F={cls:new Set(['Exact Match','Drift Match','New Build']),
+  region:new Set(),demo:new Set(),priority:new Set(),
+  ssrf:new Set(['yes','no']),maxDist:10000,minH:0,city:''};
+let donut,chReg,chDist,chDem;
 
-// ═══════════════════════════════════════════════════════════
-// INIT MAP
-// ═══════════════════════════════════════════════════════════
-function initMap() {
-  map = L.map('map', { zoomControl: true }).setView([30.3, 69.3], 6);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors', maxZoom: 18
-  }).addTo(map);
-  markerLayer = L.markerClusterGroup({
-    maxClusterRadius: 40,
-    iconCreateFunction: clusterIcon,
-    chunkedLoading: true
-  });
-  map.addLayer(markerLayer);
-  // Leaflet needs explicit size refresh after the flex layout settles.
-  // Multiple timeouts cover slow CDN / Netlify cold starts.
-  [50, 200, 500, 1000].forEach(ms => setTimeout(() => map.invalidateSize(), ms));
-  window.addEventListener('resize', () => map.invalidateSize());
+/* ─── HAVERSINE ─── */
+function hav(a,b,c,d){
+  const R=6371000,p=Math.PI/180,dL=(c-a)*p,dN=(d-b)*p;
+  const x=Math.sin(dL/2)**2+Math.cos(a*p)*Math.cos(c*p)*Math.sin(dN/2)**2;
+  return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
 }
 
-function clusterIcon(cluster) {
-  const children = cluster.getAllChildMarkers();
-  const counts = {exact:0, drift:0, build:0};
-  children.forEach(m => {
-    if(m.options.cls === 'Exact Match') counts.exact++;
-    else if(m.options.cls === 'Drift Match') counts.drift++;
-    else counts.build++;
-  });
-  const total = children.length;
-  const dom = Math.max(counts.exact, counts.drift, counts.build);
-  const color = dom === counts.exact ? '#1F9D6E' : dom === counts.drift ? '#E8A33D' : '#D9534F';
+/* ─── SPATIAL INDEX (sorted by lat) ─── */
+function buildIdx(towers){return [...towers].sort((a,b)=>a.lat-b.lat);}
+
+function nearest(nlat,nlng,idx){
+  let best=null,bd=Infinity;
+  const R=0.5;
+  const lo=nlat-R,hi=nlat+R;
+  let st=0,l=0,r=idx.length-1;
+  while(l<=r){const m=(l+r)>>1;if(idx[m].lat<lo){st=m+1;l=m+1}else r=m-1;}
+  for(let i=st;i<idx.length;i++){
+    if(idx[i].lat>hi&&bd<1e9)break;
+    const d=hav(nlat,nlng,idx[i].lat,idx[i].lng);
+    if(d<bd){bd=d;best=idx[i];}
+  }
+  if(!best){for(const t of idx){const d=hav(nlat,nlng,t.lat,t.lng);if(d<bd){bd=d;best=t;}}}
+  return{tower:best,dist:bd};
+}
+
+/* ─── CLASSIFY ─── */
+function radii(){return{
+  'Dense Urban':+(document.getElementById('r-du').value)||100,
+  'Urban':+(document.getElementById('r-u').value)||300,
+  'Suburban':+(document.getElementById('r-s').value)||700,
+  'Rural':+(document.getElementById('r-r').value)||1500
+};}
+function exact(){return+(document.getElementById('r-e').value)||100;}
+function classify(dist,demo){
+  const e=exact(),R=radii(),k=normDemo(demo);
+  const rv=Object.entries(R).find(([kk])=>kk.toLowerCase()===k.toLowerCase());
+  const r=rv?rv[1]:500;
+  return dist<e?'Exact Match':dist<=r?'Drift Match':'New Build';
+}
+function actionTxt(s){
+  if(s.classification==='Exact Match') return`Colocate on ${s.tower_id} — no site change needed`;
+  if(s.classification==='Drift Match') return`Drift ${Math.round(s.distance)}m to ${s.tower_id} (${s.tower_type}, ${s.tower_height}m)`;
+  return`New build — nearest tower ${s.tower_id} is ${Math.round(s.distance)}m away`;
+}
+function normDemo(d){
+  if(!d)return'Unknown';
+  const m={'dense urban':'Dense Urban','urban':'Urban','suburban':'Suburban','rural':'Rural'};
+  return m[(d+'').toLowerCase().trim()]||(d+'').trim();
+}
+
+/* ─── MAP ─── */
+function initMap(){
+  map=L.map('map').setView([30.3,69.3],6);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {attribution:'© OpenStreetMap',maxZoom:18}).addTo(map);
+  cluster=L.markerClusterGroup({maxClusterRadius:45,chunkedLoading:true,iconCreateFunction:cIcon});
+  map.addLayer(cluster);
+}
+function cIcon(c){
+  const ch=c.getAllChildMarkers();
+  let e=0,d=0,b=0;
+  ch.forEach(m=>{m._c==='Exact Match'?e++:m._c==='Drift Match'?d++:b++;});
+  const mx=Math.max(e,d,b);
+  const col=mx===e?'#1F9D6E':mx===d?'#E8A33D':'#D9534F';
   return L.divIcon({
-    html: `<div style="background:${color};color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;border:2px solid rgba(255,255,255,.5);box-shadow:0 2px 6px rgba(0,0,0,.25)">${total}</div>`,
-    className: '', iconSize: [36,36], iconAnchor:[18,18]
-  });
+    html:`<div style="background:${col};color:#fff;width:34px;height:34px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;
+      border:2px solid rgba(255,255,255,.5);box-shadow:0 2px 5px rgba(0,0,0,.25)">${ch.length}</div>`,
+    className:'',iconSize:[34,34],iconAnchor:[17,17]});
 }
-
-function markerColor(cls) {
-  if(cls==='Exact Match') return '#1F9D6E';
-  if(cls==='Drift Match') return '#E8A33D';
-  return '#D9534F';
-}
-
-function makeMarker(site) {
-  const color = markerColor(site.classification);
-  const icon = L.divIcon({
-    html: `<div style="width:10px;height:10px;background:${color};border-radius:50%;border:2px solid rgba(255,255,255,.8);box-shadow:0 1px 4px rgba(0,0,0,.3)"></div>`,
-    className: '', iconSize:[10,10], iconAnchor:[5,5]
-  });
-  const m = L.marker([site.lat, site.lng], { icon, cls: site.classification });
-  m.on('click', () => showDetail(site));
-  m.bindTooltip(`<b>${site.id}</b><br>${site.city} · ${site.classification}<br>Dist: ${site.distance.toFixed(0)}m`, {direction:'top'});
+function mkMarker(s){
+  const col=s.classification==='Exact Match'?'#1F9D6E':s.classification==='Drift Match'?'#E8A33D':'#D9534F';
+  const icon=L.divIcon({
+    html:`<div style="width:9px;height:9px;background:${col};border-radius:50%;border:2px solid rgba(255,255,255,.8);box-shadow:0 1px 3px rgba(0,0,0,.3)"></div>`,
+    className:'',iconSize:[9,9],iconAnchor:[4,4]});
+  const m=L.marker([s.lat,s.lng],{icon});
+  m._c=s.classification;
+  m.on('click',()=>showDetail(s));
+  m.bindTooltip(`<b>${s.site_id}</b><br>${s.city||''} · ${s.classification}<br>${s.distance.toFixed(0)}m`,{direction:'top'});
   return m;
 }
-
-// ═══════════════════════════════════════════════════════════
-// LOAD DATA
-// ═══════════════════════════════════════════════════════════
-async function loadDefaultData() {
-  try {
-    const resp = await fetch('sites_data.json');
-    const data = await resp.json();
-    allSites = data;
-    activeFilters.demo = new Set([...new Set(allSites.map(s=>s.demo))]);
-    document.getElementById('loadingOverlay').style.display = 'none';
-    applyFilters();
-  } catch(e) {
-    document.querySelector('.loading-text').textContent = 'Error loading data: ' + e.message;
-  }
+function renderMap(){
+  cluster.clearLayers();
+  cluster.addLayers(FILT.map(mkMarker));
 }
 
-// ═══════════════════════════════════════════════════════════
-// FILTERS
-// ═══════════════════════════════════════════════════════════
-function toggleChip(el) {
-  const filter = el.dataset.filter;
-  const val = el.dataset.val;
-  if(el.classList.contains('active')) {
-    el.classList.remove('active');
-    activeFilters[filter].delete(val);
-  } else {
-    el.classList.add('active');
-    activeFilters[filter].add(val);
-  }
+/* ─── DEMO DATA ─── */
+async function loadDemo(){
+  showLoad('Loading demo data…');
+  try{
+    const r=await fetch('demo_results.json');
+    if(!r.ok)throw new Error('demo_results.json not found — place it alongside index.html');
+    ALL=await r.json();
+    buildFilters();applyFilters();hideLoad();
+  }catch(e){document.getElementById('ltxt').textContent='⚠ '+e.message;setTimeout(hideLoad,4000);}
+}
+
+/* ─── FILTERS ─── */
+function buildFilters(){
+  const regs=[...new Set(ALL.map(s=>s.region).filter(Boolean))].sort();
+  const dems=[...new Set(ALL.map(s=>normDemo(s.demographic)).filter(Boolean))].sort();
+  const pris=[...new Set(ALL.map(s=>s.priority).filter(Boolean))].sort();
+  F.region=new Set(regs);F.demo=new Set(dems);F.priority=new Set(pris);
+  document.getElementById('f-reg').innerHTML=
+    regs.map(v=>`<div class="chip chip-r on" data-f="region" data-v="${v}" onclick="fc(this)">${v}</div>`).join('');
+  document.getElementById('f-dem').innerHTML=
+    dems.map(v=>`<div class="chip chip-m on" data-f="demo" data-v="${v}" onclick="fc(this)">${v}</div>`).join('');
+  document.getElementById('f-pri').innerHTML=
+    pris.map(v=>`<div class="chip chip-m on" data-f="priority" data-v="${v}" onclick="fc(this)">${v}</div>`).join('');
+}
+function fc(el){
+  const f=el.dataset.f,v=el.dataset.v;
+  el.classList.toggle('on');
+  el.classList.contains('on')?F[f].add(v):F[f].delete(v);
   applyFilters();
 }
-
-function onDistSlider(el) {
-  const v = parseInt(el.value);
-  activeFilters.maxDist = v;
-  document.getElementById('dist-label').textContent = v >= 72400 ? 'all' : v.toLocaleString()+'m';
+function onDist(el){
+  F.maxDist=+el.value;
+  document.getElementById('dl').textContent=+el.value>=10000?'all':el.value+'m';
   applyFilters();
 }
-
-function onHeightSlider(el) {
-  const v = parseInt(el.value);
-  activeFilters.minHeight = v;
-  document.getElementById('height-label').textContent = v+'m';
+function onH(el){F.minH=+el.value;document.getElementById('hl').textContent=el.value+'m';applyFilters();}
+function resetFilters(){
+  document.querySelectorAll('.chip').forEach(c=>c.classList.add('on'));
+  F.cls=new Set(['Exact Match','Drift Match','New Build']);
+  F.ssrf=new Set(['yes','no']);
+  buildFilters();
+  F.maxDist=10000;F.minH=0;F.city='';
+  document.getElementById('sl-d').value=10000;document.getElementById('dl').textContent='all';
+  document.getElementById('sl-h').value=0;document.getElementById('hl').textContent='0m';
+  document.getElementById('city-in').value='';
   applyFilters();
 }
-
-function resetFilters() {
-  activeFilters.class = new Set(['Exact Match','Drift Match','New Build']);
-  activeFilters.region = new Set(['North','Central','South']);
-  activeFilters.demo = new Set([...new Set(allSites.map(s=>s.demo))]);
-  activeFilters.priority = new Set(['New Construction','Sharing']);
-  activeFilters.ssrf = new Set(['yes','no']);
-  activeFilters.maxDist = 999999;
-  activeFilters.minHeight = 0;
-  activeFilters.city = '';
-  document.querySelectorAll('.chip').forEach(c => c.classList.add('active'));
-  document.getElementById('dist-slider').value = 72400;
-  document.getElementById('dist-label').textContent = 'all';
-  document.getElementById('height-slider').value = 0;
-  document.getElementById('height-label').textContent = '0m';
-  document.getElementById('city-search').value = '';
-  applyFilters();
-}
-
-function applyFilters() {
-  const cityQ = document.getElementById('city-search').value.trim().toLowerCase();
-  filteredSites = allSites.filter(s => {
-    if(!activeFilters.class.has(s.classification)) return false;
-    if(!activeFilters.region.has(s.region)) return false;
-    const demo = s.demo.trim();
-    // handle 'urban' (lowercase) as 'Urban'
-    const demoKey = demo.charAt(0).toUpperCase() + demo.slice(1).toLowerCase();
-    if(!activeFilters.demo.has(demo) && !activeFilters.demo.has(demoKey)) return false;
-    if(!activeFilters.priority.has(s.priority)) return false;
-    const ssrfVal = s.ssrf ? 'yes' : 'no';
-    if(!activeFilters.ssrf.has(ssrfVal)) return false;
-    if(s.distance > activeFilters.maxDist) return false;
-    if(s.towerHeight < activeFilters.minHeight) return false;
-    if(cityQ && !s.city.toLowerCase().includes(cityQ)) return false;
+function applyFilters(){
+  const cq=(document.getElementById('city-in').value||'').toLowerCase();
+  FILT=ALL.filter(s=>{
+    if(!F.cls.has(s.classification))return false;
+    if(F.region.size&&!F.region.has(s.region))return false;
+    if(F.demo.size&&!F.demo.has(normDemo(s.demographic)))return false;
+    if(F.priority.size&&!F.priority.has(s.priority))return false;
+    if(!F.ssrf.has(s.ssrf?'yes':'no'))return false;
+    if(s.distance>F.maxDist)return false;
+    if((s.tower_height||0)<F.minH)return false;
+    if(cq&&!(s.city||'').toLowerCase().includes(cq))return false;
     return true;
   });
-  updateTopbar();
-  updateMap();
-  updateTable();
-  updateCharts();
+  updateKPIs();renderMap();renderTable();updateCharts();
 }
 
-// ═══════════════════════════════════════════════════════════
-// TOPBAR + LEGEND
-// ═══════════════════════════════════════════════════════════
-function updateTopbar() {
-  const total = filteredSites.length;
-  const exact = filteredSites.filter(s=>s.classification==='Exact Match').length;
-  const drift = filteredSites.filter(s=>s.classification==='Drift Match').length;
-  const build = filteredSites.filter(s=>s.classification==='New Build').length;
-  const rate = total > 0 ? (((exact+drift)/total)*100).toFixed(1)+'%' : '—';
-  document.getElementById('st-total').textContent = total.toLocaleString();
-  document.getElementById('st-exact').textContent = exact.toLocaleString();
-  document.getElementById('st-drift').textContent = drift.toLocaleString();
-  document.getElementById('st-build').textContent = build.toLocaleString();
-  document.getElementById('st-rate').textContent = rate;
-  document.getElementById('leg-exact').textContent = exact;
-  document.getElementById('leg-drift').textContent = drift;
-  document.getElementById('leg-build').textContent = build;
-  document.getElementById('ai-site-count').textContent = total.toLocaleString();
+/* ─── KPIs ─── */
+function updateKPIs(){
+  const t=FILT.length,e=FILT.filter(s=>s.classification==='Exact Match').length,
+    d=FILT.filter(s=>s.classification==='Drift Match').length,b=FILT.filter(s=>s.classification==='New Build').length;
+  document.getElementById('k-tot').textContent=t.toLocaleString();
+  document.getElementById('k-e').textContent=e.toLocaleString();
+  document.getElementById('k-d').textContent=d.toLocaleString();
+  document.getElementById('k-b').textContent=b.toLocaleString();
+  document.getElementById('k-r').textContent=t?((e+d)/t*100).toFixed(1)+'%':'—';
+  document.getElementById('l-e').textContent=e;
+  document.getElementById('l-d').textContent=d;
+  document.getElementById('l-b').textContent=b;
+  document.getElementById('ai-ct').textContent=t.toLocaleString();
 }
 
-// ═══════════════════════════════════════════════════════════
-// MAP
-// ═══════════════════════════════════════════════════════════
-function updateMap() {
-  markerLayer.clearLayers();
-  const markers = filteredSites.map(s => makeMarker(s));
-  markerLayer.addLayers(markers);
-}
-
-// ═══════════════════════════════════════════════════════════
-// TABLE
-// ═══════════════════════════════════════════════════════════
-function sortTable(col) {
-  if(sortCol===col) sortAsc=!sortAsc;
-  else { sortCol=col; sortAsc=true; }
-  renderTable();
-}
-
-function updateTable() { renderTable(); }
-
-function renderTable() {
-  const sorted = [...filteredSites].sort((a,b)=>{
-    let va = a[sortCol], vb = b[sortCol];
-    if(typeof va==='string') va=va.toLowerCase();
-    if(typeof vb==='string') vb=vb.toLowerCase();
-    return sortAsc ? (va>vb?1:-1) : (va<vb?1:-1);
+/* ─── TABLE ─── */
+function srt(col){sortAsc=sortCol===col?!sortAsc:true;sortCol=col;renderTable();}
+function renderTable(){
+  const sorted=[...FILT].sort((a,b)=>{
+    let va=a[sortCol]??'',vb=b[sortCol]??'';
+    if(typeof va==='string')va=va.toLowerCase();
+    if(typeof vb==='string')vb=vb.toLowerCase();
+    return sortAsc?(va>vb?1:-1):(va<vb?1:-1);
   });
-  const rows = sorted.slice(0,500); // cap at 500 for performance
-  const tb = document.getElementById('tableBody');
-  tb.innerHTML = rows.map(s => {
-    const badge = s.classification==='Exact Match' ? 'badge-exact' : s.classification==='Drift Match' ? 'badge-drift' : 'badge-build';
-    return `<tr onclick="showDetail(allSites.find(x=>x.id==='${s.id}'))" style="cursor:pointer">
-      <td><code style="font-size:11px">${s.id}</code></td>
-      <td>${s.city}</td>
-      <td>${s.region}</td>
-      <td>${s.demo}</td>
-      <td><span class="badge ${badge}">${s.classification}</span></td>
+  const rows=sorted.slice(0,500);
+  document.getElementById('tb').innerHTML=rows.length?rows.map(s=>{
+    const bc=s.classification==='Exact Match'?'bx-e':s.classification==='Drift Match'?'bx-d':'bx-b';
+    const act=actionTxt(s);
+    return`<tr onclick="showDetail(FILT.find(x=>x.site_id===String(${JSON.stringify(s.site_id)})))" style="cursor:pointer">
+      <td><code style="font-size:10px">${s.site_id}</code></td>
+      <td>${s.city||'—'}</td><td>${s.region||'—'}</td>
+      <td>${normDemo(s.demographic)}</td>
+      <td><span class="bx ${bc}">${s.classification}</span></td>
       <td style="font-weight:600">${s.distance.toFixed(0)}</td>
-      <td><code style="font-size:10px">${s.nearestId}</code></td>
-      <td style="font-size:10.5px">${s.towerType}</td>
-      <td>${s.towerHeight}</td>
-      <td>${s.ssrf ? '<span class="badge badge-ssrf">Yes</span>' : '—'}</td>
-      <td style="font-size:10.5px">${s.priority}</td>
-      <td style="font-size:10px;max-width:220px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="${s.action}">${s.action}</td>
+      <td><code style="font-size:10px">${s.tower_id||'—'}</code></td>
+      <td style="font-size:10px">${s.tower_type||'—'}</td>
+      <td>${s.tower_height||0}</td><td>${s.tenants||0}</td>
+      <td>${s.ssrf?'<span class="bx bx-y">Yes</span>':'—'}</td>
+      <td style="font-size:10px">${s.priority||'—'}</td>
+      <td style="font-size:10px;max-width:190px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="${act}">${act}</td>
     </tr>`;
-  }).join('');
-  if(sorted.length > 500) {
-    const extra = document.createElement('tr');
-    extra.innerHTML = `<td colspan="12" style="text-align:center;color:var(--muted);font-size:11px;padding:8px">Showing 500 of ${sorted.length} sites — apply filters to narrow down</td>`;
-    tb.appendChild(extra);
+  }).join(''):`<tr><td colspan="13" class="nodata">No results for current filters</td></tr>`;
+  if(sorted.length>500){
+    const r=document.createElement('tr');
+    r.innerHTML=`<td colspan="13" class="nodata">Showing 500 of ${sorted.length} — narrow filters to see all</td>`;
+    document.getElementById('tb').appendChild(r);
   }
 }
 
-// ═══════════════════════════════════════════════════════════
-// DETAIL POPUP
-// ═══════════════════════════════════════════════════════════
-function showDetail(site) {
-  if(!site) return;
-  document.getElementById('dp-id').textContent = `Site ${site.id}`;
-  document.getElementById('dp-city').textContent = `${site.city} · ${site.region} · ${site.subRegion}`;
-  const rows = [
-    ['Classification', `<span class="badge ${site.classification==='Exact Match'?'badge-exact':site.classification==='Drift Match'?'badge-drift':'badge-build'}">${site.classification}</span>`],
-    ['Distance to Tower', `<strong>${site.distance.toFixed(1)}m</strong>`],
-    ['Nearest Tower ID', `<code>${site.nearestId}</code>`],
-    ['Tower Type', site.towerType],
-    ['Tower Height', site.towerHeight + 'm'],
-    ['Tenants', site.tenants > 0 ? site.tenants : 'Not recorded'],
-    ['Demography', site.demo],
-    ['Grid Type', site.gridType],
-    ['Fiber PoP', site.fiberPop === '0' ? 'No' : site.fiberPop],
-    ['Priority', site.priority],
-    ['SSRF Submitted', site.ssrf ? '✅ Yes' : '—'],
-    ['Batch', site.batch],
-  ];
-  document.getElementById('dp-rows').innerHTML = rows.map(([k,v])=>`
-    <div class="detail-row"><span class="detail-key">${k}</span><span class="detail-val">${v}</span></div>`).join('');
-  document.getElementById('dp-action').innerHTML = `<strong>Recommended action:</strong><br>${site.action}`;
-  document.getElementById('detailPopup').style.display = 'block';
-  map.setView([site.lat, site.lng], 14);
+/* ─── CHARTS ─── */
+function initCharts(){
+  Chart.defaults.font.family="'Segoe UI',system-ui,sans-serif";
+  donut=new Chart(document.getElementById('ch-donut'),{type:'doughnut',
+    data:{labels:['Exact','Drift','New Build'],
+      datasets:[{data:[0,0,0],backgroundColor:['#1F9D6E','#E8A33D','#D9534F'],borderWidth:2,borderColor:'#fff'}]},
+    options:{cutout:'62%',plugins:{legend:{position:'bottom',labels:{font:{size:9},boxWidth:8}}},animation:{duration:250}}});
+  chReg=new Chart(document.getElementById('ch-reg'),{type:'bar',
+    data:{labels:[],datasets:[
+      {label:'Exact',data:[],backgroundColor:'#1F9D6E'},
+      {label:'Drift',data:[],backgroundColor:'#E8A33D'},
+      {label:'New Build',data:[],backgroundColor:'#D9534F'}]},
+    options:{scales:{x:{stacked:true,ticks:{font:{size:8}}},y:{stacked:true,ticks:{font:{size:8}}}},
+      plugins:{legend:{labels:{font:{size:9},boxWidth:8}}},animation:{duration:250}}});
+  chDist=new Chart(document.getElementById('ch-dist'),{type:'bar',
+    data:{labels:['<100','100-300','300-700','0.7-1.5k','1.5-3k','3k+'],
+      datasets:[{data:[0,0,0,0,0,0],backgroundColor:'#2D6E7E',borderRadius:2}]},
+    options:{plugins:{legend:{display:false}},
+      scales:{x:{ticks:{font:{size:8}}},y:{ticks:{font:{size:8}}}},animation:{duration:250}}});
+  chDem=new Chart(document.getElementById('ch-dem'),{type:'bar',
+    data:{labels:['Dense Urban','Urban','Suburban','Rural'],
+      datasets:[{data:[0,0,0,0],backgroundColor:['#1B2A4A','#2D6E7E','#E8A33D','#1F9D6E'],borderRadius:2}]},
+    options:{indexAxis:'y',plugins:{legend:{display:false}},
+      scales:{x:{ticks:{font:{size:8}}},y:{ticks:{font:{size:8}}}},animation:{duration:250}}});
+}
+function updateCharts(){
+  const f=FILT,t=f.length;
+  const e=f.filter(s=>s.classification==='Exact Match').length;
+  const d=f.filter(s=>s.classification==='Drift Match').length;
+  const b=f.filter(s=>s.classification==='New Build').length;
+  donut.data.datasets[0].data=[e,d,b];donut.update();
+  const regs=[...new Set(ALL.map(s=>s.region).filter(Boolean))].sort();
+  chReg.data.labels=regs;
+  chReg.data.datasets[0].data=regs.map(r=>f.filter(s=>s.region===r&&s.classification==='Exact Match').length);
+  chReg.data.datasets[1].data=regs.map(r=>f.filter(s=>s.region===r&&s.classification==='Drift Match').length);
+  chReg.data.datasets[2].data=regs.map(r=>f.filter(s=>s.region===r&&s.classification==='New Build').length);
+  chReg.update();
+  const bins=[0,100,300,700,1500,3000,Infinity],bc=Array(6).fill(0);
+  f.forEach(s=>{for(let i=0;i<6;i++){if(s.distance>=bins[i]&&s.distance<bins[i+1]){bc[i]++;break;}}});
+  chDist.data.datasets[0].data=bc;chDist.update();
+  const dems=['Dense Urban','Urban','Suburban','Rural'];
+  chDem.data.datasets[0].data=dems.map(dm=>f.filter(s=>normDemo(s.demographic)===dm).length);
+  chDem.update();
+  const avg=t?f.reduce((a,s)=>a+s.distance,0)/t:0;
+  const ssrfN=f.filter(s=>s.ssrf).length;
+  document.getElementById('sg').innerHTML=`
+    <div class="sc sc-g"><div class="sn" style="color:var(--green)">${e}</div><div class="sl">Exact</div><div class="ss">&lt;${exact()}m</div></div>
+    <div class="sc sc-a"><div class="sn" style="color:var(--amber)">${d}</div><div class="sl">Drift</div><div class="ss">Within radius</div></div>
+    <div class="sc sc-r"><div class="sn" style="color:var(--red)">${b}</div><div class="sl">New Build</div></div>
+    <div class="sc sc-t"><div class="sn" style="color:var(--teal)">${t?((e+d)/t*100).toFixed(1):0}%</div><div class="sl">Coloc. Rate</div></div>
+    <div class="sc sc-n"><div class="sn" style="color:var(--navy);font-size:18px">${avg.toFixed(0)}m</div><div class="sl">Avg Dist</div></div>
+    <div class="sc sc-g"><div class="sn" style="color:var(--green);font-size:18px">${ssrfN}</div><div class="sl">SSRF Filed</div></div>`;
 }
 
-// ═══════════════════════════════════════════════════════════
-// CHARTS
-// ═══════════════════════════════════════════════════════════
-function initCharts() {
-  Chart.defaults.font.family = "'Segoe UI', system-ui, sans-serif";
-  Chart.defaults.plugins.legend.labels.boxWidth = 10;
-  Chart.defaults.plugins.legend.labels.padding = 10;
-
-  donutChart = new Chart(document.getElementById('donutChart'), {
-    type: 'doughnut',
-    data: { labels:['Exact Match','Drift Match','New Build'], datasets:[{data:[0,0,0], backgroundColor:['#1F9D6E','#E8A33D','#D9534F'], borderWidth:2, borderColor:'#fff'}] },
-    options: { cutout:'65%', plugins:{legend:{position:'bottom',labels:{font:{size:10}}}}, animation:{duration:300} }
-  });
-  regionChart = new Chart(document.getElementById('regionChart'), {
-    type: 'bar',
-    data: { labels:['North','Central','South'], datasets:[
-      {label:'Exact',data:[0,0,0],backgroundColor:'#1F9D6E'},
-      {label:'Drift',data:[0,0,0],backgroundColor:'#E8A33D'},
-      {label:'New Build',data:[0,0,0],backgroundColor:'#D9534F'},
-    ]},
-    options: { scales:{x:{stacked:true,ticks:{font:{size:9}}},y:{stacked:true,ticks:{font:{size:9}}}}, plugins:{legend:{labels:{font:{size:9}}}}, animation:{duration:300} }
-  });
-  distChart = new Chart(document.getElementById('distChart'), {
-    type: 'bar',
-    data: { labels:['<100','100-300','300-700','700-1.5k','1.5k-3k','3k+'], datasets:[{data:[0,0,0,0,0,0],backgroundColor:'#2D6E7E',borderRadius:2}] },
-    options: { plugins:{legend:{display:false}}, scales:{x:{ticks:{font:{size:9}}},y:{ticks:{font:{size:9}}}}, animation:{duration:300} }
-  });
-  demoChart = new Chart(document.getElementById('demoChart'), {
-    type: 'bar',
-    data: { labels:['Dense Urban','Urban','Suburban','Rural'], datasets:[{data:[0,0,0,0],backgroundColor:['#1B2A4A','#2D6E7E','#E8A33D','#1F9D6E'],borderRadius:2}] },
-    options: { indexAxis:'y', plugins:{legend:{display:false}}, scales:{x:{ticks:{font:{size:9}}},y:{ticks:{font:{size:9}}}}, animation:{duration:300} }
-  });
+/* ─── DETAIL ─── */
+function showDetail(s){
+  if(!s)return;
+  document.getElementById('d-id').textContent='Site '+s.site_id;
+  document.getElementById('d-city').textContent=(s.city||'—')+' · '+(s.region||'—');
+  const bc=s.classification==='Exact Match'?'bx-e':s.classification==='Drift Match'?'bx-d':'bx-b';
+  document.getElementById('d-rows').innerHTML=[
+    ['Class',`<span class="bx ${bc}">${s.classification}</span>`],
+    ['Distance',`<b>${s.distance.toFixed(1)}m</b>`],
+    ['Tower',`<code>${s.tower_id||'—'}</code>`],
+    ['Type',s.tower_type||'—'],['Height',`${s.tower_height||0}m`],
+    ['Tenants',s.tenants||0],['Demography',normDemo(s.demographic)],
+    ['Priority',s.priority||'—'],['SSRF',s.ssrf?'✅ Yes':'—'],
+    ['Grid',s.grid_type||'—'],['Fiber PoP',s.fiber_pop||'—'],
+  ].map(([k,v])=>`<div class="dr"><span class="dk">${k}</span><span class="dv">${v}</span></div>`).join('');
+  document.getElementById('d-act').innerHTML='<b>Action:</b> '+actionTxt(s);
+  document.getElementById('detail').style.display='block';
+  map.setView([s.lat,s.lng],14);
 }
 
-function updateCharts() {
-  const fs = filteredSites;
-  const exact = fs.filter(s=>s.classification==='Exact Match').length;
-  const drift = fs.filter(s=>s.classification==='Drift Match').length;
-  const build = fs.filter(s=>s.classification==='New Build').length;
-  donutChart.data.datasets[0].data = [exact,drift,build];
-  donutChart.update();
-
-  const regions = ['North','Central','South'];
-  regionChart.data.datasets[0].data = regions.map(r=>fs.filter(s=>s.region===r&&s.classification==='Exact Match').length);
-  regionChart.data.datasets[1].data = regions.map(r=>fs.filter(s=>s.region===r&&s.classification==='Drift Match').length);
-  regionChart.data.datasets[2].data = regions.map(r=>fs.filter(s=>s.region===r&&s.classification==='New Build').length);
-  regionChart.update();
-
-  const bins = [0,100,300,700,1500,3000,Infinity];
-  const bCounts = Array(bins.length-1).fill(0);
-  fs.forEach(s=>{ for(let i=0;i<bins.length-1;i++){ if(s.distance>=bins[i]&&s.distance<bins[i+1]){ bCounts[i]++; break; } } });
-  distChart.data.datasets[0].data = bCounts;
-  distChart.update();
-
-  const demos = ['Dense Urban','Urban','Suburban','Rural'];
-  demoChart.data.datasets[0].data = demos.map(d=>fs.filter(s=>s.demo===d||s.demo.toLowerCase()===d.toLowerCase()).length);
-  demoChart.update();
-
-  // Stats panel
-  const avgDist = fs.length > 0 ? (fs.reduce((a,b)=>a+b.distance,0)/fs.length).toFixed(0) : '—';
-  const ssrfCount = fs.filter(s=>s.ssrf).length;
-  const rate = fs.length > 0 ? (((exact+drift)/fs.length)*100).toFixed(1) : '0';
-  document.getElementById('stat-grid').innerHTML = `
-    <div class="stat-card green"><div class="stat-n green">${exact}</div><div class="stat-lbl">Exact Match</div><div class="stat-sub">&lt;100m to tower</div></div>
-    <div class="stat-card amber"><div class="stat-n amber">${drift}</div><div class="stat-lbl">Drift Match</div><div class="stat-sub">Within drift radius</div></div>
-    <div class="stat-card red"><div class="stat-n red">${build}</div><div class="stat-lbl">New Build</div><div class="stat-sub">No towerco nearby</div></div>
-    <div class="stat-card teal"><div class="stat-n teal">${rate}%</div><div class="stat-lbl">Coloc. Rate</div><div class="stat-sub">${(exact+drift)} sites saved</div></div>
-    <div class="stat-card navy"><div class="stat-n navy" style="font-size:18px">${avgDist}m</div><div class="stat-lbl">Avg Distance</div><div class="stat-sub">to nearest tower</div></div>
-    <div class="stat-card green"><div class="stat-n green" style="font-size:18px">${ssrfCount}</div><div class="stat-lbl">SSRF Filed</div><div class="stat-sub">of ${fs.length} sites</div></div>
-  `;
+/* ─── EXPORT ─── */
+function exportCSV(){
+  const h='site_id,city,region,demographic,priority,classification,distance,tower_id,tower_type,tower_height,tenants,ssrf,action';
+  const rows=FILT.map(s=>[s.site_id,s.city,s.region,normDemo(s.demographic),s.priority,
+    s.classification,s.distance.toFixed(1),s.tower_id,s.tower_type,s.tower_height||0,
+    s.tenants||0,s.ssrf?'Yes':'No',`"${actionTxt(s)}"`].join(','));
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([[h,...rows].join('\n')],{type:'text/csv'}));
+  a.download='colocation_analysis.csv';a.click();
 }
 
-// ═══════════════════════════════════════════════════════════
-// TAB SWITCHING
-// ═══════════════════════════════════════════════════════════
-function switchSTab(idx, el) {
-  for(let i=0;i<3;i++) {
-    document.getElementById(`stab-body-${i}`).style.display = i===idx?'block':'none';
-    document.getElementById(`stab${i}`).classList.toggle('active', i===idx);
-  }
-}
-function switchPTab(idx, el) {
-  document.getElementById('ptab-0').style.display = idx===0?'flex':'none';
-  document.getElementById('ptab-1').style.display = idx===1?'flex':'none';
-  document.querySelectorAll('.p-tab').forEach((t,i)=>t.classList.toggle('active',i===idx));
-}
-
-// ═══════════════════════════════════════════════════════════
-// EXPORT
-// ═══════════════════════════════════════════════════════════
-function exportCSV() {
-  const headers = ['Site ID','City','Region','Sub-Region','Latitude','Longitude','Demography','Priority','Classification','Distance (m)','Nearest Tower ID','Tower Type','Tower Height (m)','Tenants','SSRF Submitted','Fiber PoP','Grid Type','Action'];
-  const rows = filteredSites.map(s=>[s.id,s.city,s.region,s.subRegion,s.lat,s.lng,s.demo,s.priority,s.classification,s.distance.toFixed(1),s.nearestId,s.towerType,s.towerHeight,s.tenants,s.ssrf?'Yes':'No',s.fiberPop,s.gridType,`"${s.action}"`]);
-  const csv = [headers, ...rows].map(r=>r.join(',')).join('\n');
-  const blob = new Blob([csv], {type:'text/csv'});
-  const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='colocation_analysis.csv'; a.click();
-}
-
-// ═══════════════════════════════════════════════════════════
-// FILE UPLOAD
-// ═══════════════════════════════════════════════════════════
-function onDragOver(e) { e.preventDefault(); document.getElementById('dropZone').classList.add('drag-over'); }
-function onDragLeave(e) { document.getElementById('dropZone').classList.remove('drag-over'); }
-function onDrop(e) { e.preventDefault(); onDragLeave(e); const f=e.dataTransfer.files[0]; if(f) processFile(f); }
-function onFileSelect(e) { const f=e.target.files[0]; if(f) processFile(f); }
-
-function processFile(file) {
-  const status = document.getElementById('uploadStatus');
-  status.textContent = `⏳ Processing ${file.name}…`;
-  const reader = new FileReader();
-  reader.onload = function(e) {
-    try {
+/* ─── FILE UPLOAD ─── */
+function dov(e,id){e.preventDefault();document.getElementById(id).classList.add('over');}
+function dol(id){document.getElementById(id).classList.remove('over');}
+function ddp(e,type){e.preventDefault();dol('dz-'+type);const f=e.dataTransfer.files[0];if(f)readFi(f,type);}
+function onFi(e,type){const f=e.target.files[0];if(f)readFi(f,type);}
+function readFi(file,type){
+  const rd=new FileReader();
+  rd.onload=e=>{
+    try{
       let rows;
-      if(file.name.endsWith('.csv')) {
-        const result = Papa.parse(e.target.result, {header:true, skipEmptyLines:true});
-        rows = result.data;
-      } else {
-        const wb = XLSX.read(e.target.result, {type:'array'});
-        const ws = wb.Sheets[wb.SheetNames[0]];
-        rows = XLSX.utils.sheet_to_json(ws);
+      if(/\.csv$/i.test(file.name)){
+        rows=Papa.parse(e.target.result,{header:true,skipEmptyLines:true,dynamicTyping:true}).data;
+      }else{
+        const wb=XLSX.read(e.target.result,{type:'array'});
+        rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
       }
-      status.textContent = `✅ Loaded ${rows.length} rows. Running analysis…`;
-      runAnalysisOnRows(rows);
-    } catch(err) {
-      status.textContent = `❌ Error: ${err.message}`;
+      const st=document.getElementById('st-'+type);
+      if(type==='n'){
+        uploadedNom=rows;
+        st.className='status st-ok';
+        st.textContent=`✅ ${rows.length} nominals loaded · columns: ${Object.keys(rows[0]||{}).slice(0,6).join(', ')}…`;
+        document.getElementById('nl').textContent=`✅ ${file.name} (${rows.length} rows)`;
+      }else{
+        uploadedTow=rows;
+        st.className='status st-ok';
+        st.textContent=`✅ ${rows.length} towers loaded · columns: ${Object.keys(rows[0]||{}).slice(0,6).join(', ')}…`;
+        document.getElementById('tl').textContent=`✅ ${file.name} (${rows.length} rows)`;
+      }
+    }catch(err){
+      const st=document.getElementById('st-'+type);
+      st.className='status st-err';st.textContent='❌ '+err.message;
     }
   };
-  if(file.name.endsWith('.csv')) reader.readAsText(file);
-  else reader.readAsArrayBuffer(file);
+  /\.csv$/i.test(file.name)?rd.readAsText(file):rd.readAsArrayBuffer(file);
 }
 
-function getDriftRadii() {
-  return {
-    'Dense Urban': parseInt(document.getElementById('r-dense').value) || 100,
-    'Urban': parseInt(document.getElementById('r-urban').value) || 300,
-    'Suburban': parseInt(document.getElementById('r-suburban').value) || 700,
-    'Rural': parseInt(document.getElementById('r-rural').value) || 1500,
-  };
-}
-function getExactThreshold() { return parseInt(document.getElementById('r-exact').value) || 100; }
-
-function runAnalysisOnRows(rows) {
-  const exact = getExactThreshold();
-  const radii = getDriftRadii();
-  // Try to find required columns with flexible names
-  const colMap = {};
-  const firstRow = rows[0] || {};
-  const keys = Object.keys(firstRow);
-  for(const k of keys) {
-    const kl = k.toLowerCase();
-    if(kl.includes('lat')) colMap.lat = k;
-    if(kl.includes('lon') || kl.includes('lng')) colMap.lng = k;
-    if(kl.includes('city')) colMap.city = k;
-    if(kl.includes('region') && !kl.includes('sub')) colMap.region = k;
-    if(kl.includes('sub') && kl.includes('region')) colMap.subRegion = k;
-    if(kl.includes('demo') || kl.includes('category')) colMap.demo = k;
-    if(kl.includes('site') && (kl.includes('id') || kl.includes('final'))) colMap.id = k;
-    if(kl.includes('priority')) colMap.priority = k;
-    if(kl.includes('distance')) colMap.distance = k;
-    if(kl.includes('tower') && kl.includes('type')) colMap.towerType = k;
-    if(kl.includes('height')) colMap.towerHeight = k;
-    if(kl.includes('ssrf')) colMap.ssrf = k;
-    if(kl.includes('smdb') || (kl.includes('nearest') && kl.includes('id'))) colMap.nearestId = k;
+function findCol(keys,candidates){
+  for(const c of candidates){
+    const f=keys.find(k=>k.toLowerCase().replace(/[\s_\-\.]/g,'').includes(c.toLowerCase().replace(/[\s_\-\.]/g,'')));
+    if(f)return f;
   }
-  if(!colMap.lat || !colMap.lng) {
-    document.getElementById('uploadStatus').textContent = '❌ Could not find Latitude/Longitude columns.';
-    return;
+  return null;
+}
+
+async function runAnalysis(){
+  const runSt=document.getElementById('st-run');
+  const prog=document.getElementById('prog');
+  const pf=document.getElementById('pf');
+  if(!uploadedNom){runSt.className='status st-err';runSt.textContent='❌ Upload nominals first';return;}
+  if(!uploadedTow){runSt.className='status st-err';runSt.textContent='❌ Upload towerco inventory first';return;}
+  runSt.className='status st-info';runSt.textContent='⏳ Parsing files…';
+  prog.classList.add('show');pf.style.width='5%';
+  await sleep(30);
+  try{
+    /* Parse nominals */
+    const nk=Object.keys(uploadedNom[0]);
+    const nLat=findCol(nk,['latitude','lat']);
+    const nLng=findCol(nk,['longitude','long','lng']);
+    if(!nLat||!nLng){throw new Error('Nominals file needs Latitude + Longitude columns. Found: '+nk.join(', '));}
+    const nId=findCol(nk,['siteid','site_id','finalsite','id','number']);
+    const nCity=findCol(nk,['city','town']);
+    const nReg=findCol(nk,['region']);
+    const nSub=findCol(nk,['subregion','sub_region','sub-region']);
+    const nDem=findCol(nk,['demographic','demo','category','landuse','land_use']);
+    const nPri=findCol(nk,['priority']);
+    const nSS=findCol(nk,['ssrf']);
+    const nGr=findCol(nk,['grid']);
+    const nFi=findCol(nk,['fiber','fibre','pop']);
+    const nBa=findCol(nk,['batch']);
+    const nominals=uploadedNom.map((r,i)=>({
+      site_id:String(r[nId]??i+1),
+      lat:parseFloat(r[nLat]),lng:parseFloat(r[nLng]),
+      city:String(r[nCity]||''),region:String(r[nReg]||''),
+      sub_region:String(r[nSub]||''),demographic:normDemo(String(r[nDem]||'')),
+      priority:String(r[nPri]||''),ssrf:(String(r[nSS]||'')).toLowerCase().trim()==='yes',
+      grid_type:String(r[nGr]||''),fiber_pop:String(r[nFi]||''),batch:String(r[nBa]||''),
+    })).filter(n=>!isNaN(n.lat)&&!isNaN(n.lng)&&n.lat!==0);
+    pf.style.width='25%';await sleep(20);
+
+    /* Parse towers */
+    const tk=Object.keys(uploadedTow[0]);
+    const tLat=findCol(tk,['latitude','lat']);
+    const tLng=findCol(tk,['longitude','long','lng']);
+    if(!tLat||!tLng){throw new Error('Towerco file needs Latitude + Longitude columns. Found: '+tk.join(', '));}
+    const tId=findCol(tk,['towerid','tower_id','smdb','id','siteid']);
+    const tTy=findCol(tk,['towertype','tower_type','type']);
+    const tHt=findCol(tk,['height','height_m']);
+    const tCa=findCol(tk,['category','cat']);
+    const tTe=findCol(tk,['tenants','tenant']);
+    const towers=uploadedTow.map(r=>({
+      tower_id:String(r[tId]||''),lat:parseFloat(r[tLat]),lng:parseFloat(r[tLng]),
+      tower_type:String(r[tTy]||''),tower_height:parseFloat(r[tHt]||0)||0,
+      tower_cat:String(r[tCa]||''),tenants:parseInt(r[tTe]||0)||0,
+    })).filter(t=>!isNaN(t.lat)&&!isNaN(t.lng)&&t.lat!==0);
+    pf.style.width='40%';await sleep(20);
+
+    runSt.textContent=`⏳ Building spatial index for ${towers.length} towers…`;
+    const idx=buildIdx(towers);
+    pf.style.width='50%';await sleep(20);
+
+    runSt.textContent=`⏳ Joining ${nominals.length} nominals to nearest tower…`;
+    const results=[];
+    const chunk=40;
+    for(let i=0;i<nominals.length;i+=chunk){
+      const sl=nominals.slice(i,i+chunk);
+      for(const nom of sl){
+        const{tower,dist}=nearest(nom.lat,nom.lng,idx);
+        const cls=classify(dist,nom.demographic);
+        results.push({...nom,tower_id:tower.tower_id,tower_lat:tower.lat,tower_lng:tower.lng,
+          tower_type:tower.tower_type,tower_height:tower.tower_height,
+          tower_cat:tower.tower_cat,tenants:tower.tenants,distance:dist,classification:cls});
+      }
+      pf.style.width=Math.round(50+45*(i/nominals.length))+'%';
+      await sleep(0);
+    }
+    pf.style.width='100%';
+    ALL=results;buildFilters();applyFilters();
+    const e=results.filter(r=>r.classification==='Exact Match').length;
+    const d=results.filter(r=>r.classification==='Drift Match').length;
+    const b=results.filter(r=>r.classification==='New Build').length;
+    runSt.className='status st-ok';
+    runSt.textContent=`✅ ${results.length} sites: ${e} Exact · ${d} Drift · ${b} New Build`;
+    prog.classList.remove('show');
+    stab(1,document.querySelectorAll('.stab')[1]);
+  }catch(err){
+    runSt.className='status st-err';runSt.textContent='❌ '+err.message;
+    prog.classList.remove('show');console.error(err);
   }
-  const newSites = rows.map((r, i) => {
-    const demo = String(r[colMap.demo] || 'Unknown').trim();
-    const demoNorm = demo.charAt(0).toUpperCase() + demo.slice(1).toLowerCase();
-    const distance = parseFloat(r[colMap.distance] || 0);
-    const radius = radii[demoNorm] || 500;
-    let cls;
-    if(distance < exact) cls = 'Exact Match';
-    else if(distance <= radius) cls = 'Drift Match';
-    else cls = 'New Build';
-    const nearId = String(r[colMap.nearestId] || '—');
-    const action = cls === 'Exact Match' ? `Colocate on ${nearId} — no site change required`
-      : cls === 'Drift Match' ? `Propose ${Math.round(distance)}m drift to ${nearId}`
-      : `New build required — nearest asset is ${Math.round(distance)}m away`;
-    return {
-      id: String(r[colMap.id] || (i+1)),
-      city: String(r[colMap.city] || '—'),
-      region: String(r[colMap.region] || '—'),
-      subRegion: String(r[colMap.subRegion] || '—'),
-      lat: parseFloat(r[colMap.lat] || 0),
-      lng: parseFloat(r[colMap.lng] || 0),
-      demo: demoNorm,
-      priority: String(r[colMap.priority] || '—'),
-      classification: cls,
-      distance: distance,
-      nearestId: nearId,
-      towerType: String(r[colMap.towerType] || '—'),
-      towerHeight: parseFloat(r[colMap.towerHeight] || 0),
-      tenants: 0,
-      ssrf: String(r[colMap.ssrf] || '').toLowerCase() === 'yes',
-      fiberPop: '—',
-      gridType: '—',
-      batch: '—',
-      nearLat: 0, nearLng: 0,
-      action
-    };
-  }).filter(s => !isNaN(s.lat) && !isNaN(s.lng) && s.lat !== 0);
+}
+function sleep(ms){return new Promise(r=>setTimeout(r,ms));}
 
-  allSites = newSites;
-  activeFilters.demo = new Set([...new Set(newSites.map(s=>s.demo))]);
-  activeFilters.class = new Set(['Exact Match','Drift Match','New Build']);
-  document.getElementById('uploadStatus').textContent = `✅ Analysis complete: ${newSites.length} sites processed.`;
-  applyFilters();
-  if(newSites.length > 0) map.setView([newSites[0].lat, newSites[0].lng], 7);
+/* ─── TABS ─── */
+function stab(i,el){
+  ['sb0','sb1','sb2'].forEach((id,j)=>document.getElementById(id).style.display=j===i?'block':'none');
+  document.querySelectorAll('.stab').forEach((t,j)=>t.classList.toggle('on',j===i));
+}
+function ptab(i,el){
+  document.getElementById('pt0').style.display=i===0?'flex':'none';
+  document.getElementById('pt1').style.display=i===1?'flex':'none';
+  document.querySelectorAll('.ptab').forEach((t,j)=>t.classList.toggle('on',j===i));
 }
 
-function rerunWithCustomRadii() {
-  runAnalysisOnRows(allSites.map(s => ({
-    Latitude: s.lat, Longitude: s.lng, City: s.city, Region: s.region,
-    'Sub-Region': s.subRegion, 'Demographic Category': s.demo,
-    'Final Site': s.id, Priority: s.priority,
-    'Distance (meters)': s.distance, 'Tower Type': s.towerType,
-    Height: s.towerHeight, 'SMDB May 2024': s.nearestId,
-    'Zong SSRF submitted (Y/N)': s.ssrf ? 'Yes' : ''
-  })));
-}
+/* ─── RESIZE BOTTOM PANEL ─── */
+(()=>{
+  const h=document.getElementById('rh'),bot=document.getElementById('bot');
+  let drag=false,sy,sh;
+  h.addEventListener('mousedown',e=>{drag=true;sy=e.clientY;sh=bot.offsetHeight;
+    document.body.style.cursor='row-resize';e.preventDefault();});
+  document.addEventListener('mousemove',e=>{if(!drag)return;
+    const nh=Math.max(140,Math.min(520,sh+(sy-e.clientY)))+'px';
+    bot.style.height=nh;document.documentElement.style.setProperty('--bot',nh);});
+  document.addEventListener('mouseup',()=>{drag=false;document.body.style.cursor='';});
+})();
 
-// ═══════════════════════════════════════════════════════════
-// AI ASSISTANT
-// ═══════════════════════════════════════════════════════════
-function buildContext() {
-  const fs = filteredSites;
-  const exact = fs.filter(s=>s.classification==='Exact Match').length;
-  const drift = fs.filter(s=>s.classification==='Drift Match').length;
-  const build = fs.filter(s=>s.classification==='New Build').length;
-  const total = fs.length;
-  const rate = total > 0 ? (((exact+drift)/total)*100).toFixed(1) : 0;
-  const avgDist = total > 0 ? (fs.reduce((a,b)=>a+b.distance,0)/total).toFixed(0) : 0;
-  const ssrfCount = fs.filter(s=>s.ssrf).length;
-  const regions = ['North','Central','South'].map(r=>{
-    const rsites = fs.filter(s=>s.region===r);
-    const re = rsites.filter(s=>s.classification==='Exact Match').length;
-    const rd = rsites.filter(s=>s.classification==='Drift Match').length;
-    return `${r}: ${rsites.length} sites, ${re} exact, ${rd} drift, ${((re+rd)/Math.max(rsites.length,1)*100).toFixed(1)}% colocatable`;
-  }).join('\n');
-  const demos = ['Dense Urban','Urban','Suburban','Rural'].map(d=>{
-    const dsites = fs.filter(s=>s.demo===d||s.demo.toLowerCase()===d.toLowerCase());
-    return `${d}: ${dsites.length} sites`;
-  }).join(', ');
-  const cities = Object.entries(fs.reduce((acc,s)=>{ acc[s.city]=(acc[s.city]||0)+1; return acc; },{}))
-    .sort((a,b)=>b[1]-a[1]).slice(0,10).map(([c,n])=>`${c}(${n})`).join(', ');
-  const topExact = Object.entries(fs.filter(s=>s.classification==='Exact Match').reduce((acc,s)=>{ acc[s.city]=(acc[s.city]||0)+1; return acc; },{}))
-    .sort((a,b)=>b[1]-a[1]).slice(0,5).map(([c,n])=>`${c}(${n})`).join(', ');
-  return `You are a telecom network planning analyst. You have access to a colocation & drift analysis dataset.
-
-CURRENT FILTER RESULTS (${total} sites):
-- Exact Match (≤100m to towerco): ${exact} sites (${((exact/Math.max(total,1))*100).toFixed(1)}%)
-- Drift Match (within land-use radius): ${drift} sites (${((drift/Math.max(total,1))*100).toFixed(1)}%)
-- New Build required: ${build} sites (${((build/Math.max(total,1))*100).toFixed(1)}%)
-- Overall colocation rate: ${rate}%
-- Average distance to nearest tower: ${avgDist}m
-- SSRF already submitted: ${ssrfCount} sites
-
-BY REGION:
-${regions}
-
-BY DEMOGRAPHY: ${demos}
-
-TOP CITIES BY SITE COUNT: ${cities}
-TOP CITIES FOR EXACT MATCH: ${topExact}
-
-DRIFT RADII USED: Dense Urban=100m, Urban=300m, Suburban=700m, Rural=1500m
-ANALYSIS BASIS: Zong NRO 2024 rollout plan vs SMDB towerco inventory (Deodar)
-
-Answer concisely, be specific with numbers, and give actionable recommendations. Use bullet points for lists.`;
-}
-
-async function sendAI() {
-  const input = document.getElementById('aiInput');
-  const msg = input.value.trim();
-  if(!msg) return;
-  await askAI(msg);
-  input.value = '';
-}
-
-// ═══════════════════════════════════════════════════════════
-// AI PROVIDER CONFIG
-// ═══════════════════════════════════════════════════════════
-const AI_PROVIDERS = {
-  groq: {
-    url:      'https://api.groq.com/openai/v1/chat/completions',
-    keyLink:  'https://console.groq.com',
-    keyHint:  'Get a free key ↗',
-    placeholder: 'gsk_… (free at console.groq.com)',
-    storageKey: 'ai_key_groq',
-    models: [
-      'openai/gpt-oss-120b',
-      'openai/gpt-oss-20b',
-      'llama-4-scout-17b-16e-instruct',
-      'meta-llama/llama-4-maverick-17b-128e-instruct',
-      'moonshotai/kimi-k2-instruct',
-      'qwen/qwen3-32b',
-      'gemma2-9b-it',
-    ]
-  },
-  openrouter: {
-    url:      'https://openrouter.ai/api/v1/chat/completions',
-    keyLink:  'https://openrouter.ai/keys',
-    keyHint:  'Get free key ↗',
-    placeholder: 'sk-or-… (free at openrouter.ai)',
-    storageKey: 'ai_key_openrouter',
-    models: [
-      'meta-llama/llama-3.3-70b-instruct:free',
-      'meta-llama/llama-4-scout:free',
-      'google/gemma-3-27b-it:free',
-      'mistralai/mistral-7b-instruct:free',
-    ]
-  },
-  gemini: {
-    url:      'https://generativelanguage.googleapis.com/v1beta/openai/chat/completions',
-    keyLink:  'https://aistudio.google.com/app/apikey',
-    keyHint:  'Get free key ↗',
-    placeholder: 'AIza… (free at aistudio.google.com)',
-    storageKey: 'ai_key_gemini',
-    models: [
-      'gemini-2.0-flash',
-      'gemini-2.0-flash-lite',
-      'gemini-1.5-flash',
-      'gemini-1.5-pro',
-    ]
-  },
-  openai: {
-    url:      'https://api.openai.com/v1/chat/completions',
-    keyLink:  'https://platform.openai.com/api-keys',
-    keyHint:  'Get key ↗',
-    placeholder: 'sk-… (platform.openai.com)',
-    storageKey: 'ai_key_openai',
-    models: [
-      'gpt-4o',
-      'gpt-4o-mini',
-      'gpt-4-turbo',
-      'gpt-3.5-turbo',
-    ]
-  }
+/* ─── AI ─── */
+const PROVS={
+  groq:{url:'https://api.groq.com/openai/v1/chat/completions',link:'https://console.groq.com',hint:'Free key ↗',ph:'gsk_…',sk:'ai_groq',
+    models:['openai/gpt-oss-120b','openai/gpt-oss-20b','llama-4-scout-17b-16e-instruct','moonshotai/kimi-k2-instruct','qwen/qwen3-32b','gemma2-9b-it']},
+  openrouter:{url:'https://openrouter.ai/api/v1/chat/completions',link:'https://openrouter.ai/keys',hint:'Free key ↗',ph:'sk-or-…',sk:'ai_or',
+    models:['meta-llama/llama-3.3-70b-instruct:free','meta-llama/llama-4-scout:free','google/gemma-3-27b-it:free','mistralai/mistral-7b-instruct:free']},
+  gemini:{url:'https://generativelanguage.googleapis.com/v1beta/openai/chat/completions',link:'https://aistudio.google.com/app/apikey',hint:'Free key ↗',ph:'AIza…',sk:'ai_gem',
+    models:['gemini-2.0-flash','gemini-2.0-flash-lite','gemini-1.5-flash','gemini-1.5-pro']},
+  openai:{url:'https://api.openai.com/v1/chat/completions',link:'https://platform.openai.com/api-keys',hint:'Get key ↗',ph:'sk-…',sk:'ai_oai',
+    models:['gpt-4o','gpt-4o-mini','gpt-4-turbo','gpt-3.5-turbo']},
 };
-
-function onProviderChange() {
-  const provider = document.getElementById('aiProvider').value;
-  const cfg = AI_PROVIDERS[provider];
-  // Rebuild model list
-  const sel = document.getElementById('aiModel');
-  sel.innerHTML = cfg.models.map(m => `<option value="${m}">${m}</option>`).join('');
-  // Update key field
-  document.getElementById('apiKey').placeholder = cfg.placeholder;
-  document.getElementById('keyLink').href = cfg.keyLink;
-  document.getElementById('keyLink').textContent = cfg.keyHint;
-  // Restore saved key for this provider
-  const saved = localStorage.getItem(cfg.storageKey);
-  document.getElementById('apiKey').value = saved || '';
+function provChange(){
+  const p=document.getElementById('ai-prov').value,cfg=PROVS[p];
+  document.getElementById('ai-model').innerHTML=cfg.models.map(m=>`<option value="${m}">${m}</option>`).join('');
+  document.getElementById('ai-key').placeholder=cfg.ph;
+  document.getElementById('ai-link').href=cfg.link;
+  document.getElementById('ai-link').textContent=cfg.hint;
+  document.getElementById('ai-key').value=localStorage.getItem(cfg.sk)||'';
 }
-
-async function askAI(question) {
-  const provider = document.getElementById('aiProvider').value;
-  const cfg = AI_PROVIDERS[provider];
-  const key = document.getElementById('apiKey').value.trim() || localStorage.getItem(cfg.storageKey);
-  if(!key) {
-    addAIMsg('assistant', `⚠️ Please enter an API key. Get one free at ${cfg.keyLink}`);
-    return;
-  }
-  localStorage.setItem(cfg.storageKey, key);
-  document.getElementById('apiKey').value = key;
-  const model = document.getElementById('aiModel').value;
-
-  addAIMsg('user', question);
-  const loadId = addAIMsg('assistant', '⏳ Thinking…', true);
-
-  const headers = {
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer ' + key
-  };
-  if(provider === 'openrouter') {
-    headers['HTTP-Referer'] = window.location.href;
-    headers['X-Title'] = 'Colocation Analyzer';
-  }
-
-  // Keep system prompt under ~2000 chars to stay well within token limits
-  const ctx = buildContext().slice(0, 2500);
-
-  try {
-    const resp = await fetch(cfg.url, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({
-        model,
-        max_tokens: 800,
-        messages: [
-          { role: 'system', content: ctx },
-          { role: 'user',   content: question }
-        ]
-      })
-    });
-
-    // Try to parse JSON regardless of HTTP status so we see the error body
-    let data;
-    const rawText = await resp.text();
-    try { data = JSON.parse(rawText); }
-    catch { throw new Error(`Non-JSON response (HTTP ${resp.status}): ${rawText.slice(0,200)}`); }
-
-    if(!resp.ok || data.error) {
-      const msg = data?.error?.message || data?.error || JSON.stringify(data);
-      throw new Error(`HTTP ${resp.status}: ${msg}`);
-    }
-
-    const text = data.choices?.[0]?.message?.content || 'No response received.';
-    document.getElementById(loadId).textContent = text;
-    document.getElementById(loadId).classList.remove('loading');
-  } catch(e) {
-    // Distinguish CORS/network errors (no response) from API errors
-    const isCors = e instanceof TypeError && e.message.includes('fetch');
-    const msg = isCors
-      ? `❌ Network/CORS error — check your API key and that the provider allows browser requests.\nDetail: ${e.message}`
-      : `❌ ${e.message}`;
-    document.getElementById(loadId).textContent = msg;
-    document.getElementById(loadId).classList.remove('loading');
+function buildCtx(){
+  const f=FILT,t=f.length,
+    e=f.filter(s=>s.classification==='Exact Match').length,
+    d=f.filter(s=>s.classification==='Drift Match').length,
+    b=f.filter(s=>s.classification==='New Build').length,
+    avg=t?f.reduce((a,s)=>a+s.distance,0)/t:0,
+    regs=[...new Set(f.map(s=>s.region))],
+    topC=Object.entries(f.filter(s=>s.classification!=='New Build')
+      .reduce((a,s)=>{a[s.city]=(a[s.city]||0)+1;return a;},{}))
+      .sort((a,b)=>b[1]-a[1]).slice(0,8).map(([c,n])=>`${c}(${n})`).join(', ');
+  return`Telecom network planning analyst. Answer concisely with numbers and actionable recommendations.
+RESULTS (${t} sites): Exact ${e} (${t?((e/t)*100).toFixed(1):0}%), Drift ${d} (${t?((d/t)*100).toFixed(1):0}%), New Build ${b}
+Colocation rate: ${t?((e+d)/t*100).toFixed(1):0}% | Avg distance: ${avg.toFixed(0)}m | SSRF filed: ${f.filter(s=>s.ssrf).length}
+BY REGION: ${regs.map(r=>{const rs=f.filter(s=>s.region===r);const re=rs.filter(s=>s.classification==='Exact Match').length,rd=rs.filter(s=>s.classification==='Drift Match').length;return`${r}: ${rs.length} sites, ${((re+rd)/Math.max(rs.length,1)*100).toFixed(0)}% colocatable`;}).join(' | ')}
+TOP COLOCATION CITIES: ${topC||'none'}`;
+}
+async function sendAI(){const q=(document.getElementById('ai-in').value||'').trim();if(!q)return;await ask(q);document.getElementById('ai-in').value='';}
+async function ask(q){
+  const p=document.getElementById('ai-prov').value,cfg=PROVS[p];
+  const key=(document.getElementById('ai-key').value||'').trim()||localStorage.getItem(cfg.sk)||'';
+  if(!key){addMsg('a','⚠️ Enter an API key — get a free one at '+cfg.link);return;}
+  localStorage.setItem(cfg.sk,key);document.getElementById('ai-key').value=key;
+  const model=document.getElementById('ai-model').value;
+  addMsg('u',q);
+  const lid=addMsg('a','⏳ Thinking…',true);
+  const hdrs={'Content-Type':'application/json','Authorization':'Bearer '+key};
+  if(p==='openrouter'){hdrs['HTTP-Referer']=location.href;hdrs['X-Title']='Colocation Analyzer';}
+  try{
+    const resp=await fetch(cfg.url,{method:'POST',headers:hdrs,
+      body:JSON.stringify({model,max_tokens:800,
+        messages:[{role:'system',content:buildCtx()},{role:'user',content:q}]})});
+    const raw=await resp.text();
+    let data;try{data=JSON.parse(raw);}catch{throw new Error('HTTP '+resp.status+': '+raw.slice(0,150));}
+    if(!resp.ok||data.error)throw new Error('HTTP '+resp.status+': '+(data?.error?.message||JSON.stringify(data.error)));
+    const el=document.getElementById(lid);
+    el.textContent=data.choices?.[0]?.message?.content||'No response';
+    el.classList.remove('ld');
+  }catch(e){
+    const el=document.getElementById(lid);
+    el.textContent='❌ '+(e instanceof TypeError?'Network/CORS error — check key & provider: ':'')+e.message;
+    el.classList.remove('ld');
   }
 }
-
-function addAIMsg(role, text, loading=false) {
-  const id = 'ai-msg-' + Date.now();
-  const div = document.createElement('div');
-  div.className = `ai-msg ${role}${loading?' loading':''}`;
-  div.id = id;
-  div.textContent = text;
-  const container = document.getElementById('aiMessages');
-  container.appendChild(div);
-  container.scrollTop = container.scrollHeight;
+function addMsg(role,text,ld=false){
+  const id='m'+Date.now()+Math.random();
+  const d=document.createElement('div');
+  d.className='aim '+role+(ld?' ld':'');d.id=id;d.textContent=text;
+  const c=document.getElementById('ai-msgs');c.appendChild(d);c.scrollTop=c.scrollHeight;
   return id;
 }
 
-// ═══════════════════════════════════════════════════════════
-// RESIZE HANDLE
-// ═══════════════════════════════════════════════════════════
-(function() {
-  const handle = document.getElementById('resizeHandle');
-  const panel = document.getElementById('bottomPanel');
-  let dragging = false, startY, startH;
-  handle.addEventListener('mousedown', e => {
-    dragging = true; startY = e.clientY; startH = panel.offsetHeight;
-    document.body.style.cursor = 'row-resize';
-  });
-  document.addEventListener('mousemove', e => {
-    if(!dragging) return;
-    const diff = startY - e.clientY;
-    const newH = Math.max(160, Math.min(500, startH + diff));
-    panel.style.height = newH + 'px';
-  });
-  document.addEventListener('mouseup', () => { dragging = false; document.body.style.cursor = ''; });
-})();
+/* ─── LOADER ─── */
+function showLoad(t){document.getElementById('loader').style.display='flex';document.getElementById('ltxt').textContent=t;}
+function hideLoad(){document.getElementById('loader').style.display='none';}
 
-// Restore saved key for the default provider (Groq)
-(function() {
-  onProviderChange(); // sets models, placeholder, and restores saved key
-})();
+/* ─── BOOT ─── */
+initMap();
 initCharts();
-loadDefaultData();
+provChange();
+loadDemo();
 </script>
 </body>
 </html>
