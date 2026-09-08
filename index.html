@@ -181,6 +181,16 @@ tr:hover td{background:#F8F9FC}
 .dr:last-child{border:none}
 .dk{color:var(--muted)}.dv{font-weight:600;color:var(--navy);text-align:right;max-width:58%}
 .da{margin-top:7px;padding:7px 8px;background:var(--paper);border-radius:5px;font-size:10px;line-height:1.4}
+/* Selected table row */
+tr.row-selected td{background:#FFF8E6!important;outline:2px solid var(--amber);outline-offset:-1px;}
+
+/* Layer control — push below legend so they don't overlap */
+.leaflet-top.leaflet-right{top:110px!important;}
+.leaflet-control-layers{font-size:11px!important;border-radius:7px!important;
+  box-shadow:0 2px 8px rgba(0,0,0,.13)!important;border:1px solid var(--border)!important;}
+.leaflet-control-layers label{font-size:11px!important;padding:1px 0!important;}
+.leaflet-control-layers-base{padding:4px 6px!important;}
+
 /* Loader */
 #loader{position:fixed;inset:0;background:rgba(18,28,51,.88);z-index:9999;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
@@ -466,8 +476,14 @@ function normDemo(d){
 /* ─── MAP ─── */
 function initMap(){
   map=L.map('map').setView([30.3,69.3],6);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    {attribution:'© OpenStreetMap',maxZoom:18}).addTo(map);
+  const street=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {attribution:'© OpenStreetMap',maxZoom:19});
+  const satellite=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    {attribution:'Tiles © Esri',maxZoom:19});
+  const terrain=L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
+    {attribution:'© OpenTopoMap',maxZoom:17});
+  street.addTo(map);
+  L.control.layers({'🗺 Street':street,'🛰 Satellite':satellite,'⛰ Terrain':terrain},{},{position:'topright',collapsed:false}).addTo(map);
   cluster=L.markerClusterGroup({maxClusterRadius:45,chunkedLoading:true,iconCreateFunction:cIcon});
   map.addLayer(cluster);
 }
@@ -490,7 +506,7 @@ function mkMarker(s){
     className:'',iconSize:[9,9],iconAnchor:[4,4]});
   const m=L.marker([s.lat,s.lng],{icon});
   m._c=s.classification;
-  m.on('click',()=>showDetail(s));
+  m.on('click',()=>{showDetail(s);selectTableRow(s.site_id);});
   m.bindTooltip(`<b>${s.site_id}</b><br>${s.city||''} · ${s.classification}<br>${s.distance.toFixed(0)}m`,{direction:'top'});
   return m;
 }
@@ -590,7 +606,7 @@ function renderTable(){
   document.getElementById('tb').innerHTML=rows.length?rows.map(s=>{
     const bc=s.classification==='Exact Match'?'bx-e':s.classification==='Drift Match'?'bx-d':'bx-b';
     const act=actionTxt(s);
-    return`<tr onclick="showDetail(FILT.find(x=>x.site_id===String(${JSON.stringify(s.site_id)})))" style="cursor:pointer">
+    return`<tr id="row-${s.site_id}" data-site-id="${s.site_id}" onclick="showDetail(FILT.find(x=>x.site_id===String(${JSON.stringify(s.site_id)})));selectTableRow(${JSON.stringify(s.site_id)})" style="cursor:pointer">
       <td><code style="font-size:10px">${s.site_id}</code></td>
       <td>${s.city||'—'}</td><td>${s.region||'—'}</td>
       <td>${normDemo(s.demographic)}</td>
@@ -683,6 +699,20 @@ function showDetail(s){
   document.getElementById('d-act').innerHTML='<b>Action:</b> '+actionTxt(s);
   document.getElementById('detail').style.display='block';
   map.setView([s.lat,s.lng],14);
+}
+
+/* ─── SELECT TABLE ROW ─── */
+function selectTableRow(siteId){
+  // Switch to table tab
+  ptab(0,document.querySelector('.ptab'));
+  // Clear any previous highlight
+  document.querySelectorAll('tr.row-selected').forEach(r=>r.classList.remove('row-selected'));
+  // The row might not be rendered if filtered — find and highlight it
+  const row=document.getElementById('row-'+siteId);
+  if(row){
+    row.classList.add('row-selected');
+    row.scrollIntoView({block:'center',behavior:'smooth'});
+  }
 }
 
 /* ─── EXPORT ─── */
